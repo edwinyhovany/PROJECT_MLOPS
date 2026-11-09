@@ -1,27 +1,41 @@
-# Configuración de la pipeline (valores que pueden cambiar sin tocar el código)
+# Configuración de la pipeline de entrenamiento e inferencia (Actividad 2)
+# Dataset: https://www.kaggle.com/datasets/colabsss/consumer-portrait-e-commerce-dataset
 
 datos:
-  ruta: data/Consumer_Portrait_ECommerce_Recommendation_Dataset.csv   # dataset real
+  ruta: data/Consumer_Portrait_ECommerce_Recommendation_Dataset.csv
 
 division:
   test_size: 0.2
   random_state: 42          # también se registra como semilla en MLflow
 
-modelo:
-  tipo: gradient_boosting   # logistic_regression | gradient_boosting
-  parametros:                 # argumentos del estimador de sklearn
-    learning_rate: 0.1
-    max_depth: 3
-    n_estimators: 100
+# Modelos candidatos a comparar
+candidatos:
+  - nombre_run: ecommerce-logreg
+    tipo: logistic_regression
+    parametros:
+      C: 1.0
+      max_iter: 1000
+  - nombre_run: ecommerce-gbt
+    tipo: gradient_boosting
+    parametros:
+      learning_rate: 0.1
+      max_depth: 3
+      n_estimators: 100
+      random_state: 42
 
 mlflow:
-  tracking_uri: http://localhost:5000  # servidor de MLflow de services/. Sin servidor: sqlite:///mlflow.db. MLFLOW_TRACKING_URI, si existe, tiene prioridad
-  experimento: churn-training-mlops    # nombre del experimento donde se agrupan los runs
-  nombre_run: churn-training       # nombre de cada run dentro del experimento
-  tag_fase: entrenamiento            # tag para identificar runs de entrenamiento
+  tracking_uri: http://localhost:5000
+  experimento: ecommerce-recommendation-mlops
+  nombre_run: ecommerce-training
 
 metricas:
-  umbral: 0.5                         # probabilidad a partir de la cual se predice churn (Recommendation_Label = 1)
+  umbral: 0.5
 
-features:
-  seleccion: "ALL"   # ALL | NUMERIC | CUSTOM (ver features.yaml)
+# Configuración de registro y promoción de champion
+registro:
+  nombre_modelo: ecommerce-recommendation-modelo
+  umbral_auc: 0.60          # AUC mínimo para ser champion; además debe superar al champion actual
+
+inferencia:
+  tamano_lote: 100          # clientes puntuados en cada ejecución diaria
+  carpeta_salida: data

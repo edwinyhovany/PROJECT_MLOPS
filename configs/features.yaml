@@ -1,14 +1,14 @@
-# Selección de variables para el experimento MLflow
-# Cada run debe registrar el alias 'features' y 'n_features'
+# Selección de variables para el experimento MLflow (Actividad 2)
+# Cada run registra el alias en el parámetro 'features' y el número de variables en 'n_features'
+#
+# Opciones disponibles en 'seleccion':
+# - ALL     : todas las variables numéricas y categóricas
+# - NUMERIC : solo variables numéricas
+# - CUSTOM  : solo las variables definidas en la lista 'custom'
 
-# Opciones:
-# ALL  : todas las variables, numéricas y categóricas
-# NUMERIC : solo las variables numéricas
-# CUSTOM : solo las variables que listes en 'custom'
+seleccion: "ALL"
 
-seleccion: "ALL"   # Cambiar a 'NUMERIC' o 'CUSTOM' según sea necesario
-
-# Solo applicable si seleccion es 'CUSTOM':
+# Lista utilizada únicamente cuando seleccion es "CUSTOM":
 custom:
   - "Age"
   - "Gender"
@@ -17,4 +17,9 @@ custom:
   - "Income_Level"
   - "Membership_Level"
   - "Shopping_Device"
-  - "Payment_Method"
+  - "Purchase_Count"
+  - "Purchase_Value"
+  - "Interaction_Score"
+  - "Customer_Loyalty_Score"
+  - "Product_Relevance_Score"
+  - "Product_Category"

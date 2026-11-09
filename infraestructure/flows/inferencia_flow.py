@@ -1,111 +1,117 @@
-"""Pipeline de inferencia en Prefect.
+"""Pipeline de inferencia en Prefect (Actividad 2).
 
-Carga el modelo por su alias champion, calcula predicciones sobre un lote de datos
-y guarda las predicciones en un archivo con la fecha de ejecución.
+- Se conecta a MLflow y carga el modelo con el alias 'champion'.
+- Ingesta un lote de datos que simula clientes nuevos.
+- Genera predicciones y probabilidades.
+- Guarda las predicciones en un archivo CSV con la fecha de ejecución.
+- Registra la ejecución en MLflow con tag fase = inferencia y metadata de versión.
 """
 
 import os
 import sys
+from datetime import date
+from pathlib import Path
 
-# Añadir el directorio raíz (3 niveles hacia arriba desde flows/) al path para imports
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-
-# Ahora añadir scripts al path (4 niveles hacia arriba + scripts/)
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "scripts"))
+# Raíz del proyecto en sys.path
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
 
 import mlflow
-import pandas as pd
+import yaml
+from mlflow.tracking import MlflowClient
 from prefect import flow, task
 
+from scripts.load_data import cargar_datos as load_data_fn
 
-@task
-def cargar_datos_prueba():
-    """Carga unos datos de prueba para simular clientes nuevos.
-
-    En producción esto recibiría un lote real. Aquí usamos el dataset de validación
-    o generamos una muestra aleatoria.
-    """
-    from scripts.load_data import cargar_datos
-    df = cargar_datos()
-    # Tomar una muestra aleatoria de 5 registros para simular clientes nuevos
-    return df.sample(5, random_state=42)
+CONFIG_FILE = ROOT_DIR / "configs" / "config.yaml"
 
 
-@task
-def predecir_con_champion(df):
-    """Carga el modelo por su alias champion y hace predicciones.
+@task(name="Cargar Modelo Champion")
+def task_cargar_champion(cfg):
+    """Carga el modelo mediante el alias 'champion' en MLflow."""
+    nombre_modelo = cfg["registro"]["nombre_modelo"]
+    tracking_uri = os.environ.get("MLFLOW_TRACKING_URI", cfg["mlflow"]["tracking_uri"])
+    mlflow.set_tracking_uri(tracking_uri)
 
-    El alias 'champion' se resuelve automáticamente hacia la versión actual
-    mejor registrada.
-    """
-    import mlflow
+    client = MlflowClient()
+    version_info = client.get_model_version_by_alias(nombre_modelo, "champion")
+    model_uri = f"models:/{nombre_modelo}@champion"
+    print(f"Cargando modelo champion desde {model_uri} (Versión {version_info.version})...")
 
-    # Cargar el modelo por alias champion (no por versión fija)
-    model = mlflow.pyfunc.load_model(model_uri="champion")
-
-    # Realizar predicciones
-    # Usar solo features numéricas y categóricas definidas en el dominio
-    numericas = [
-        "Age", "Login_Hour", "Session_Duration_Min", "Pages_Viewed",
-        "Search_Count", "Wishlist_Count", "Cart_Items", "Purchase_Count",
-        "Purchase_Value", "Discount_Percentage", "Product_Price",
-        "Product_Rating", "Product_Popularity", "Review_Count",
-        "Click_Count", "View_Time_Sec", "Repeat_Product_View",
-        "Browsing_Frequency", "Average_Order_Value",
-        "Purchase_Recency_Days", "Interaction_Score",
-        "Customer_Loyalty_Score", "Product_Relevance_Score",
-    ]
-    categoricas = [
-        "Gender", "Region", "Occupation", "Income_Level",
-        "Membership_Level", "Shopping_Device", "Coupon_Used",
-        "Payment_Method", "Delivery_Preference", "Product_Category",
-        "Brand", "Favorite_Category",
-    ]
-
-    X = df[numericas + categoricas]
-    proba = model.predict_proba(X)[:, 1]
-    pred = (proba >= 0.5).astype(int)
-
-    resultados = df.copy()
-    resultados["probabilidad_churn"] = proba
-    resultados["prediccion_churn"] = pred
-    return resultados
+    modelo = mlflow.sklearn.load_model(model_uri)
+    return modelo, version_info.version, version_info.run_id
 
 
-@task
-def guardar_predicciones(resultados, filename=None):
-    """Guarda las predicciones en un archivo con la fecha de ejecución."""
-    if filename is None:
-        fecha = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"predicciones_{fecha}.csv"
+@task(name="Ingesta Lote de Clientes")
+def task_ingesta_lote(cfg):
+    """Obtiene una muestra de clientes para simular el lote diario."""
+    tamano_lote = cfg.get("inferencia", {}).get("tamano_lote", 100)
+    print(f"Ingestando lote de {tamano_lote} clientes simulados...")
+    df = load_data_fn(cfg["datos"]["ruta"])
+    sample_df = df.sample(n=min(tamano_lote, len(df)), random_state=None)
+    return sample_df
 
-    resultados.to_csv(filename, index=False)
-    return filename
+
+@task(name="Generar y Guardar Predicciones")
+def task_predecir_y_guardar(modelo, lote, cfg):
+    """Calcula predicciones con el modelo champion y guarda en CSV con fecha."""
+    cols_modelo = list(getattr(modelo, "feature_names_in_", []))
+    if not cols_modelo:
+        # Fallback si el pipeline no guardó feature_names_in_
+        import domain.modelo as md
+        cols_modelo = md.VARIABLES
+
+    X = lote[[c for c in cols_modelo if c in lote.columns]]
+    proba = modelo.predict_proba(X)[:, 1]
+    umbral = cfg["metricas"]["umbral"]
+    pred = (proba >= umbral).astype(int)
+
+    resultado = lote.copy()
+    resultado["probabilidad_recomendacion"] = proba
+    resultado["prediccion_recomendado"] = pred
+
+    carpeta_salida = ROOT_DIR / cfg.get("inferencia", {}).get("carpeta_salida", "data")
+    carpeta_salida.mkdir(parents=True, exist_ok=True)
+    fecha_hoy = date.today().isoformat()
+    ruta_csv = carpeta_salida / f"prediccion_{fecha_hoy}.csv"
+
+    resultado.to_csv(ruta_csv, index=False)
+    print(f"Predicciones guardadas exitosamente en: {ruta_csv}")
+    return str(ruta_csv), len(proba), float(proba.mean())
 
 
-@flow(name="inferencia-champion-v1")
-def inferencia():
-    """Flow principal de inferencia con horario diario.
+@task(name="Registrar Inferencia en MLflow")
+def task_registrar_inferencia(cfg, version, run_id_entrenamiento, ruta_csv, total_filas, proba_media):
+    """Registra un run de inferencia con tag fase = inferencia."""
+    tracking_uri = os.environ.get("MLFLOW_TRACKING_URI", cfg["mlflow"]["tracking_uri"])
+    mlflow.set_tracking_uri(tracking_uri)
+    mlflow.set_experiment(cfg["mlflow"]["experimento"])
 
-    Carga el modelo champion, hace predicciones y guarda resultados.
-    """
-    # 1. Cargar datos de prueba
-    df = cargar_datos_prueba()
-    print(f"Datos de prueba cargados: {df.shape[0]} registros")
+    run_name = f"inferencia-{date.today().isoformat()}"
+    with mlflow.start_run(run_name=run_name):
+        mlflow.set_tag("fase", "inferencia")
+        mlflow.set_tag("modelo_version", str(version))
+        mlflow.set_tag("modelo_run_id", str(run_id_entrenamiento))
+        mlflow.log_metric("filas_predichas", total_filas)
+        mlflow.log_metric("probabilidad_media", proba_media)
+        if os.path.exists(ruta_csv):
+            mlflow.log_artifact(ruta_csv)
+    print("Inferencia registrada en MLflow con tag fase=inferencia.")
 
-    # 2. Predecir con el modelo champion
-    resultados = predecir_con_champion(df)
-    print(f"Predicciones generadas: {len(resultados)} registros")
 
-    # 3. Guardar predicciones con fecha
-    filename = guardar_predicciones(resultados)
-    print(f"Predicciones guardadas en: {filename}")
+@flow(name="pipeline-inferencia-ecommerce", log_prints=True)
+def inferencia_flow():
+    """Pipeline completa de inferencia Prefect."""
+    with open(CONFIG_FILE, encoding="utf-8") as f:
+        cfg = yaml.safe_load(f)
 
-    return filename
+    modelo, version, run_id_entrenamiento = task_cargar_champion(cfg)
+    lote = task_ingesta_lote(cfg)
+    ruta_csv, total_filas, proba_media = task_predecir_y_guardar(modelo, lote, cfg)
+    task_registrar_inferencia(cfg, version, run_id_entrenamiento, ruta_csv, total_filas, proba_media)
+    return ruta_csv
 
 
 if __name__ == "__main__":
-    import datetime
-    os.environ["PREFECT_API_URL"] = os.environ.get("PREFECT_API_URL", "http://localhost:4200/api")
-    os.environ["MLFLOW_TRACKING_URI"] = os.environ.get("MLFLOW_TRACKING_URI", "http://localhost:5000")
-    inferencia()
+    inferencia_flow()
