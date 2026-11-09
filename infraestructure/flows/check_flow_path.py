@@ -1,0 +1,10 @@
+import os
+filepath = os.path.abspath(__file__)
+print("__file__:", filepath)
+print("dirname(__file__):", os.path.dirname(filepath))
+print("dirname(dirname(__file__)):", os.path.dirname(os.path.dirname(filepath)))
+print("dirname(dirname(dirname(__file__))):", os.path.dirname(os.path.dirname(os.path.dirname(filepath))))
+print()
+print("Project root should be:", r"C:\proyecto\MLOPS\PROJECT_MLOPS")
+print("Is 2 levels correct?", os.path.dirname(os.path.dirname(filepath)) == r"C:\proyecto\MLOPS\PROJECT_MLOPS")
+print("Is 3 levels correct?", os.path.dirname(os.path.dirname(os.path.dirname(filepath))) == r"C:\proyecto\MLOPS\PROJECT_MLOPS")
