@@ -1,4 +1,5 @@
-# Configuración de la pipeline de entrenamiento e inferencia (Actividad 2)
+# Configuración unificada del proyecto (Actividad 2).
+# Todo lo que puede cambiar (datos, división, features, modelos candidatos, MLflow, registro e inferencia) vive aquí, no en el código.
 # Dataset: https://www.kaggle.com/datasets/colabsss/consumer-portrait-e-commerce-dataset
 
 datos:
@@ -8,34 +9,61 @@ division:
   test_size: 0.2
   random_state: 42          # también se registra como semilla en MLflow
 
-# Modelos candidatos a comparar
+# Conjuntos de features. Cada candidato se entrena con cada uno: un run por combinación.
+# columnas: ALL para todas las variables, o una lista con los nombres exactos del CSV.
+features:
+  - nombre: all
+    columnas: ALL
+  - nombre: custom
+    columnas:
+      - Age
+      - Gender
+      - Region
+      - Occupation
+      - Income_Level
+      - Membership_Level
+      - Shopping_Device
+      - Purchase_Count
+      - Purchase_Value
+      - Interaction_Score
+      - Customer_Loyalty_Score
+      - Product_Relevance_Score
+      - Product_Category
+
+# Modelos que el flow de entrenamiento compara. Cada uno se entrena con cada conjunto de `features`.
+# Cada run se llama `<nombre_run>-<nombre de features>`. Solo el de mayor AUC se evalúa para champion.
 candidatos:
-  - nombre_run: ecommerce-logreg
+  - nombre_run: ecommerce-logreg-c1
     tipo: logistic_regression
     parametros:
       C: 1.0
       max_iter: 1000
+  - nombre_run: ecommerce-logreg-c01
+    tipo: logistic_regression
+    parametros:
+      C: 0.1
+      max_iter: 1000
   - nombre_run: ecommerce-gbt
     tipo: gradient_boosting
     parametros:
+      n_estimators: 100
       learning_rate: 0.1
       max_depth: 3
-      n_estimators: 100
       random_state: 42
 
 mlflow:
-  tracking_uri: http://localhost:5000
-  experimento: ecommerce-recommendation-mlops
-  nombre_run: ecommerce-training
+  tracking_uri: http://localhost:5000  # servidor de MLflow de services/. MLFLOW_TRACKING_URI, si existe, tiene prioridad
+  experimento: ecommerce-recommendation-mlops    # nombre del experimento donde se agrupan los runs
+  nombre_run: ecommerce-training                 # prefijo de run
 
 metricas:
-  umbral: 0.5
+  umbral: 0.5                          # probabilidad a partir de la cual se predice recomendación (Recommendation_Label = 1)
 
-# Configuración de registro y promoción de champion
+# Registro del modelo e inferencia (Actividad 2).
 registro:
-  nombre_modelo: ecommerce-recommendation-modelo
-  umbral_auc: 0.60          # AUC mínimo para ser champion; además debe superar al champion actual
+  nombre_modelo: ecommerce-recommendation-modelo   # nombre en el Model Registry de MLflow
+  umbral_auc: 0.60                                  # AUC mínimo para ser champion; además debe superar al champion actual
 
 inferencia:
-  tamano_lote: 100          # clientes puntuados en cada ejecución diaria
-  carpeta_salida: data
+  tamano_lote: 100              # clientes que se puntúan en cada ejecución diaria
+  carpeta_salida: data          # carpeta donde se guardan las predicciones diarias

@@ -1,16 +1,31 @@
-"""Pipeline de inferencia en Prefect (Actividad 2).
+"""Actividad 2: pipeline de inferencia (se ejecuta cada día, ver infraestructure/flows/desplegar.py).
 
-- Se conecta a MLflow y carga el modelo con el alias 'champion'.
-- Ingesta un lote de datos que simula clientes nuevos.
-- Genera predicciones y probabilidades.
-- Guarda las predicciones en un archivo CSV con la fecha de ejecución.
-- Registra la ejecución en MLflow con tag fase = inferencia y metadata de versión.
+Pasos: cargar modelo champion → ingesta del lote → predicción → guardar CSV → registrar en MLflow
+
+El modelo se busca por el alias `champion`, así que cuando el pipeline de entrenamiento
+asigna un nuevo champion, la inferencia usa ese modelo sin cambiar código.
+El run de inferencia guarda la versión del modelo usada en sus tags, para poder conectarlo
+con el entrenamiento.
+
+Requisitos: servicios levantados, un champion registrado (ver infraestructure/flows/entrenamiento_flow.py)
+y las variables:
+    PREFECT_API_URL=http://localhost:4200/api
+    MLFLOW_TRACKING_URI=http://localhost:5000
+
+Ejecución de prueba:
+    poetry run python infraestructure/flows/inferencia_flow.py
 """
 
 import os
 import sys
 from datetime import date
 from pathlib import Path
+
+# Configurar variables de entorno por defecto si no están definidas
+if not os.environ.get("PREFECT_API_URL"):
+    os.environ["PREFECT_API_URL"] = "http://localhost:4200/api"
+if not os.environ.get("MLFLOW_TRACKING_URI"):
+    os.environ["MLFLOW_TRACKING_URI"] = "http://localhost:5000"
 
 # Raíz del proyecto en sys.path
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
@@ -22,95 +37,77 @@ import yaml
 from mlflow.tracking import MlflowClient
 from prefect import flow, task
 
-from scripts.load_data import cargar_datos as load_data_fn
+from scripts.load_data import cargar_datos as leer_datos
 
-CONFIG_FILE = ROOT_DIR / "configs" / "config.yaml"
-
-
-@task(name="Cargar Modelo Champion")
-def task_cargar_champion(cfg):
-    """Carga el modelo mediante el alias 'champion' en MLflow."""
-    nombre_modelo = cfg["registro"]["nombre_modelo"]
-    tracking_uri = os.environ.get("MLFLOW_TRACKING_URI", cfg["mlflow"]["tracking_uri"])
-    mlflow.set_tracking_uri(tracking_uri)
-
-    client = MlflowClient()
-    version_info = client.get_model_version_by_alias(nombre_modelo, "champion")
-    model_uri = f"models:/{nombre_modelo}@champion"
-    print(f"Cargando modelo champion desde {model_uri} (Versión {version_info.version})...")
-
-    modelo = mlflow.sklearn.load_model(model_uri)
-    return modelo, version_info.version, version_info.run_id
+CONFIG = str(ROOT_DIR / "configs" / "config.yaml")
 
 
-@task(name="Ingesta Lote de Clientes")
-def task_ingesta_lote(cfg):
-    """Obtiene una muestra de clientes para simular el lote diario."""
-    tamano_lote = cfg.get("inferencia", {}).get("tamano_lote", 100)
-    print(f"Ingestando lote de {tamano_lote} clientes simulados...")
-    df = load_data_fn(cfg["datos"]["ruta"])
-    sample_df = df.sample(n=min(tamano_lote, len(df)), random_state=None)
-    return sample_df
+@task
+def cargar_champion(cfg):
+    """Carga el modelo con el alias champion. Devuelve el modelo, su número de versión y su run de entrenamiento."""
+    print("Buscando modelo champion en MLflow...")
+    nombre = cfg["registro"]["nombre_modelo"]
+    version = MlflowClient().get_model_version_by_alias(nombre, "champion")
+    modelo = mlflow.sklearn.load_model(f"models:/{nombre}@champion")
+    print(f"Modelo cargado: {nombre} versión {version.version}")
+    return modelo, version.version, version.run_id
 
 
-@task(name="Generar y Guardar Predicciones")
-def task_predecir_y_guardar(modelo, lote, cfg):
-    """Calcula predicciones con el modelo champion y guarda en CSV con fecha."""
+@task
+def ingesta(cfg):
+    """Toma un lote de clientes. Aquí se simula con una muestra aleatoria del CSV."""
+    print(f"Ingestando lote de {cfg['inferencia']['tamano_lote']} clientes...")
+    df = leer_datos(cfg["datos"]["ruta"])
+    return df.sample(n=cfg["inferencia"]["tamano_lote"])
+
+
+@task
+def predecir(modelo, lote, cfg):
+    """Calcula la probabilidad de recomendación y guarda el resultado en un CSV con la fecha de hoy."""
+    print(f"Prediciendo con modelo versión {cfg['registro']['nombre_modelo']}...")
     cols_modelo = list(getattr(modelo, "feature_names_in_", []))
     if not cols_modelo:
-        # Fallback si el pipeline no guardó feature_names_in_
         import domain.modelo as md
         cols_modelo = md.VARIABLES
 
-    X = lote[[c for c in cols_modelo if c in lote.columns]]
-    proba = modelo.predict_proba(X)[:, 1]
-    umbral = cfg["metricas"]["umbral"]
-    pred = (proba >= umbral).astype(int)
-
+    proba = modelo.predict_proba(lote[cols_modelo])[:, 1]
     resultado = lote.copy()
     resultado["probabilidad_recomendacion"] = proba
-    resultado["prediccion_recomendado"] = pred
+    resultado["prediccion"] = (proba >= cfg["metricas"]["umbral"]).astype(int)
 
-    carpeta_salida = ROOT_DIR / cfg.get("inferencia", {}).get("carpeta_salida", "data")
-    carpeta_salida.mkdir(parents=True, exist_ok=True)
-    fecha_hoy = date.today().isoformat()
-    ruta_csv = carpeta_salida / f"prediccion_{fecha_hoy}.csv"
+    print("Guardando predicciones en CSV...")
+    carpeta = ROOT_DIR / cfg["inferencia"]["carpeta_salida"]
+    carpeta.mkdir(parents=True, exist_ok=True)
+    ruta = carpeta / f"prediccion_{date.today().isoformat()}.csv"
+    resultado.to_csv(ruta, index=False)
+    print(f"Predicciones guardadas en {ruta}")
+    return str(ruta), len(proba), float(proba.mean())
 
-    resultado.to_csv(ruta_csv, index=False)
-    print(f"Predicciones guardadas exitosamente en: {ruta_csv}")
-    return str(ruta_csv), len(proba), float(proba.mean())
 
-
-@task(name="Registrar Inferencia en MLflow")
-def task_registrar_inferencia(cfg, version, run_id_entrenamiento, ruta_csv, total_filas, proba_media):
-    """Registra un run de inferencia con tag fase = inferencia."""
-    tracking_uri = os.environ.get("MLFLOW_TRACKING_URI", cfg["mlflow"]["tracking_uri"])
-    mlflow.set_tracking_uri(tracking_uri)
-    mlflow.set_experiment(cfg["mlflow"]["experimento"])
-
-    run_name = f"inferencia-{date.today().isoformat()}"
-    with mlflow.start_run(run_name=run_name):
+@task
+def registrar_inferencia(version, run_id_entrenamiento, ruta, filas, proba_media):
+    """Crea un run de inferencia con tags que apuntan a la versión del modelo y a su run de entrenamiento."""
+    print(f"Registrando inferencia para modelo versión {version}...")
+    with mlflow.start_run(run_name=f"inferencia-{date.today().isoformat()}"):
         mlflow.set_tag("fase", "inferencia")
-        mlflow.set_tag("modelo_version", str(version))
-        mlflow.set_tag("modelo_run_id", str(run_id_entrenamiento))
-        mlflow.log_metric("filas_predichas", total_filas)
+        mlflow.set_tag("modelo_version", version)
+        mlflow.set_tag("modelo_run_id", run_id_entrenamiento)
+        mlflow.log_metric("filas_predichas", filas)
         mlflow.log_metric("probabilidad_media", proba_media)
-        if os.path.exists(ruta_csv):
-            mlflow.log_artifact(ruta_csv)
-    print("Inferencia registrada en MLflow con tag fase=inferencia.")
+        if os.path.exists(ruta):
+            mlflow.log_artifact(ruta)
 
 
-@flow(name="pipeline-inferencia-ecommerce", log_prints=True)
+@flow(name="inferencia-ecommerce", log_prints=True)
 def inferencia_flow():
-    """Pipeline completa de inferencia Prefect."""
-    with open(CONFIG_FILE, encoding="utf-8") as f:
+    with open(CONFIG, encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
-
-    modelo, version, run_id_entrenamiento = task_cargar_champion(cfg)
-    lote = task_ingesta_lote(cfg)
-    ruta_csv, total_filas, proba_media = task_predecir_y_guardar(modelo, lote, cfg)
-    task_registrar_inferencia(cfg, version, run_id_entrenamiento, ruta_csv, total_filas, proba_media)
-    return ruta_csv
+    mlflow.set_tracking_uri(os.environ.get("MLFLOW_TRACKING_URI", cfg["mlflow"]["tracking_uri"]))
+    mlflow.set_experiment(cfg["mlflow"]["experimento"])
+    modelo, version, run_id_entrenamiento = cargar_champion(cfg)
+    lote = ingesta(cfg)
+    ruta, filas, proba_media = predecir(modelo, lote, cfg)
+    registrar_inferencia(version, run_id_entrenamiento, ruta, filas, proba_media)
 
 
 if __name__ == "__main__":
