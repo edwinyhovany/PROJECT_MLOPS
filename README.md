@@ -5,7 +5,7 @@ Este repositorio implementa el ciclo de vida completo de un proyecto MLOps para 
 2. **Registro de modelos y estrategia Champion**: el modelo solo se promociona a champion si supera el umbral de AUC y al champion vigente.
 3. **Pipeline de inferencia diaria** en Prefect que consume el modelo champion y persiste predicciones por lotes.
 4. **API REST de servicio con FastAPI** que expone el modelo champion para inferencia en tiempo real.
-5. **Configuración en YAML** (`configs/config.yaml`).
+5. **Configuración centralizada y unificada en YAML** (`configs/config.yaml`).
 
 ---
 
@@ -15,14 +15,14 @@ Este repositorio implementa el ciclo de vida completo de un proyecto MLOps para 
   [Consumer Portrait E-Commerce Recommendation Dataset (Kaggle)](https://www.kaggle.com/datasets/colabsss/consumer-portrait-e-commerce-dataset)
 - **Ubicación local en el repositorio:**  
   [`data/Consumer_Portrait_ECommerce_Recommendation_Dataset.csv`](data/Consumer_Portrait_ECommerce_Recommendation_Dataset.csv)
-- **Dimensión:** 15,000 filas y 40 columnas (comportamiento de navegación, demografía, compras y producto).
+- **Dimensión:** 15,000 filas y 40 columnas (comportamiento de navegación, demografía, compras y características del producto).
 - **Variable objetivo (`Recommendation_Label`):** Predicción de recomendación binarizada (`Recommended` = 1, `Neutral`/`Not Recommended`/`Low Priority` = 0).
 - **Destino de las predicciones generadas:**  
   Las predicciones por lotes generadas por la pipeline de inferencia diaria se guardan automáticamente en la carpeta [`data/`](data/) con el formato:
   ```text
   data/prediccion_YYYY-MM-DD.csv
   ```
-  *(Por ejemplo: `data/prediccion_2026-11-09.csv`). Cada archivo contiene las variables del lote de clientes evaluado junto con `probabilidad_recomendacion` y `prediccion_recomendado`.*
+  *(Por ejemplo: `data/prediccion_2026-11-09.csv`). Cada archivo contiene las variables del lote de clientes evaluado junto con `probabilidad_recomendacion` y `prediccion`.*
 
 ---
 
@@ -40,10 +40,9 @@ En la carpeta [`docs/`](docs/) se encuentran los soportes y pantallazos de la ej
 ```text
 PROJECT_MLOPS/
 ├── configs/
-│   ├── config.yaml                     # Configuración de datos, división, modelos, MLflow, registro e inferencia
-│   └── features.yaml                   # Selección de features del experimento (ALL, NUMERIC, CUSTOM)
+│   └── config.yaml                     # Configuración unificada (datos, división, features, candidatos, MLflow, registro e inferencia)
 ├── data/
-│   ├── Consumer_Portrait_ECommerce_Recommendation_Dataset.csv   # Dataset real de Kaggle
+│   ├── Consumer_Portrait_ECommerce_Recommendation_Dataset.csv   # Dataset real descargado de Kaggle
 │   └── prediccion_*.csv                # Archivos generados por el pipeline de inferencia diaria
 ├── docs/
 │   ├── Actividad 1_ Fundamentos, versionamiento y tracking.pdf  # Evidencias Actividad 1
@@ -55,10 +54,10 @@ PROJECT_MLOPS/
 │   │   └── main.py                     # API FastAPI que sirve el modelo champion
 │   └── flows/
 │       ├── entrenamiento_flow.py        # Pipeline de entrenamiento y registro en Prefect/MLflow
-│       ├── inferencia_flow.py           # Pipeline de inferencia en lote en Prefect
+│       ├── inferencia_flow.py           # Pipeline de inferencia diaria en Prefect
 │       └── desplegar.py                 # Script de despliegue de ambos flows en Prefect
 ├── scripts/
-│   └── load_data.py                    # Carga y validación defensiva contra valores nulos
+│   └── load_data.py                    # Carga y validación con resolución automática de ruta
 ├── services/
 │   ├── docker-compose.yml              # Levanta contenedores de MLflow (5000) y Prefect (4200)
 │   └── requirements.txt
@@ -81,7 +80,7 @@ PROJECT_MLOPS/
 poetry install
 ```
 
-### Variables de entorno requeridas
+### Variables de entorno
 
 En cada terminal donde vayas a ejecutar un flow o la API:
 
@@ -90,6 +89,23 @@ $env:PREFECT_API_URL = "http://localhost:4200/api"
 $env:MLFLOW_TRACKING_URI = "http://localhost:5000"
 $env:PYTHONUTF8 = "1"
 ```
+
+*Nota: Tanto `entrenamiento_flow.py` como `inferencia_flow.py` cuentan con fallback automático que apunta a `http://localhost:4200/api` y `http://localhost:5000` si estas variables no fueron definidas en la sesión.*
+
+---
+
+## Configuración Unificada (`configs/config.yaml`)
+
+Toda la configuración del proyecto reside en [`configs/config.yaml`](configs/config.yaml) sin parámetros cableados en el código:
+
+- **`datos.ruta`**: Ruta del CSV de entrada (`data/Consumer_Portrait_ECommerce_Recommendation_Dataset.csv`).
+- **`division`**: `test_size: 0.2` y `random_state: 42`.
+- **`features`**: Grupos de variables experimentales (`all` y `custom`). Cada candidato se entrena con cada grupo de features.
+- **`candidatos`**: Lista de modelos evaluados (`ecommerce-logreg-c1`, `ecommerce-logreg-c01`, `ecommerce-gbt`).
+- **`mlflow`**: Tracking URI, experimento (`ecommerce-recommendation-mlops`) y prefijo de run.
+- **`metricas.umbral`**: Umbral de probabilidad para clasificar como positivo (0.5).
+- **`registro`**: Nombre en el Model Registry (`ecommerce-recommendation-modelo`) y umbral mínimo de AUC (0.60).
+- **`inferencia`**: Tamaño del lote diario (100 clientes) y carpeta de salida (`data`).
 
 ---
 
@@ -120,11 +136,10 @@ poetry run python infraestructure\flows\entrenamiento_flow.py
 ```
 
 **Qué realiza:**
-1. **Ingesta:** Carga `data/Consumer_Portrait_ECommerce_Recommendation_Dataset.csv` y aplica tratamiento de nulos.
-2. **Entrenamiento:** Entrena los candidatos configurados (`ecommerce-logreg`, `ecommerce-gbt`) usando el subconjunto de features definido en `configs/features.yaml`.
-3. **MLflow Tracking:** Crea runs con el tag `fase = entrenamiento`, registrando parámetros, métricas (`auc`, `accuracy`, `precision`, `recall`, `f1`), tags `features` y `n_features`, y el artefacto del modelo.
-4. **Champion Promotion:** Compara el mejor modelo contra el champion vigente. Solo si supera el umbral mínimo (`registro.umbral_auc = 0.60`) y mejora el AUC del champion actual, se promueve al alias **`champion`** en el Model Registry de MLflow.
-5. **Prefect Artifact:** Genera un resumen visual en Markdown dentro del run de Prefect.
+1. **Carga y validación:** Lee la ruta configurada en `configs/config.yaml` a través de `scripts/load_data.py`. Resuelve la ruta contra la raíz del proyecto sin importar el directorio de trabajo.
+2. **Entrenamiento y seguimiento:** Entrena cada modelo candidato con cada grupo de features configurado (`len(candidatos) × len(features)` runs).
+3. **MLflow Tracking:** Cada ejecución registra un run en MLflow con tag `fase = entrenamiento`, parámetros, métricas (`auc`, `accuracy`, `precision`, `recall`, `f1`), tags `features` y `n_features`, y el artefacto del modelo.
+4. **Promoción a Champion:** El mejor candidato (mayor AUC) se evalúa contra `registro.umbral_auc` y contra el champion actual. Si lo supera, pasa a recibir el alias **`champion`** en el Model Registry de MLflow.
 
 ---
 
@@ -137,11 +152,10 @@ poetry run python infraestructure\flows\inferencia_flow.py
 ```
 
 **Qué realiza:**
-1. Carga el modelo desde MLflow utilizando el alias dinámico `models:/ecommerce-recommendation-modelo@champion`.
-2. Simula un lote diario de clientes desde el dataset.
-3. Genera probabilidades y clasificaciones.
-4. **Guarda el CSV** con la fecha del día en [`data/prediccion_YYYY-MM-DD.csv`](data/).
-5. Registra un run en MLflow con tag `fase = inferencia`, registrando métricas de lote y adjuntando el CSV como artefacto.
+1. **Carga dinámica:** Busca el modelo en MLflow mediante el alias `models:/ecommerce-recommendation-modelo@champion` (no depende de una versión fija).
+2. **Ingesta:** Extrae una muestra aleatoria de clientes del dataset para simular el lote diario.
+3. **Predicción y guardado:** Genera probabilidades y clasificaciones, guardando el archivo en [`data/prediccion_YYYY-MM-DD.csv`](data/).
+4. **Tracking en MLflow:** Registra el run con tag `fase = inferencia`, métricas de volumen (`filas_predichas`, `probabilidad_media`) y el CSV generado como artefacto.
 
 ---
 
