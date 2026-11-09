@@ -9,16 +9,16 @@ Este repositorio implementa el ciclo de vida completo de un proyecto MLOps para 
 
 ---
 
-## 📊 Dataset del Proyecto
+## Dataset del Proyecto
 
 - **Origen del dataset:** Descargado directamente de Kaggle:  
-  🔗 [Consumer Portrait E-Commerce Recommendation Dataset (Kaggle)](https://www.kaggle.com/datasets/colabsss/consumer-portrait-e-commerce-dataset)
+  [Consumer Portrait E-Commerce Recommendation Dataset (Kaggle)](https://www.kaggle.com/datasets/colabsss/consumer-portrait-e-commerce-dataset)
 - **Ubicación local en el repositorio:**  
-  📁 [`data/Consumer_Portrait_ECommerce_Recommendation_Dataset.csv`](data/Consumer_Portrait_ECommerce_Recommendation_Dataset.csv)
+  [`data/Consumer_Portrait_ECommerce_Recommendation_Dataset.csv`](data/Consumer_Portrait_ECommerce_Recommendation_Dataset.csv)
 - **Dimensión:** 15,000 filas y 40 columnas (comportamiento de navegación, demografía, compras y producto).
 - **Variable objetivo (`Recommendation_Label`):** Predicción de recomendación binarizada (`Recommended` = 1, `Neutral`/`Not Recommended`/`Low Priority` = 0).
 - **Destino de las predicciones generadas:**  
-  📁 Las predicciones por lotes generadas por la pipeline de inferencia diaria se guardan automáticamente en la carpeta [`data/`](data/) con el formato:
+  Las predicciones por lotes generadas por la pipeline de inferencia diaria se guardan automáticamente en la carpeta [`data/`](data/) con el formato:
   ```text
   data/prediccion_YYYY-MM-DD.csv
   ```
@@ -26,7 +26,16 @@ Este repositorio implementa el ciclo de vida completo de un proyecto MLOps para 
 
 ---
 
-## 📁 Estructura del Proyecto
+## Evidencias de Ejecución (Carpeta docs)
+
+En la carpeta [`docs/`](docs/) se encuentran los soportes y pantallazos de la ejecución completa de ambas actividades en formato PDF:
+
+- [`docs/Actividad 1_ Fundamentos, versionamiento y tracking.pdf`](docs/Actividad%201_%20Fundamentos,%20versionamiento%20y%20tracking.pdf): Evidencias de entorno Poetry, servicios Docker de MLflow y Prefect levantados, y validación del primer flow.
+- [`docs/Actividad 2_Pipeline y empaquetado.pdf`](docs/Actividad%202_Pipeline%20y%20empaquetado.pdf): Evidencias del pipeline de entrenamiento, registro de runs y métricas en MLflow, promoción a champion en Model Registry, pipeline de inferencia diaria, despliegues en Prefect y consumo de la API FastAPI.
+
+---
+
+## Estructura del Proyecto
 
 ```text
 PROJECT_MLOPS/
@@ -36,6 +45,9 @@ PROJECT_MLOPS/
 ├── data/
 │   ├── Consumer_Portrait_ECommerce_Recommendation_Dataset.csv   # Dataset real de Kaggle
 │   └── prediccion_*.csv                # Archivos generados por el pipeline de inferencia diaria
+├── docs/
+│   ├── Actividad 1_ Fundamentos, versionamiento y tracking.pdf  # Evidencias Actividad 1
+│   └── Actividad 2_Pipeline y empaquetado.pdf                   # Evidencias Actividad 2
 ├── domain/
 │   ├── __init__.py
 │   └── modelo.py                       # Lógica de negocio pura (features, pipeline scikit-learn, métricas)
@@ -62,7 +74,7 @@ PROJECT_MLOPS/
 
 ---
 
-## ⚙️ Requisitos y Entorno
+## Requisitos y Entorno
 
 - **Python:** 3.12 a 3.14
 - **Poetry:** 2.x
@@ -86,7 +98,7 @@ $env:PYTHONUTF8 = "1"
 
 ---
 
-## 🚀 Guía de Ejecución Paso a Paso
+## Guía de Ejecución Paso a Paso
 
 ### Paso 1: Levantar los Servicios (MLflow y Prefect)
 
@@ -160,7 +172,7 @@ poetry run uvicorn infraestructure.api.main:app --port 8000
 ```
 
 - **Documentación Swagger UI:** [http://localhost:8000/docs](http://localhost:8000/docs)
-- **Health Check & Versión Champion:** [http://localhost:8000/health](http://localhost:8000/health)
+- **Health Check y Versión Champion:** [http://localhost:8000/health](http://localhost:8000/health)
 - **Inspección de Modelos:** [http://localhost:8000/v1/models](http://localhost:8000/v1/models)
 
 #### Ejemplo de predicción (`POST /predict`):
@@ -221,7 +233,7 @@ Invoke-RestMethod -Uri "http://localhost:8000/predict" -Method Post -ContentType
 
 ---
 
-## 🔄 Criterio de Éxito de la Actividad
+## Criterio de Éxito de la Actividad
 
 1. Al ejecutar un reentrenamiento que supere las métricas del champion actual, MLflow traslada automáticamente el alias `champion` hacia la nueva versión.
 2. Al reiniciar la API (`uvicorn`), esta sirve inmediatamente la nueva versión del modelo sin modificar una sola línea de código en la API.
