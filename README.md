@@ -5,7 +5,7 @@ Este repositorio implementa el ciclo de vida completo de un proyecto MLOps para 
 2. **Registro de modelos y estrategia Champion**: el modelo solo se promociona a champion si supera el umbral de AUC y al champion vigente.
 3. **Pipeline de inferencia diaria** en Prefect que consume el modelo champion y persiste predicciones por lotes.
 4. **API REST de servicio con FastAPI** que expone el modelo champion para inferencia en tiempo real.
-5. **Configuración desacoplada en YAML** (`configs/config.yaml` y `configs/features.yaml`).
+5. **Configuración en YAML** (`configs/config.yaml`).
 
 ---
 
