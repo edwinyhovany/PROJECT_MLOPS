@@ -34,7 +34,7 @@ jobs:
           key: ${{ runner.os }}-py3.12-${{ hashFiles('poetry.lock') }}
 
       - name: Instalar dependencias
-        run: poetry install --no-interaction
+        run: poetry install --no-interaction --no-root
 
       - name: Ejecutar suite de pruebas unitarias
         run: poetry run pytest -v
