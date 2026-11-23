@@ -1,0 +1,501 @@
+Age,Login_Hour,Session_Duration_Min,Pages_Viewed,Search_Count,Wishlist_Count,Cart_Items,Purchase_Count,Purchase_Value,Discount_Percentage,Product_Price,Product_Rating,Product_Popularity,Review_Count,Click_Count,View_Time_Sec,Repeat_Product_View,Browsing_Frequency,Average_Order_Value,Purchase_Recency_Days,Interaction_Score,Customer_Loyalty_Score,Product_Relevance_Score,Gender,Region,Occupation,Income_Level,Membership_Level,Shopping_Device,Coupon_Used,Payment_Method,Delivery_Preference,Product_Category,Brand,Favorite_Category,Recommendation_Label
+29,20,38,18,54,4,0,8,4757.06,34.46,1131.8,2.8,94,462,70,105,2,60,2415.21,225,15.06,13.64,0.93,Male,South,Homemaker,Low,Gold,Mobile,Yes,Net Banking,Express,Jewelry,Brand_B,Automotive,0
+59,22,37,48,15,13,19,7,1658.32,56.6,1166.01,3.0,5,1700,42,802,17,57,2178.51,116,55.75,19.91,0.066,Female,East,Teacher,Lower-Middle,Gold,Desktop,No,UPI,Express,Health,Brand_C,Sports,0
+23,8,35,85,52,24,3,6,3499.51,24.25,2712.81,1.6,23,674,69,10,7,23,2735.79,239,68.05,63.25,0.921,Male,West,Self-Employed,Low,Gold,Mobile,No,Debit Card,Standard,Home Decor,Brand_G,Books,0
+40,1,83,22,44,0,0,4,3166.57,44.26,3978.97,1.9,19,2965,112,222,20,79,2575.14,154,36.04,20.11,0.795,Male,South,Business,High,Silver,Mobile,No,Cash on Delivery,Express,Beauty,Brand_J,Automotive,0
+21,14,104,84,37,26,11,10,1696.25,44.92,2570.53,3.9,17,472,5,367,13,3,2229.21,157,59.63,91.37,0.282,Male,Northeast,Freelancer,Middle,Basic,Mobile,No,Digital Wallet,Express,Fashion,Brand_G,Books,0
+32,0,73,13,17,21,9,9,614.99,20.47,1690.92,4.8,7,1863,40,399,7,37,3145.26,360,22.46,4.17,0.443,Male,East,Student,Upper-Middle,Basic,Mobile,No,Net Banking,Standard,Jewelry,Brand_C,Grocery,0
+66,3,173,78,37,9,9,6,2498.55,12.24,3055.76,3.4,88,3690,92,462,7,21,4781.28,323,94.55,53.93,0.6,Female,West,Self-Employed,Middle,Silver,Mobile,No,UPI,Standard,Jewelry,Brand_J,Electronics,1
+69,14,139,83,3,26,19,7,3810.19,42.24,1442.02,3.0,60,4388,138,757,6,31,4997.56,349,85.37,28.87,0.273,Male,Coastal,Engineer,Lower-Middle,Silver,Mobile,No,Digital Wallet,Standard,Sports,Brand_I,Grocery,0
+59,19,33,60,48,20,1,4,3642.43,48.76,4661.25,3.3,3,2222,141,864,17,85,411.13,184,11.03,88.96,0.07,Female,Northeast,Government,Lower-Middle,Silver,Mobile,No,UPI,Standard,Beauty,Brand_E,Fashion,0
+62,4,112,40,14,9,3,10,3050.12,12.79,4120.65,2.2,59,1497,77,230,12,91,4402.73,84,35.93,92.77,0.941,Female,North,Doctor,Middle,Silver,Mobile,No,Debit Card,Same Day,Grocery,Brand_G,Jewelry,0
+64,14,130,61,51,4,7,7,1278.65,10.06,754.35,2.8,70,3984,37,697,0,67,4408.2,22,73.18,25.35,0.549,Female,Northeast,Retired,Middle,Basic,Mobile,No,UPI,Standard,Grocery,Brand_A,Electronics,0
+23,22,114,87,47,7,12,2,2857.08,59.91,4466.26,4.1,29,4052,54,570,20,44,1677.06,188,16.19,97.81,0.313,Male,East,Homemaker,Low,Silver,Mobile,Yes,UPI,Standard,Health,Brand_J,Furniture,0
+59,15,108,68,59,14,1,2,2376.45,30.94,3212.73,2.2,12,888,42,221,2,28,151.8,94,42.57,37.56,0.572,Male,East,Homemaker,Lower-Middle,Silver,Mobile,No,Debit Card,Express,Toys,Brand_E,Sports,0
+62,10,164,99,4,24,12,0,4455.67,7.09,99.11,2.9,81,1284,144,619,11,89,730.58,356,59.68,95.1,0.009,Male,Metro,Retired,Lower-Middle,Basic,Tablet,No,Cash on Delivery,Same Day,Home Decor,Brand_D,Electronics,0
+33,10,164,15,39,12,13,9,795.33,37.64,2622.81,1.9,13,3752,117,808,3,80,599.73,140,74.44,92.91,0.446,Female,Coastal,Teacher,High,Basic,Mobile,No,Net Banking,Express,Furniture,Brand_F,Health,0
+57,16,35,33,24,5,1,2,1444.9,30.45,4188.65,4.4,13,2028,141,576,17,71,4709.55,122,7.2,5.35,0.359,Male,Central,Self-Employed,Middle,Basic,Mobile,Yes,UPI,Express,Health,Brand_D,Jewelry,0
+43,9,151,53,7,27,16,0,1321.38,44.34,1913.68,4.1,89,4524,74,714,10,24,3011.62,49,47.35,26.27,0.316,Female,Metro,Engineer,Middle,Basic,Desktop,No,Cash on Delivery,Standard,Furniture,Brand_C,Books,0
+40,17,141,55,4,19,16,7,3660.58,78.12,849.59,4.2,37,3913,24,755,14,8,4364.57,94,34.52,72.92,0.799,Male,Central,Doctor,Lower-Middle,Basic,Mobile,Yes,Digital Wallet,Express,Jewelry,Brand_B,Jewelry,0
+20,3,177,98,43,16,1,8,1983.78,39.7,3863.73,1.8,36,3412,116,696,0,96,4879.67,51,92.91,68.74,0.969,Female,Central,Teacher,Middle,Basic,Mobile,Yes,Cash on Delivery,Standard,Health,Brand_C,Beauty,1
+43,14,113,49,46,20,20,3,2715.32,51.71,3874.36,1.4,63,2509,150,63,5,26,3372.89,1,13.95,41.84,0.652,Male,Metro,Business,Upper-Middle,Basic,Desktop,No,Net Banking,Standard,Beauty,Brand_H,Health,0
+34,10,19,68,60,27,1,3,189.33,42.38,3860.37,1.2,93,3417,69,35,0,70,2571.06,161,66.55,64.01,0.912,Female,South,Retired,High,Basic,Mobile,No,Net Banking,Standard,Jewelry,Brand_E,Fashion,0
+50,8,120,13,15,3,10,1,485.52,49.77,870.71,3.2,13,1249,135,594,18,44,160.19,291,93.48,62.57,0.401,Female,Coastal,Self-Employed,Lower-Middle,Basic,Mobile,No,Cash on Delivery,Express,Health,Brand_A,Home Decor,0
+70,7,117,42,31,5,10,4,2818.5,74.0,3073.44,2.9,74,2084,6,96,0,71,2025.19,217,86.18,22.35,0.77,Female,Metro,Homemaker,Low,Gold,Tablet,No,Net Banking,Express,Health,Brand_C,Beauty,0
+65,0,115,29,2,2,6,2,1300.64,14.36,2719.75,2.7,37,3688,115,436,17,87,3127.96,4,4.2,45.9,0.781,Female,South,Business,Middle,Basic,Mobile,No,Debit Card,Standard,Automotive,Brand_J,Grocery,0
+40,0,73,100,41,23,9,4,3623.02,23.57,2189.16,2.3,74,965,119,154,15,95,1374.02,48,94.99,50.44,0.189,Male,Northeast,Freelancer,High,Silver,Mobile,No,UPI,Standard,Fashion,Brand_J,Electronics,0
+45,18,137,32,52,9,1,9,907.09,33.24,653.83,3.8,20,2882,112,637,20,86,4098.37,311,63.12,94.52,0.591,Male,South,Retired,Lower-Middle,Silver,Mobile,Yes,Cash on Delivery,Standard,Health,Brand_H,Home Decor,1
+68,10,11,68,28,1,3,6,1843.58,54.06,147.9,4.9,88,685,84,680,19,12,272.94,241,28.9,68.15,0.909,Female,West,Retired,Lower-Middle,Silver,Mobile,No,UPI,Same Day,Beauty,Brand_B,Jewelry,0
+49,9,27,90,26,8,14,0,2023.13,65.14,2973.53,2.1,56,4556,18,418,13,75,3028.72,60,33.34,69.24,0.236,Male,North,Doctor,Middle,Gold,Mobile,No,UPI,Standard,Books,Brand_E,Beauty,0
+45,0,25,46,29,0,7,9,1990.91,62.28,1071.44,1.6,25,1680,106,227,15,70,1659.63,154,74.39,93.89,0.692,Female,Coastal,Homemaker,Middle,Silver,Mobile,Yes,Cash on Delivery,Express,Electronics,Brand_H,Electronics,1
+21,19,39,33,48,6,17,1,4351.28,76.06,3632.65,4.7,99,2685,38,224,18,49,311.1,230,93.94,50.4,0.684,Female,Northeast,Freelancer,Lower-Middle,Platinum,Mobile,No,Debit Card,Same Day,Sports,Brand_G,Fashion,1
+35,15,28,12,6,28,11,10,4064.46,54.34,2887.65,3.5,50,2911,44,175,17,23,2672.22,60,61.06,95.55,0.934,Female,Northeast,Homemaker,Lower-Middle,Silver,Mobile,No,UPI,Standard,Grocery,Brand_E,Jewelry,1
+44,9,145,37,55,9,20,3,1318.36,21.11,2150.37,1.6,59,359,101,307,0,48,2859.88,143,88.7,4.18,0.204,Male,Coastal,Homemaker,Lower-Middle,Gold,Desktop,No,Credit Card,Standard,Furniture,Brand_E,Automotive,0
+29,19,22,58,37,26,10,0,503.47,37.14,4173.43,2.3,78,1993,15,76,17,4,4409.11,28,88.41,70.79,0.001,Male,Metro,Teacher,Middle,Gold,Mobile,Yes,Digital Wallet,Standard,Toys,Brand_J,Electronics,0
+24,2,142,80,10,15,10,3,2324.81,78.2,4285.9,4.1,47,4743,135,417,8,6,4649.94,250,69.89,68.59,0.92,Male,Central,Homemaker,Middle,Silver,Desktop,Yes,UPI,Same Day,Furniture,Brand_B,Home Decor,1
+53,19,170,29,28,15,14,5,4653.08,59.94,718.11,3.8,17,2290,122,555,5,96,930.47,199,81.35,5.17,0.279,Female,South,Homemaker,Upper-Middle,Silver,Mobile,No,Digital Wallet,Express,Jewelry,Brand_G,Electronics,0
+26,12,51,97,52,6,7,3,3465.97,18.0,2388.84,1.1,49,1527,61,384,10,37,858.72,266,20.12,15.38,0.017,Male,North,Teacher,Upper-Middle,Silver,Desktop,No,Net Banking,Same Day,Health,Brand_J,Toys,0
+65,6,55,85,40,18,17,10,198.54,34.22,557.48,4.5,51,2605,67,846,6,6,376.93,137,0.88,3.61,0.675,Female,West,Teacher,Middle,Basic,Mobile,No,Net Banking,Standard,Books,Brand_A,Sports,0
+55,19,175,51,44,16,0,10,3726.57,51.38,678.34,3.9,20,2063,140,45,11,39,4584.17,6,7.85,34.81,0.079,Male,North,Freelancer,Lower-Middle,Basic,Mobile,Yes,Cash on Delivery,Express,Home Decor,Brand_J,Grocery,0
+62,8,97,98,36,26,19,8,1838.71,7.61,2730.33,1.8,59,4653,148,360,15,11,2161.57,333,74.1,11.14,0.333,Male,Metro,Engineer,Lower-Middle,Silver,Desktop,Yes,Cash on Delivery,Standard,Jewelry,Brand_A,Books,0
+57,21,149,62,34,25,19,9,2599.91,10.76,3542.0,3.3,8,2699,15,600,17,5,677.34,349,65.71,90.82,0.995,Male,West,Teacher,Middle,Gold,Mobile,No,UPI,Standard,Sports,Brand_J,Automotive,1
+54,23,132,75,2,24,18,10,3106.62,68.2,3231.48,2.8,31,4718,96,398,16,53,3028.82,168,96.7,88.41,0.89,Male,Metro,Doctor,Middle,Gold,Desktop,No,Cash on Delivery,Express,Books,Brand_F,Beauty,0
+27,9,17,12,28,4,1,3,2160.44,64.63,494.21,2.9,77,4688,44,421,2,84,3539.45,281,22.55,39.44,0.556,Female,South,Teacher,Lower-Middle,Silver,Mobile,No,Digital Wallet,Express,Furniture,Brand_G,Beauty,0
+70,5,31,51,5,7,7,8,92.4,7.92,2006.26,3.3,78,2990,100,638,20,24,861.97,237,83.62,20.04,0.82,Male,Metro,Homemaker,Middle,Gold,Mobile,No,Digital Wallet,Standard,Home Decor,Brand_D,Electronics,0
+46,1,131,28,54,5,2,1,2710.04,66.08,2383.27,4.8,67,2063,18,36,3,77,725.8,253,5.14,93.74,0.935,Male,South,Business,Middle,Gold,Mobile,No,UPI,Standard,Health,Brand_I,Furniture,0
+21,5,173,25,27,3,2,9,1353.67,2.88,713.8,1.5,47,2033,60,666,20,49,1975.89,312,41.32,15.76,0.937,Female,Northeast,Freelancer,Low,Silver,Mobile,No,UPI,Express,Grocery,Brand_B,Books,0
+30,12,64,71,24,28,3,8,1406.78,35.93,4964.29,1.2,44,3103,57,739,3,89,2017.65,299,76.98,34.41,0.419,Female,Coastal,Retired,High,Basic,Mobile,Yes,Net Banking,Standard,Automotive,Brand_I,Automotive,0
+22,5,58,68,16,28,2,8,2789.78,62.4,278.47,5.0,54,3053,44,570,10,62,2780.51,202,38.72,0.81,0.093,Female,Central,Retired,Lower-Middle,Basic,Mobile,Yes,Digital Wallet,Standard,Furniture,Brand_I,Sports,0
+18,16,75,40,44,6,9,4,2760.39,48.35,4226.87,3.7,52,1546,88,199,0,39,1542.72,4,61.27,58.47,0.391,Male,Metro,Engineer,High,Basic,Mobile,No,Net Banking,Express,Health,Brand_I,Beauty,0
+33,11,42,23,46,28,8,2,3113.08,28.84,840.59,1.5,32,990,138,428,20,7,1923.16,176,28.82,62.72,0.869,Female,East,Student,Middle,Basic,Mobile,Yes,Debit Card,Same Day,Grocery,Brand_I,Electronics,0
+37,9,59,54,42,27,3,1,1064.75,20.53,1116.6,1.6,9,3978,3,683,3,95,2680.19,250,87.71,66.49,0.409,Male,Central,Student,Low,Silver,Desktop,Yes,Net Banking,Express,Jewelry,Brand_J,Health,0
+30,14,95,34,3,19,12,10,4427.56,7.78,3816.76,3.7,86,1355,140,411,8,50,4797.44,346,36.72,27.74,0.366,Female,Northeast,Business,Middle,Silver,Mobile,Yes,Cash on Delivery,Express,Electronics,Brand_C,Furniture,0
+25,7,154,97,56,9,20,10,129.53,36.73,1769.2,3.0,41,2861,103,131,14,27,4914.5,236,99.46,44.06,0.891,Female,Metro,Freelancer,Lower-Middle,Basic,Desktop,Yes,Debit Card,Express,Beauty,Brand_D,Health,1
+34,3,115,39,17,29,2,0,1157.04,57.2,4766.89,1.5,83,4429,82,206,20,11,640.76,210,27.76,8.05,0.358,Male,Coastal,Freelancer,Middle,Silver,Desktop,Yes,UPI,Express,Books,Brand_B,Toys,0
+21,19,161,20,19,11,14,6,3699.29,55.9,2616.49,1.0,59,2840,88,53,17,9,4512.8,65,6.32,25.2,0.48,Male,Coastal,Retired,High,Gold,Mobile,No,Digital Wallet,Same Day,Toys,Brand_E,Automotive,0
+58,7,23,76,41,1,13,4,1079.55,68.21,4612.61,1.0,44,4692,104,738,3,21,392.06,358,62.56,71.06,0.198,Female,North,Retired,Upper-Middle,Basic,Mobile,No,UPI,Standard,Toys,Brand_B,Beauty,0
+42,16,15,80,56,11,13,4,825.42,17.93,533.09,2.1,60,565,84,277,17,83,2068.0,149,30.82,99.46,0.412,Male,South,Government,High,Basic,Mobile,Yes,Net Banking,Standard,Health,Brand_F,Books,0
+29,15,55,60,11,2,17,7,1419.71,2.43,1138.75,1.6,44,4387,109,717,17,7,964.6,195,26.55,5.24,0.558,Male,Coastal,Freelancer,Middle,Platinum,Mobile,No,Debit Card,Standard,Fashion,Brand_E,Sports,0
+49,11,65,5,10,4,0,1,1219.7,71.49,4551.7,3.1,21,163,94,528,8,86,4223.65,19,54.83,73.03,0.233,Male,North,Engineer,Low,Silver,Mobile,No,Cash on Delivery,Standard,Automotive,Brand_H,Toys,0
+51,13,160,70,21,29,17,4,3980.15,49.66,2985.44,3.7,16,2475,122,441,15,82,1582.75,156,88.23,58.59,0.931,Male,Metro,Doctor,Low,Basic,Mobile,Yes,Debit Card,Express,Toys,Brand_A,Beauty,1
+67,21,121,90,46,3,14,4,2752.32,45.34,21.04,1.6,78,4265,46,140,4,52,3196.25,102,57.26,33.19,0.599,Female,Metro,Student,Lower-Middle,Gold,Mobile,No,Credit Card,Standard,Fashion,Brand_A,Grocery,0
+29,6,96,7,6,10,17,2,3017.22,51.1,3543.38,2.8,24,4587,136,257,12,18,3179.4,195,57.39,76.41,0.118,Female,South,Business,Low,Basic,Desktop,Yes,Net Banking,Standard,Books,Brand_D,Home Decor,0
+57,20,105,49,38,21,5,10,2111.9,60.02,3424.46,1.0,94,440,45,190,5,49,4857.52,24,45.4,70.76,0.623,Female,North,Business,Upper-Middle,Silver,Mobile,Yes,Digital Wallet,Express,Furniture,Brand_F,Furniture,0
+45,10,16,73,0,28,4,5,4520.85,11.17,3627.69,3.9,39,1308,47,798,16,25,2104.58,304,55.71,27.37,0.905,Female,North,Business,Lower-Middle,Gold,Mobile,No,Debit Card,Standard,Beauty,Brand_C,Automotive,0
+34,16,41,24,0,3,1,8,1441.49,79.36,4071.08,1.1,78,1723,85,142,15,52,1821.58,348,62.9,96.19,0.723,Female,East,Doctor,Low,Basic,Mobile,No,Digital Wallet,Express,Beauty,Brand_E,Health,0
+68,6,142,37,36,11,18,3,1412.59,33.45,249.06,4.8,61,4735,20,449,9,94,3832.59,283,62.05,6.34,0.904,Male,Central,Engineer,Upper-Middle,Gold,Tablet,No,UPI,Express,Home Decor,Brand_F,Sports,0
+36,7,21,9,9,29,0,9,1488.74,59.79,3581.1,3.5,64,2797,132,63,5,14,4969.48,25,32.75,97.51,0.051,Male,East,Self-Employed,Middle,Basic,Desktop,Yes,Credit Card,Standard,Jewelry,Brand_G,Fashion,0
+27,15,166,17,48,7,12,0,2961.47,8.64,4803.5,1.3,49,4124,93,335,4,77,890.87,19,29.47,90.35,0.392,Female,Central,Freelancer,Upper-Middle,Basic,Mobile,Yes,Net Banking,Express,Home Decor,Brand_C,Automotive,0
+37,16,55,61,30,0,5,10,4009.41,20.04,1940.17,1.1,42,3973,123,738,18,52,3337.75,341,43.05,15.34,0.544,Female,Northeast,Doctor,Upper-Middle,Platinum,Tablet,Yes,Cash on Delivery,Express,Beauty,Brand_H,Furniture,0
+61,15,108,64,24,13,0,9,2942.24,35.37,4430.01,2.6,96,2812,58,307,20,57,3727.7,314,16.83,20.0,0.196,Male,Metro,Homemaker,Low,Gold,Desktop,Yes,UPI,Standard,Home Decor,Brand_F,Automotive,0
+45,0,43,40,55,24,13,4,4797.61,12.31,578.19,4.9,18,766,105,211,0,78,4562.4,354,35.4,26.62,0.513,Female,West,Retired,Middle,Gold,Mobile,No,Credit Card,Standard,Jewelry,Brand_B,Jewelry,0
+56,13,129,37,17,10,8,8,3037.61,62.81,1844.21,2.5,96,2858,99,414,18,61,4462.64,340,1.58,87.87,0.739,Male,South,Engineer,Lower-Middle,Silver,Desktop,No,Credit Card,Standard,Home Decor,Brand_D,Jewelry,0
+24,17,144,32,1,11,8,10,4701.82,11.62,1913.38,4.4,91,2323,109,187,3,74,2198.05,45,35.68,63.5,0.091,Male,Coastal,Self-Employed,High,Gold,Mobile,Yes,Digital Wallet,Express,Books,Brand_B,Toys,0
+35,10,108,82,16,6,20,10,2456.39,39.66,4741.98,1.4,55,2828,142,558,8,83,4317.0,302,0.9,2.41,0.315,Male,Northeast,Retired,Low,Basic,Mobile,No,Debit Card,Standard,Health,Brand_E,Automotive,0
+19,17,133,66,0,20,15,5,3844.18,36.92,40.67,2.8,17,4674,45,742,17,94,182.39,259,65.0,75.56,0.683,Female,North,Homemaker,Middle,Basic,Desktop,No,UPI,Express,Home Decor,Brand_A,Books,0
+42,20,60,25,18,10,20,7,4856.91,57.45,2195.66,2.9,65,3396,7,821,0,77,4340.27,361,99.31,5.24,0.2,Female,Metro,Retired,Upper-Middle,Gold,Mobile,Yes,Cash on Delivery,Same Day,Home Decor,Brand_H,Jewelry,0
+55,22,64,82,16,28,17,10,2150.97,6.92,1605.9,1.6,35,122,143,394,12,24,3101.49,171,84.84,71.3,0.59,Male,Coastal,Teacher,High,Basic,Desktop,No,Digital Wallet,Standard,Books,Brand_F,Toys,0
+20,14,119,83,35,25,14,10,1051.37,10.93,2938.3,3.1,24,2072,32,748,14,58,532.17,202,2.91,82.22,0.121,Female,East,Student,Middle,Silver,Mobile,No,UPI,Same Day,Toys,Brand_A,Toys,0
+55,4,13,44,31,2,7,8,4126.02,23.91,1706.76,3.2,98,66,65,680,13,60,3120.84,138,89.87,29.22,0.536,Female,Metro,Teacher,Middle,Basic,Mobile,No,UPI,Same Day,Fashion,Brand_C,Beauty,0
+46,14,147,8,44,28,5,7,728.78,66.31,4527.35,4.3,20,3678,33,79,5,39,3891.26,344,49.22,20.46,0.55,Male,South,Engineer,Lower-Middle,Platinum,Desktop,Yes,Digital Wallet,Standard,Home Decor,Brand_E,Fashion,0
+36,3,49,91,3,27,7,8,2797.16,38.14,1229.52,4.5,51,2609,95,364,4,3,2819.44,85,47.93,70.42,0.08,Female,East,Student,Low,Basic,Desktop,No,Digital Wallet,Express,Electronics,Brand_E,Automotive,0
+46,1,60,62,52,16,9,9,4707.79,61.07,423.03,3.7,16,1108,82,840,8,2,2440.29,228,19.32,13.69,0.179,Male,Central,Student,Middle,Basic,Desktop,Yes,Debit Card,Same Day,Furniture,Brand_J,Furniture,0
+22,3,36,8,25,1,18,4,77.72,75.65,159.74,5.0,19,3318,138,442,14,33,4879.74,17,82.38,63.82,0.874,Male,Northeast,Government,Upper-Middle,Gold,Mobile,No,Cash on Delivery,Standard,Fashion,Brand_G,Jewelry,1
+45,20,119,72,26,26,20,10,3654.39,22.03,1737.73,4.6,24,4261,139,155,9,33,1236.8,86,14.06,70.49,0.322,Female,East,Doctor,Low,Basic,Mobile,No,Debit Card,Express,Toys,Brand_A,Health,0
+31,22,146,41,36,11,14,0,4948.26,41.93,2808.16,2.5,59,2104,114,115,7,43,4115.79,28,84.69,73.76,0.98,Female,West,Government,Lower-Middle,Silver,Mobile,No,Debit Card,Standard,Jewelry,Brand_H,Automotive,1
+36,5,135,38,59,12,15,2,2975.15,22.49,2889.22,2.4,38,3825,122,411,20,1,3296.27,257,33.45,5.01,0.871,Male,Coastal,Business,Upper-Middle,Gold,Mobile,No,Credit Card,Express,Books,Brand_I,Grocery,0
+63,19,135,19,0,30,3,9,4881.98,77.7,4425.46,3.4,12,1637,25,420,13,78,1069.59,146,64.84,59.07,0.716,Male,Coastal,Freelancer,Middle,Gold,Mobile,Yes,Net Banking,Express,Books,Brand_I,Health,0
+49,21,39,76,2,26,14,0,1305.32,79.76,4452.23,4.2,68,3043,145,467,1,41,3449.99,130,28.98,69.58,0.196,Male,North,Government,Upper-Middle,Silver,Mobile,No,Net Banking,Express,Jewelry,Brand_D,Health,0
+65,12,140,74,15,28,6,9,893.44,75.25,375.74,2.7,40,160,65,534,8,11,3661.99,97,46.92,99.23,0.859,Female,Central,Self-Employed,Low,Basic,Mobile,No,Digital Wallet,Standard,Toys,Brand_B,Sports,1
+29,19,174,23,5,27,19,5,2661.38,24.41,4932.66,4.6,10,3609,118,379,5,33,3707.96,162,91.4,19.88,0.295,Male,East,Government,Middle,Basic,Mobile,Yes,Net Banking,Express,Books,Brand_D,Furniture,0
+61,5,174,4,51,20,17,0,2317.66,41.94,2916.53,4.6,98,4769,149,783,14,76,3755.29,185,33.64,48.86,0.262,Male,South,Freelancer,Middle,Silver,Mobile,Yes,Digital Wallet,Express,Automotive,Brand_E,Automotive,0
+20,14,19,60,19,4,5,3,2256.39,54.59,3725.96,4.5,86,1851,89,28,4,51,3028.33,179,29.25,12.62,0.674,Male,South,Teacher,Middle,Basic,Mobile,Yes,Credit Card,Express,Sports,Brand_D,Home Decor,0
+32,3,171,3,7,15,17,1,1242.37,7.7,2786.3,4.7,94,1935,49,5,20,92,4057.25,89,68.57,26.59,0.945,Female,Northeast,Freelancer,Middle,Basic,Mobile,Yes,Debit Card,Same Day,Fashion,Brand_D,Health,0
+36,0,79,99,17,8,16,0,211.26,16.77,2724.53,3.6,8,645,102,342,13,58,3452.76,144,66.94,56.4,0.49,Female,South,Freelancer,Low,Platinum,Mobile,Yes,Credit Card,Same Day,Fashion,Brand_G,Home Decor,0
+28,6,3,47,37,15,1,9,1886.74,26.9,4925.81,2.8,32,4352,14,58,11,30,2685.79,227,12.96,70.04,0.775,Female,West,Homemaker,Low,Gold,Mobile,Yes,Debit Card,Standard,Sports,Brand_A,Toys,0
+20,15,114,35,51,25,11,7,1653.93,58.96,4892.75,1.7,90,4042,101,846,5,32,3827.88,323,88.72,65.76,0.848,Female,West,Homemaker,Upper-Middle,Basic,Mobile,Yes,Debit Card,Standard,Electronics,Brand_D,Furniture,1
+29,10,6,18,8,5,18,1,2345.15,75.52,2547.35,3.6,60,4046,3,597,5,82,3183.41,279,45.32,40.25,0.833,Male,East,Student,Low,Silver,Mobile,Yes,Net Banking,Standard,Health,Brand_I,Jewelry,0
+38,0,89,61,56,2,5,9,2112.74,7.8,3178.63,2.3,86,4893,63,495,6,81,3884.32,77,89.56,31.46,0.812,Male,North,Self-Employed,Lower-Middle,Basic,Mobile,No,Credit Card,Standard,Health,Brand_F,Jewelry,0
+69,14,44,100,28,4,9,6,686.58,51.22,4727.69,1.1,94,2919,63,720,17,78,3141.38,184,58.71,30.41,0.063,Female,Northeast,Self-Employed,Low,Gold,Desktop,Yes,Debit Card,Express,Home Decor,Brand_I,Toys,0
+20,5,122,72,1,24,13,6,3544.82,52.43,874.63,4.2,68,3223,61,377,15,12,2843.62,350,68.14,11.15,0.668,Female,West,Self-Employed,Low,Silver,Mobile,No,Credit Card,Standard,Sports,Brand_D,Health,0
+66,20,43,69,39,11,16,7,2927.15,58.15,4283.92,4.8,16,1821,64,372,11,86,3275.36,244,36.29,73.01,0.24,Male,North,Engineer,Upper-Middle,Basic,Mobile,No,Net Banking,Express,Beauty,Brand_G,Sports,0
+70,14,149,22,9,10,6,4,633.71,9.49,598.9,4.1,29,2485,74,556,6,18,3224.4,216,76.16,32.65,0.532,Male,South,Student,Middle,Gold,Desktop,Yes,Digital Wallet,Standard,Beauty,Brand_H,Fashion,0
+30,12,141,4,25,3,0,2,2449.89,40.11,1953.22,3.7,91,4561,41,876,8,43,3028.92,277,52.81,74.82,0.483,Female,Metro,Self-Employed,Middle,Basic,Mobile,Yes,Net Banking,Standard,Fashion,Brand_B,Health,0
+22,8,155,39,32,3,14,4,3527.83,10.15,431.97,1.9,73,2947,81,22,15,58,1127.54,242,14.99,20.14,0.512,Female,Coastal,Self-Employed,Low,Platinum,Mobile,Yes,Digital Wallet,Standard,Toys,Brand_F,Sports,0
+21,4,92,30,13,6,19,6,3115.49,23.31,3801.84,2.0,41,3476,33,820,2,5,1076.01,308,76.94,6.01,0.037,Male,Northeast,Student,Middle,Basic,Desktop,No,Credit Card,Express,Fashion,Brand_A,Home Decor,0
+35,21,75,3,43,4,14,5,2919.44,1.76,2754.26,1.8,27,2672,9,263,12,25,1529.73,50,62.82,90.25,0.09,Female,Coastal,Student,Middle,Basic,Mobile,Yes,Digital Wallet,Standard,Electronics,Brand_E,Home Decor,0
+54,15,20,78,39,16,20,7,2674.46,77.21,4816.52,2.5,51,3026,16,384,16,24,3127.75,22,88.9,60.73,0.212,Female,Metro,Self-Employed,High,Basic,Tablet,Yes,Credit Card,Express,Furniture,Brand_G,Automotive,0
+56,12,119,39,26,25,18,1,1446.44,0.75,780.14,4.5,69,24,124,720,7,14,1462.56,79,44.46,55.55,0.891,Female,Coastal,Retired,Middle,Basic,Mobile,Yes,Cash on Delivery,Standard,Automotive,Brand_J,Books,0
+70,20,166,13,18,17,0,0,1874.27,18.36,2693.23,1.7,6,1252,0,699,9,10,891.23,99,18.78,87.14,0.666,Male,West,Doctor,Middle,Basic,Mobile,No,UPI,Same Day,Automotive,Brand_B,Grocery,0
+55,2,20,77,8,26,3,7,3923.75,21.59,1169.27,1.7,75,1961,48,170,6,27,131.42,178,97.12,93.91,0.838,Male,Northeast,Business,Middle,Gold,Mobile,Yes,Digital Wallet,Standard,Home Decor,Brand_E,Fashion,1
+39,10,102,55,55,6,14,8,3406.42,1.13,3854.07,4.9,80,173,73,703,8,64,1836.11,114,48.76,61.83,0.27,Female,East,Self-Employed,Lower-Middle,Silver,Mobile,Yes,Cash on Delivery,Express,Beauty,Brand_G,Automotive,0
+28,18,76,81,15,27,9,9,4850.51,29.62,3057.45,4.3,85,3797,120,156,0,54,2114.57,348,53.17,77.02,0.16,Female,South,Freelancer,Upper-Middle,Basic,Mobile,Yes,Digital Wallet,Express,Toys,Brand_H,Automotive,0
+54,17,69,96,16,30,3,1,778.11,67.99,4189.21,3.1,18,1577,119,171,20,11,4027.71,241,37.38,49.58,0.938,Male,West,Freelancer,Middle,Platinum,Mobile,No,Net Banking,Standard,Beauty,Brand_G,Automotive,0
+61,23,5,54,32,23,14,3,763.58,31.11,4779.64,1.6,8,4400,29,539,13,73,1157.78,45,33.89,76.98,0.977,Female,Northeast,Freelancer,Middle,Silver,Tablet,Yes,UPI,Express,Home Decor,Brand_D,Electronics,0
+31,9,165,1,11,18,15,6,3582.72,3.03,3640.38,1.0,22,2010,132,803,1,19,3776.63,66,43.5,38.32,0.955,Female,Central,Self-Employed,Upper-Middle,Platinum,Desktop,Yes,Debit Card,Express,Health,Brand_G,Fashion,0
+63,2,165,33,48,4,16,5,4779.67,16.6,4603.53,4.4,34,958,97,732,10,23,668.78,21,48.24,84.93,0.792,Male,Coastal,Student,Lower-Middle,Gold,Mobile,Yes,Credit Card,Standard,Grocery,Brand_J,Toys,1
+69,22,44,78,18,7,8,8,2432.35,70.15,1069.25,4.1,54,342,40,37,1,25,3546.79,66,73.72,27.23,0.607,Male,Metro,Self-Employed,Lower-Middle,Basic,Mobile,Yes,Credit Card,Express,Jewelry,Brand_F,Furniture,0
+68,4,142,100,46,11,16,10,4621.04,32.72,4919.94,4.0,55,887,42,588,12,26,2609.9,12,50.37,3.77,0.044,Female,Coastal,Doctor,High,Silver,Mobile,Yes,UPI,Standard,Health,Brand_I,Beauty,0
+47,14,61,59,20,30,11,0,2629.46,73.37,4761.85,3.1,25,3670,140,616,7,100,4331.8,150,89.19,54.87,0.157,Female,West,Homemaker,Upper-Middle,Silver,Desktop,No,Net Banking,Same Day,Sports,Brand_J,Fashion,0
+56,0,119,19,38,17,15,3,1558.77,51.58,980.41,2.3,24,1138,54,322,0,77,690.67,239,35.73,4.03,0.148,Male,East,Homemaker,Upper-Middle,Basic,Desktop,Yes,Debit Card,Standard,Health,Brand_H,Toys,0
+39,10,52,92,10,4,17,6,1491.35,25.32,2834.17,1.3,81,1444,59,721,13,17,3139.42,85,34.71,95.36,0.586,Female,Coastal,Retired,Lower-Middle,Basic,Mobile,Yes,Debit Card,Express,Health,Brand_G,Furniture,0
+44,6,75,68,24,4,12,1,1069.28,8.2,4132.29,2.0,81,4582,105,876,12,86,1635.19,12,1.63,72.9,0.498,Male,West,Retired,Middle,Basic,Mobile,Yes,Net Banking,Standard,Home Decor,Brand_G,Furniture,0
+66,2,20,53,30,8,13,1,74.28,15.87,3833.05,3.0,27,1166,46,745,17,60,3513.05,141,19.17,52.92,0.745,Female,West,Business,Middle,Basic,Mobile,Yes,Credit Card,Standard,Furniture,Brand_G,Automotive,0
+24,12,122,42,10,13,3,1,2714.6,38.61,3327.67,1.9,83,4679,77,233,11,9,1271.97,279,53.11,3.29,0.776,Male,North,Engineer,Lower-Middle,Basic,Mobile,No,UPI,Express,Automotive,Brand_B,Jewelry,0
+37,4,47,83,5,18,19,8,3231.99,58.7,3729.96,2.6,38,4747,130,490,15,19,235.2,198,49.34,54.3,0.242,Female,West,Student,Middle,Basic,Mobile,No,Credit Card,Standard,Grocery,Brand_J,Fashion,0
+30,4,160,18,58,16,20,2,927.73,11.29,1856.87,1.2,21,3833,128,755,17,72,3510.04,326,10.17,75.95,0.351,Male,West,Self-Employed,Upper-Middle,Silver,Mobile,Yes,Digital Wallet,Standard,Fashion,Brand_C,Grocery,0
+64,4,107,54,28,7,20,4,2762.05,12.95,2876.5,4.3,75,1630,102,458,18,89,3305.74,114,24.34,48.3,0.195,Female,North,Engineer,Upper-Middle,Basic,Mobile,Yes,Debit Card,Express,Jewelry,Brand_B,Toys,0
+40,20,151,96,20,20,0,8,4163.67,31.64,3334.67,3.3,75,1262,85,580,16,60,4709.86,273,9.42,4.2,0.186,Female,West,Freelancer,High,Silver,Mobile,No,UPI,Express,Books,Brand_E,Fashion,0
+30,19,158,5,18,5,7,8,800.78,65.75,1094.88,2.0,90,4510,136,366,10,64,339.98,163,12.9,26.05,0.34,Male,South,Doctor,Upper-Middle,Basic,Mobile,Yes,Digital Wallet,Express,Fashion,Brand_A,Toys,0
+53,12,124,10,32,23,14,4,2906.84,62.87,1718.79,1.2,4,2366,33,810,3,69,2744.78,95,33.34,90.41,0.039,Female,West,Teacher,Low,Basic,Mobile,Yes,Net Banking,Standard,Toys,Brand_H,Toys,0
+18,0,106,29,42,8,13,4,3021.03,54.75,947.19,2.5,53,2752,136,82,16,3,4537.73,175,31.03,89.57,0.293,Male,Northeast,Teacher,Upper-Middle,Silver,Mobile,No,Digital Wallet,Standard,Furniture,Brand_A,Health,0
+57,7,78,75,0,8,18,0,1940.2,27.73,3805.96,2.0,10,1500,135,231,0,40,4455.05,40,76.26,4.69,0.104,Female,Northeast,Government,Upper-Middle,Basic,Tablet,Yes,Net Banking,Express,Books,Brand_I,Jewelry,0
+18,13,7,76,43,2,18,10,3087.8,64.64,3005.02,2.3,78,1302,34,836,1,49,1670.09,126,54.26,43.71,0.063,Female,South,Doctor,Upper-Middle,Silver,Mobile,Yes,Digital Wallet,Standard,Health,Brand_G,Health,0
+44,17,116,12,48,23,9,6,1892.33,46.37,2933.38,1.9,75,32,88,29,2,100,4729.1,63,74.7,56.63,0.613,Female,Coastal,Business,Middle,Gold,Mobile,No,Digital Wallet,Standard,Grocery,Brand_I,Books,0
+53,19,109,39,20,5,10,7,4761.75,44.61,3408.23,4.1,48,1345,9,528,2,71,1668.56,142,3.49,44.23,0.485,Male,South,Engineer,Middle,Basic,Mobile,Yes,UPI,Same Day,Electronics,Brand_G,Sports,0
+44,2,43,70,3,11,6,8,4809.31,0.07,4317.69,4.5,24,3892,86,151,5,3,4771.21,37,74.01,16.06,0.86,Female,Coastal,Engineer,Middle,Silver,Mobile,No,Cash on Delivery,Standard,Fashion,Brand_C,Furniture,0
+49,17,141,3,26,29,10,6,1521.71,65.86,2201.98,2.7,43,37,48,863,1,40,472.06,198,23.16,51.31,0.319,Female,North,Teacher,Middle,Gold,Mobile,Yes,Credit Card,Standard,Books,Brand_C,Health,0
+51,7,167,6,2,10,15,1,3751.77,69.27,4340.15,1.1,14,4696,92,524,0,98,3366.54,306,46.71,56.29,0.851,Female,Northeast,Doctor,Low,Basic,Mobile,No,Net Banking,Same Day,Grocery,Brand_F,Books,0
+45,14,37,11,54,9,15,5,597.02,33.48,4803.69,4.9,84,1939,136,344,16,28,3035.66,225,58.47,52.41,0.328,Female,Central,Government,Low,Basic,Desktop,Yes,Cash on Delivery,Same Day,Beauty,Brand_E,Home Decor,0
+51,11,12,23,51,23,6,10,3513.42,71.06,1906.45,1.8,56,3145,74,515,13,60,1598.71,153,90.49,31.01,0.011,Female,North,Student,Low,Basic,Mobile,No,Debit Card,Express,Health,Brand_A,Books,0
+67,19,135,33,4,14,0,4,4489.51,40.97,1811.32,3.0,58,1777,65,232,9,29,2403.99,105,59.88,93.74,0.733,Male,Northeast,Self-Employed,Low,Basic,Mobile,Yes,UPI,Express,Grocery,Brand_I,Automotive,1
+70,11,19,21,43,14,5,1,4579.44,20.53,591.24,3.3,24,3372,51,629,12,85,2166.14,80,1.2,86.74,0.59,Female,Coastal,Engineer,High,Silver,Mobile,No,Net Banking,Express,Electronics,Brand_H,Sports,0
+52,16,18,21,57,23,13,4,993.84,24.52,933.39,2.0,49,4101,12,296,19,16,3961.64,254,86.59,93.23,0.173,Female,Metro,Teacher,Upper-Middle,Gold,Mobile,Yes,Credit Card,Same Day,Automotive,Brand_E,Toys,0
+22,11,35,13,29,9,6,0,3653.35,21.92,1389.11,3.5,89,3477,111,85,17,83,1811.38,323,17.84,17.31,0.719,Male,South,Retired,Upper-Middle,Basic,Mobile,No,Digital Wallet,Express,Grocery,Brand_G,Sports,0
+38,23,147,1,29,25,13,6,4480.71,66.66,1884.95,1.2,1,477,39,291,1,16,2050.11,92,31.2,66.81,0.447,Female,East,Self-Employed,Low,Platinum,Mobile,No,Digital Wallet,Standard,Health,Brand_A,Automotive,0
+55,1,99,30,31,10,13,7,1025.88,27.51,4399.93,2.0,84,3484,114,88,20,77,866.51,135,56.09,31.57,0.132,Male,North,Freelancer,Middle,Platinum,Desktop,No,Cash on Delivery,Express,Health,Brand_C,Electronics,0
+24,11,169,92,21,7,2,9,1481.08,32.52,4888.5,2.4,73,1754,107,698,5,83,1662.19,41,20.72,3.91,0.431,Female,East,Student,Lower-Middle,Basic,Desktop,No,Cash on Delivery,Express,Books,Brand_F,Grocery,0
+63,16,163,31,48,13,2,7,3546.72,16.56,4406.76,4.6,16,2685,135,471,7,79,3065.39,305,88.57,58.58,0.779,Male,Central,Engineer,Lower-Middle,Silver,Mobile,Yes,Credit Card,Standard,Fashion,Brand_D,Books,1
+22,18,177,75,0,3,13,5,2642.63,65.08,2308.41,3.2,38,3551,91,530,10,64,994.18,309,35.74,60.93,0.026,Female,Central,Doctor,High,Basic,Desktop,Yes,Cash on Delivery,Express,Furniture,Brand_C,Automotive,0
+27,15,19,56,17,8,13,1,39.41,61.33,1856.12,4.5,14,2865,132,257,12,7,914.11,328,13.98,4.02,0.06,Male,Coastal,Freelancer,Upper-Middle,Silver,Desktop,No,UPI,Standard,Health,Brand_B,Home Decor,0
+32,13,104,55,54,22,4,3,3784.13,66.9,4183.63,3.4,76,2453,45,112,16,67,2824.43,153,52.69,21.54,0.702,Female,Northeast,Teacher,Upper-Middle,Silver,Desktop,No,UPI,Express,Health,Brand_F,Jewelry,0
+20,1,46,55,16,24,7,1,2588.1,16.02,2315.49,1.5,69,409,96,109,18,42,3909.93,230,3.29,58.36,0.786,Female,East,Retired,Upper-Middle,Silver,Desktop,Yes,Cash on Delivery,Standard,Books,Brand_G,Automotive,0
+26,23,126,60,27,14,12,8,4076.9,54.97,1242.16,2.7,51,4896,32,683,9,71,3273.53,286,62.55,50.05,0.945,Male,South,Engineer,Upper-Middle,Basic,Mobile,No,Net Banking,Standard,Grocery,Brand_F,Fashion,0
+52,7,70,87,8,19,14,4,1650.59,64.44,1126.6,3.7,86,1651,40,218,7,45,1728.76,99,11.32,25.71,0.165,Female,East,Student,Upper-Middle,Silver,Mobile,Yes,UPI,Express,Beauty,Brand_C,Grocery,0
+23,21,77,17,47,6,17,4,2033.89,27.16,4549.29,3.2,36,1394,136,734,14,34,1614.8,77,24.0,51.49,0.69,Female,Metro,Freelancer,Upper-Middle,Basic,Mobile,Yes,Debit Card,Express,Electronics,Brand_I,Grocery,0
+43,18,28,65,1,18,0,3,3290.88,68.51,3941.33,2.6,16,3715,35,875,11,20,2982.28,14,24.19,1.27,0.087,Male,Northeast,Freelancer,Middle,Gold,Mobile,Yes,Cash on Delivery,Standard,Sports,Brand_C,Furniture,0
+63,22,67,37,42,25,14,5,1958.69,64.61,1656.21,2.0,99,4590,37,417,16,92,3356.11,96,45.29,65.54,0.751,Female,North,Government,Low,Silver,Mobile,No,Cash on Delivery,Express,Home Decor,Brand_D,Beauty,0
+23,8,99,25,54,2,11,4,953.87,55.73,1183.59,3.7,81,65,26,424,2,82,3324.06,51,4.74,89.72,0.393,Female,East,Teacher,Low,Silver,Mobile,No,Credit Card,Express,Jewelry,Brand_E,Health,0
+43,3,57,56,45,4,18,1,4268.71,24.47,2082.87,1.4,37,3245,30,311,12,96,3774.77,231,63.09,68.68,0.122,Male,West,Homemaker,Lower-Middle,Silver,Mobile,No,UPI,Express,Beauty,Brand_A,Home Decor,0
+56,7,45,31,48,29,0,0,329.94,12.33,44.8,3.3,55,3092,144,409,5,67,3281.54,73,19.39,75.64,0.895,Female,Metro,Retired,Low,Gold,Mobile,Yes,UPI,Standard,Automotive,Brand_A,Home Decor,0
+29,4,59,87,41,23,7,9,3701.65,69.62,4473.19,4.6,9,1840,71,112,9,82,3642.72,16,95.38,25.33,0.555,Male,East,Teacher,Upper-Middle,Platinum,Desktop,No,Net Banking,Express,Health,Brand_D,Beauty,0
+33,6,74,89,14,3,2,8,2506.63,22.6,4261.81,3.0,99,883,51,878,1,7,1037.66,330,60.44,78.22,0.84,Male,West,Student,Upper-Middle,Gold,Mobile,No,Cash on Delivery,Express,Furniture,Brand_G,Toys,1
+26,1,5,42,46,28,18,1,2867.82,48.34,4076.91,1.6,22,3998,87,245,17,55,4167.17,296,57.16,8.29,0.754,Male,Northeast,Retired,Middle,Gold,Desktop,No,Net Banking,Standard,Health,Brand_G,Automotive,0
+29,15,58,43,24,1,0,7,3397.34,37.29,3696.8,4.3,57,4845,22,57,11,41,2270.17,40,85.92,96.18,0.843,Male,South,Self-Employed,Lower-Middle,Basic,Tablet,No,Debit Card,Express,Grocery,Brand_J,Grocery,0
+33,11,163,8,12,5,8,9,4195.83,3.31,332.61,2.2,95,898,118,155,20,87,4177.72,150,77.39,55.44,0.354,Female,South,Freelancer,Middle,Gold,Mobile,No,Cash on Delivery,Standard,Jewelry,Brand_D,Jewelry,0
+34,13,130,50,24,22,16,7,897.56,76.23,3048.68,2.4,39,275,147,640,6,30,3794.95,30,74.2,24.03,0.641,Male,East,Teacher,Middle,Gold,Mobile,No,Net Banking,Standard,Jewelry,Brand_G,Furniture,0
+35,9,66,64,29,0,6,2,4977.67,11.7,1932.44,4.7,80,1597,121,758,15,38,3597.17,334,49.55,90.89,0.364,Female,West,Government,Lower-Middle,Silver,Desktop,No,Cash on Delivery,Standard,Fashion,Brand_J,Health,0
+32,4,100,39,8,7,9,7,2395.64,56.01,825.81,2.6,52,4393,1,162,16,82,2079.57,345,64.97,16.01,0.93,Female,Coastal,Student,Upper-Middle,Silver,Mobile,No,Debit Card,Standard,Grocery,Brand_I,Toys,0
+44,13,177,10,39,19,12,5,4009.1,57.67,3336.19,1.1,85,2232,76,279,10,80,1493.92,250,15.31,67.2,0.699,Male,West,Retired,Middle,Gold,Tablet,No,Debit Card,Express,Home Decor,Brand_J,Toys,0
+47,10,89,21,10,30,17,10,180.39,39.73,1331.8,2.7,1,4879,75,393,5,77,4407.16,55,34.89,3.0,0.526,Female,North,Teacher,Middle,Basic,Mobile,No,Cash on Delivery,Express,Jewelry,Brand_E,Health,0
+49,4,69,73,5,12,8,8,841.71,2.79,3253.35,4.0,55,2399,83,439,0,31,1844.44,299,39.27,17.66,0.732,Male,Coastal,Student,Lower-Middle,Basic,Mobile,No,Digital Wallet,Express,Toys,Brand_B,Jewelry,0
+40,8,144,30,25,22,13,3,514.7,71.12,2677.87,1.1,1,4061,101,643,8,2,4687.15,165,70.49,46.11,0.012,Male,Metro,Business,Middle,Gold,Mobile,Yes,Cash on Delivery,Express,Books,Brand_G,Automotive,0
+40,17,93,43,23,28,11,8,206.06,54.32,2695.42,5.0,81,2457,52,233,1,29,1065.08,245,48.43,89.63,0.668,Female,Central,Self-Employed,Lower-Middle,Basic,Mobile,Yes,Debit Card,Standard,Home Decor,Brand_J,Beauty,1
+68,17,155,36,24,21,4,8,2502.21,34.87,3062.76,3.9,59,4258,123,744,3,21,4851.92,195,2.19,99.13,0.596,Female,Central,Business,High,Basic,Desktop,Yes,Cash on Delivery,Standard,Fashion,Brand_I,Jewelry,0
+68,3,72,49,9,27,2,2,2257.32,39.77,813.52,4.7,52,2022,37,190,18,45,3076.74,287,96.33,9.33,0.76,Male,North,Self-Employed,Middle,Platinum,Mobile,No,Digital Wallet,Standard,Toys,Brand_G,Electronics,0
+53,5,143,23,27,7,5,5,2874.07,23.02,4356.6,3.0,95,570,53,285,16,21,2559.13,134,0.05,72.92,0.043,Female,Coastal,Freelancer,Middle,Gold,Desktop,No,Debit Card,Same Day,Furniture,Brand_I,Health,0
+54,18,145,50,48,0,2,3,2730.05,61.16,3487.77,4.6,97,4273,28,629,1,12,1688.78,230,7.26,18.92,0.733,Male,Metro,Self-Employed,Low,Basic,Tablet,No,Debit Card,Express,Beauty,Brand_B,Grocery,0
+61,0,139,28,60,28,8,7,930.41,41.29,4792.85,4.3,54,1302,85,311,16,83,798.99,12,87.34,29.85,0.41,Female,Metro,Engineer,High,Basic,Tablet,No,Debit Card,Same Day,Automotive,Brand_J,Toys,0
+18,17,71,27,51,16,2,10,3644.03,43.16,1572.46,2.3,91,1811,113,554,9,44,1706.39,265,40.82,94.86,0.221,Male,Central,Teacher,Low,Basic,Desktop,No,Credit Card,Standard,Sports,Brand_G,Home Decor,0
+42,19,96,92,38,7,8,7,4587.09,31.6,3385.95,2.7,16,1901,128,272,10,65,3912.67,358,23.57,44.23,0.64,Female,Coastal,Business,Middle,Basic,Desktop,Yes,Digital Wallet,Same Day,Health,Brand_F,Toys,0
+65,19,28,27,40,10,0,1,2447.49,52.83,608.0,4.5,92,908,103,414,12,37,433.47,259,37.23,97.1,0.347,Male,East,Self-Employed,High,Silver,Mobile,Yes,Digital Wallet,Express,Furniture,Brand_F,Sports,0
+34,5,5,63,35,15,12,8,3560.99,56.05,2718.99,4.8,39,4281,102,821,19,55,2580.63,354,89.0,79.45,0.15,Male,Central,Government,High,Basic,Mobile,Yes,Debit Card,Same Day,Home Decor,Brand_D,Electronics,1
+21,16,128,16,56,28,0,5,3392.79,51.97,1413.45,3.6,12,90,55,630,12,89,3513.5,101,64.32,92.81,0.319,Male,Coastal,Engineer,Middle,Platinum,Mobile,No,Credit Card,Express,Jewelry,Brand_C,Health,0
+45,11,16,11,5,9,1,10,627.0,0.86,4891.47,4.8,41,3181,6,196,6,48,1036.2,233,18.37,74.09,0.356,Male,Metro,Retired,High,Basic,Mobile,Yes,Net Banking,Standard,Jewelry,Brand_D,Beauty,0
+55,19,104,77,29,26,1,8,4664.66,45.44,2566.49,4.3,68,1807,81,617,8,10,1365.19,155,78.75,11.58,0.21,Female,South,Student,Middle,Silver,Mobile,No,Credit Card,Express,Sports,Brand_B,Sports,0
+34,14,172,42,33,8,14,1,4568.18,45.22,268.9,4.0,56,568,57,196,9,30,4388.55,359,31.31,64.6,0.552,Female,South,Doctor,High,Platinum,Desktop,No,Digital Wallet,Standard,Books,Brand_B,Furniture,0
+18,4,141,46,58,6,15,2,2399.5,11.47,105.38,3.0,7,3823,126,568,11,40,1348.83,140,21.98,89.78,0.671,Male,Metro,Self-Employed,Low,Silver,Mobile,Yes,Digital Wallet,Express,Grocery,Brand_D,Home Decor,0
+56,12,46,93,40,27,18,4,4677.29,42.92,3677.11,2.4,71,2313,6,611,20,13,2702.63,145,10.22,11.07,0.604,Female,Metro,Engineer,Low,Silver,Mobile,No,Cash on Delivery,Standard,Health,Brand_E,Books,0
+63,22,67,89,11,25,16,1,4383.78,5.11,2026.56,3.6,5,3664,19,180,13,18,3543.51,49,89.67,21.39,0.902,Female,East,Homemaker,Upper-Middle,Gold,Mobile,No,UPI,Express,Toys,Brand_F,Sports,0
+32,23,40,44,40,22,16,4,1400.28,31.52,3114.52,1.3,17,4543,37,686,11,34,3350.83,118,29.26,19.68,0.471,Male,Central,Doctor,Middle,Platinum,Mobile,Yes,Credit Card,Standard,Grocery,Brand_C,Jewelry,0
+51,5,137,41,13,1,3,2,1447.8,58.57,3953.52,3.0,39,3187,105,125,15,40,1728.23,5,8.94,56.89,0.247,Female,North,Business,Middle,Basic,Tablet,Yes,Debit Card,Standard,Fashion,Brand_J,Grocery,0
+32,15,55,40,7,19,4,9,4757.37,66.0,2881.97,3.0,23,3934,147,877,9,51,341.17,364,46.68,33.98,0.54,Male,Central,Freelancer,Low,Basic,Tablet,No,Credit Card,Express,Toys,Brand_G,Grocery,0
+18,21,170,7,53,13,7,10,4729.3,33.66,1297.63,3.0,86,738,66,778,9,78,1054.85,284,83.56,61.7,0.264,Female,East,Retired,High,Basic,Mobile,No,UPI,Standard,Health,Brand_B,Automotive,0
+53,16,99,3,23,1,13,5,2863.76,5.7,2264.07,3.9,48,3663,73,745,5,25,1040.61,128,60.4,22.31,0.629,Male,East,Retired,Upper-Middle,Basic,Tablet,Yes,Credit Card,Express,Jewelry,Brand_E,Fashion,0
+32,9,167,16,4,30,13,0,879.45,18.14,1761.31,1.6,14,1982,147,736,3,22,279.83,174,9.41,61.09,0.358,Male,Central,Doctor,Middle,Silver,Desktop,No,Debit Card,Same Day,Sports,Brand_J,Home Decor,0
+68,4,13,55,51,24,1,1,3215.72,22.49,2651.6,1.3,44,578,150,746,16,91,1876.28,133,84.2,36.86,0.958,Female,Central,Self-Employed,Low,Silver,Mobile,Yes,UPI,Standard,Health,Brand_I,Home Decor,0
+19,6,106,11,35,11,15,2,2488.59,72.63,21.45,3.9,5,4332,145,230,13,79,3528.57,238,89.04,25.95,0.933,Female,South,Doctor,Middle,Silver,Desktop,No,Digital Wallet,Standard,Jewelry,Brand_G,Beauty,0
+54,12,120,29,21,20,5,1,3898.1,28.96,1742.56,2.0,94,2935,83,262,13,12,2624.94,146,96.93,62.37,0.915,Male,South,Freelancer,Low,Silver,Mobile,No,Credit Card,Express,Automotive,Brand_I,Jewelry,1
+63,23,178,71,4,28,5,7,1397.85,75.43,1439.81,3.4,75,2561,120,672,2,53,946.72,156,76.41,37.13,0.485,Female,Northeast,Retired,Upper-Middle,Silver,Mobile,No,Debit Card,Express,Toys,Brand_H,Home Decor,0
+53,9,29,54,56,3,2,4,209.27,16.96,262.95,4.1,33,859,16,287,1,2,1763.53,67,50.36,67.88,0.041,Female,South,Retired,Middle,Basic,Mobile,No,Debit Card,Standard,Fashion,Brand_J,Electronics,0
+63,10,14,18,21,28,17,9,1423.78,71.84,4627.42,4.6,9,4083,62,642,3,77,1607.0,61,10.18,4.02,0.459,Female,Coastal,Self-Employed,Upper-Middle,Silver,Mobile,Yes,UPI,Standard,Books,Brand_B,Books,0
+51,21,161,60,36,8,16,1,3341.4,70.09,1716.25,3.7,44,518,82,139,8,50,71.04,194,0.44,54.83,0.632,Male,South,Doctor,Lower-Middle,Silver,Mobile,No,Net Banking,Express,Toys,Brand_G,Electronics,0
+28,23,103,45,58,10,18,7,3128.22,7.94,3069.75,3.3,66,3560,37,475,14,30,2392.64,110,11.57,9.75,0.132,Male,Northeast,Homemaker,High,Silver,Mobile,Yes,Digital Wallet,Express,Home Decor,Brand_I,Fashion,0
+24,14,63,86,14,13,20,6,2225.7,67.41,4700.36,2.6,29,1720,142,754,12,30,3251.67,152,58.7,17.67,0.299,Female,Central,Engineer,Upper-Middle,Silver,Mobile,No,UPI,Standard,Automotive,Brand_H,Grocery,0
+23,9,160,82,43,7,1,8,3055.53,47.99,3772.05,4.2,19,1043,70,786,18,74,333.59,280,9.87,59.57,0.654,Male,Northeast,Freelancer,Upper-Middle,Silver,Desktop,No,Digital Wallet,Standard,Home Decor,Brand_F,Grocery,0
+67,9,82,2,0,6,11,10,834.59,14.63,4153.14,1.5,46,2282,49,773,12,97,4470.76,32,71.95,71.73,0.645,Female,Coastal,Engineer,Lower-Middle,Basic,Mobile,No,Net Banking,Standard,Sports,Brand_A,Jewelry,0
+57,16,123,91,32,26,0,10,22.41,46.52,1551.33,3.2,48,4141,32,219,14,5,664.06,309,11.25,57.77,0.333,Female,West,Student,Middle,Basic,Mobile,Yes,Cash on Delivery,Same Day,Automotive,Brand_I,Home Decor,0
+69,23,162,54,13,12,10,2,2686.67,64.52,1033.67,3.7,21,4178,124,482,2,58,2591.28,285,51.34,25.79,0.871,Female,East,Freelancer,Low,Silver,Mobile,No,UPI,Same Day,Furniture,Brand_H,Health,0
+48,16,28,16,47,17,20,10,3042.68,39.01,178.56,2.8,93,4018,10,433,1,12,2705.47,62,18.36,10.18,0.077,Female,North,Teacher,Low,Silver,Tablet,Yes,Credit Card,Express,Books,Brand_C,Jewelry,0
+24,2,73,76,25,29,16,3,3310.64,79.34,3278.19,3.8,28,1440,134,39,14,61,4126.41,29,67.53,8.72,0.363,Female,West,Retired,Middle,Basic,Mobile,Yes,Net Banking,Standard,Home Decor,Brand_J,Electronics,0
+40,2,115,22,6,26,3,3,2535.53,35.94,2809.25,4.2,47,4560,76,108,14,90,1708.08,230,48.06,71.35,0.713,Male,Metro,Freelancer,Middle,Silver,Mobile,Yes,Digital Wallet,Standard,Home Decor,Brand_I,Electronics,0
+64,5,93,38,17,4,19,2,1343.15,35.78,2821.58,4.6,44,2701,60,20,15,45,4159.62,235,40.35,99.11,0.991,Male,Metro,Engineer,Middle,Silver,Mobile,No,Net Banking,Standard,Beauty,Brand_H,Automotive,1
+67,11,149,23,34,26,8,1,1216.25,16.62,2181.6,4.1,40,3703,110,317,15,55,2711.0,227,55.66,26.15,0.748,Male,South,Student,Upper-Middle,Basic,Mobile,No,Cash on Delivery,Standard,Health,Brand_B,Toys,0
+45,2,28,54,1,1,0,7,955.29,69.45,4376.47,4.3,80,3442,52,454,9,45,3441.72,240,6.63,8.93,0.317,Male,South,Self-Employed,Middle,Gold,Mobile,Yes,Credit Card,Express,Electronics,Brand_J,Books,0
+29,14,158,45,12,29,17,8,1632.0,21.94,4338.82,3.7,97,725,26,798,0,66,4444.16,23,2.28,24.21,0.09,Female,Coastal,Government,Low,Basic,Mobile,No,Net Banking,Standard,Fashion,Brand_G,Home Decor,0
+57,4,24,71,54,25,12,4,2386.13,21.05,2898.95,3.2,64,4767,150,486,17,44,4297.36,126,17.17,60.79,0.545,Female,West,Self-Employed,Upper-Middle,Silver,Mobile,Yes,Debit Card,Standard,Jewelry,Brand_G,Sports,0
+52,15,156,58,25,10,20,4,954.48,58.68,584.73,2.4,80,2122,70,259,17,16,2552.71,51,68.17,62.01,0.479,Male,West,Engineer,Low,Basic,Desktop,Yes,Debit Card,Same Day,Grocery,Brand_G,Home Decor,0
+30,16,9,42,7,4,16,8,1963.3,62.07,4661.92,2.3,39,3743,52,411,17,30,2337.34,215,36.74,23.64,0.381,Female,South,Business,Middle,Platinum,Mobile,Yes,Digital Wallet,Same Day,Jewelry,Brand_B,Automotive,0
+28,20,85,38,44,3,2,4,4844.82,6.21,1857.27,4.8,3,1717,110,780,10,38,473.33,83,44.27,19.3,0.105,Male,North,Student,High,Silver,Tablet,Yes,Debit Card,Standard,Health,Brand_B,Beauty,0
+61,14,32,76,31,7,12,0,4459.67,59.38,4444.32,4.4,21,2875,149,440,12,76,4360.83,153,78.01,17.7,0.8,Male,Coastal,Student,Low,Silver,Desktop,No,Credit Card,Express,Home Decor,Brand_E,Automotive,0
+24,17,176,8,50,14,10,9,1887.19,28.08,4498.38,3.3,45,4345,52,466,9,28,1623.38,149,2.32,26.26,0.744,Male,West,Government,Middle,Platinum,Mobile,No,UPI,Express,Jewelry,Brand_B,Automotive,0
+23,20,79,60,38,29,13,10,3055.67,34.19,3565.55,4.9,41,386,3,62,5,47,2802.32,20,59.04,64.02,0.735,Male,Metro,Retired,Low,Platinum,Mobile,Yes,Credit Card,Standard,Books,Brand_D,Electronics,0
+38,13,16,100,24,17,15,10,1795.23,11.81,4930.47,3.8,65,858,44,418,17,46,1428.21,35,41.02,53.03,0.363,Male,Metro,Freelancer,High,Silver,Mobile,No,Net Banking,Express,Health,Brand_J,Electronics,0
+52,13,40,65,20,24,4,9,3982.76,68.99,609.72,1.3,56,4157,134,380,9,47,4278.56,15,97.73,36.68,0.365,Male,Coastal,Doctor,Middle,Basic,Mobile,Yes,Digital Wallet,Standard,Beauty,Brand_C,Toys,0
+39,14,72,7,7,9,9,6,192.62,16.07,4918.23,2.6,39,3288,115,695,9,89,86.68,301,56.33,2.6,0.339,Male,Central,Homemaker,Lower-Middle,Basic,Mobile,Yes,Credit Card,Express,Toys,Brand_D,Jewelry,0
+59,12,154,74,53,20,15,4,194.3,34.41,2303.67,4.1,80,3358,7,38,14,19,4958.2,52,45.56,43.56,0.439,Female,Coastal,Student,Middle,Silver,Mobile,No,UPI,Express,Health,Brand_H,Sports,0
+38,3,49,41,10,14,5,8,729.8,37.94,2919.27,1.5,67,686,69,865,1,8,4430.46,88,57.97,3.73,0.596,Male,West,Government,Middle,Basic,Tablet,Yes,Cash on Delivery,Standard,Books,Brand_D,Sports,0
+24,20,9,37,30,14,12,6,2239.06,50.65,944.06,1.0,60,1484,64,403,11,86,3582.66,36,97.07,80.71,0.581,Male,North,Doctor,Middle,Basic,Mobile,No,Net Banking,Same Day,Home Decor,Brand_I,Automotive,1
+26,10,29,82,14,6,5,10,3638.16,10.96,2825.04,1.4,24,2786,66,521,0,6,3015.68,159,62.29,59.27,0.587,Male,Northeast,Government,Upper-Middle,Basic,Mobile,No,Credit Card,Standard,Fashion,Brand_H,Electronics,0
+59,23,118,90,57,23,1,2,3528.45,6.68,1699.99,1.3,99,2240,61,566,4,86,4717.1,89,10.74,2.92,0.837,Male,East,Doctor,High,Basic,Mobile,Yes,Net Banking,Standard,Electronics,Brand_E,Furniture,0
+40,10,162,41,31,6,4,7,3187.75,8.97,3096.06,4.8,45,2892,106,610,1,90,2878.93,335,14.03,18.0,0.857,Male,South,Government,Middle,Basic,Mobile,No,Digital Wallet,Standard,Automotive,Brand_F,Beauty,0
+42,14,75,34,48,25,13,5,1332.61,53.07,2360.66,4.7,94,3363,33,395,18,47,3389.09,41,65.0,97.25,0.911,Female,North,Engineer,Low,Platinum,Mobile,No,Cash on Delivery,Express,Fashion,Brand_B,Beauty,1
+68,14,24,86,48,3,20,0,4724.9,5.05,4880.03,2.3,41,1427,42,742,10,34,4050.79,127,90.62,82.43,0.154,Female,Northeast,Homemaker,Upper-Middle,Silver,Tablet,Yes,Debit Card,Standard,Books,Brand_I,Electronics,0
+30,7,72,61,2,9,0,1,3968.52,78.08,4480.85,2.6,88,1752,86,422,10,93,3414.08,177,13.79,44.49,0.718,Female,Metro,Self-Employed,Upper-Middle,Silver,Mobile,No,Debit Card,Same Day,Electronics,Brand_J,Sports,0
+68,23,101,69,36,2,20,8,441.85,51.32,250.75,1.4,11,3113,93,590,18,30,3144.87,358,44.68,55.24,0.155,Female,Metro,Doctor,Lower-Middle,Basic,Mobile,Yes,Cash on Delivery,Same Day,Grocery,Brand_A,Toys,0
+21,20,140,59,10,7,9,3,4389.36,20.79,4006.07,4.7,18,4497,69,379,6,66,489.56,293,36.13,17.35,0.684,Female,Metro,Freelancer,Low,Platinum,Mobile,Yes,UPI,Standard,Grocery,Brand_F,Sports,0
+53,18,63,16,16,29,8,6,2461.03,46.07,3188.11,1.4,27,530,131,247,6,41,2387.97,149,8.91,82.4,0.548,Female,West,Freelancer,Low,Basic,Mobile,Yes,UPI,Express,Sports,Brand_C,Books,0
+68,16,11,17,33,8,12,4,1733.0,73.74,2111.55,4.5,97,1886,142,681,13,30,1913.79,43,72.73,42.78,0.758,Male,East,Doctor,High,Basic,Mobile,No,Digital Wallet,Standard,Beauty,Brand_D,Fashion,0
+53,6,49,56,6,23,0,1,2435.28,62.56,1545.36,1.7,27,1537,6,517,3,20,3533.41,259,97.47,2.7,0.949,Female,Coastal,Business,Middle,Silver,Mobile,Yes,Credit Card,Standard,Toys,Brand_I,Health,0
+46,10,78,92,2,26,19,3,3096.96,20.08,3970.51,5.0,57,4343,28,728,16,42,1706.22,17,22.5,34.41,0.584,Female,Metro,Homemaker,Middle,Silver,Desktop,No,UPI,Same Day,Health,Brand_C,Furniture,0
+43,1,64,15,34,11,13,1,954.3,61.63,2098.18,3.5,5,4577,32,376,15,48,2121.89,222,65.04,32.09,0.053,Male,Central,Doctor,Lower-Middle,Basic,Mobile,No,UPI,Same Day,Electronics,Brand_D,Grocery,0
+34,7,5,19,26,2,18,2,2035.56,3.44,3495.47,2.9,4,3265,23,593,20,63,1299.8,342,19.09,53.37,0.904,Male,Metro,Engineer,Middle,Gold,Mobile,No,Credit Card,Standard,Grocery,Brand_E,Fashion,0
+62,22,77,67,30,0,3,6,4460.43,18.92,2470.65,1.8,49,473,143,540,14,59,2247.82,224,25.13,52.86,0.083,Male,Metro,Freelancer,Middle,Basic,Mobile,Yes,Digital Wallet,Standard,Sports,Brand_B,Home Decor,0
+32,21,87,35,29,25,10,9,2694.57,45.08,3544.8,1.4,23,3799,99,356,15,17,4967.03,257,72.24,35.04,0.339,Male,East,Retired,Low,Basic,Mobile,Yes,Cash on Delivery,Standard,Jewelry,Brand_I,Jewelry,0
+41,17,32,91,27,8,6,6,2735.92,1.54,382.74,3.8,75,4504,74,627,0,46,773.81,170,88.44,31.46,0.028,Male,South,Business,Lower-Middle,Silver,Mobile,No,Net Banking,Express,Health,Brand_E,Furniture,0
+40,23,126,39,20,30,7,8,3280.96,11.39,1149.69,3.8,74,4086,35,614,11,99,3371.23,138,5.78,97.64,0.702,Female,South,Government,Middle,Silver,Desktop,No,Debit Card,Standard,Home Decor,Brand_D,Home Decor,0
+57,12,130,20,55,11,10,6,1724.52,50.6,4156.6,2.0,41,156,110,267,16,62,3071.13,136,72.66,18.37,0.854,Male,Metro,Business,Upper-Middle,Basic,Desktop,Yes,UPI,Express,Home Decor,Brand_F,Toys,0
+23,12,170,28,30,30,13,6,1663.94,47.3,1765.62,1.3,68,1688,93,96,12,56,4864.22,63,57.78,9.37,0.144,Male,North,Government,Middle,Gold,Mobile,Yes,Digital Wallet,Express,Health,Brand_E,Furniture,0
+24,2,149,67,41,24,13,2,529.55,55.81,813.32,2.0,56,3406,69,58,9,97,1051.8,277,18.05,50.58,0.426,Male,West,Business,Low,Basic,Mobile,No,Digital Wallet,Standard,Beauty,Brand_B,Home Decor,0
+22,15,40,92,21,12,20,9,163.4,39.71,4130.19,1.6,78,655,35,693,5,15,4295.72,49,5.49,90.42,0.413,Male,Coastal,Homemaker,Middle,Basic,Desktop,No,Digital Wallet,Standard,Home Decor,Brand_B,Sports,0
+20,2,3,17,44,12,3,6,4085.4,55.55,114.32,4.8,1,876,12,155,8,60,4026.72,266,57.62,52.7,0.852,Female,West,Teacher,Low,Silver,Mobile,No,Cash on Delivery,Express,Beauty,Brand_F,Beauty,0
+68,12,35,67,33,5,7,10,2596.17,78.69,1121.49,4.7,15,4824,35,559,11,53,1880.74,248,64.64,37.92,0.833,Female,South,Freelancer,Upper-Middle,Basic,Mobile,No,UPI,Same Day,Beauty,Brand_I,Sports,0
+66,18,97,69,51,16,12,2,910.94,6.41,339.07,2.3,70,1559,144,726,16,60,2772.55,329,16.96,42.53,0.875,Female,Coastal,Government,Upper-Middle,Basic,Mobile,Yes,Credit Card,Standard,Health,Brand_D,Books,0
+45,4,106,16,42,25,12,0,4066.4,75.88,3196.77,4.3,17,2004,91,383,20,96,4925.37,140,16.69,30.7,0.316,Male,North,Self-Employed,Middle,Basic,Mobile,Yes,Cash on Delivery,Standard,Electronics,Brand_I,Health,0
+34,19,18,55,20,26,0,7,1711.77,42.59,2501.01,2.9,42,1937,10,174,19,27,1825.78,245,87.19,47.28,0.719,Male,East,Engineer,Upper-Middle,Silver,Mobile,Yes,Debit Card,Express,Toys,Brand_F,Electronics,0
+42,4,89,37,48,25,8,0,4976.8,0.58,4749.14,3.2,10,4845,110,449,3,1,1840.52,129,0.9,89.51,0.838,Female,Northeast,Business,Middle,Basic,Mobile,No,Debit Card,Same Day,Electronics,Brand_C,Books,0
+42,17,146,91,54,20,19,3,2840.92,51.72,4293.13,4.3,86,723,36,157,4,46,2933.21,292,39.23,87.94,0.155,Male,Coastal,Student,Upper-Middle,Basic,Mobile,No,Digital Wallet,Express,Furniture,Brand_B,Grocery,0
+40,2,177,52,8,17,12,9,1574.83,65.92,1569.18,2.0,31,2195,8,529,6,85,4029.13,274,35.51,10.38,0.975,Male,Coastal,Freelancer,Middle,Basic,Mobile,Yes,Debit Card,Standard,Home Decor,Brand_H,Electronics,0
+28,7,117,72,35,11,14,10,1832.17,25.41,1478.92,4.9,88,3384,88,91,5,73,902.91,89,48.08,58.49,0.919,Male,North,Business,Upper-Middle,Gold,Desktop,Yes,Credit Card,Express,Toys,Brand_I,Beauty,0
+22,13,41,21,29,19,0,7,989.58,62.25,4949.8,1.6,35,2642,17,638,7,84,2263.08,204,11.95,65.39,0.347,Female,West,Engineer,Low,Basic,Mobile,No,Net Banking,Standard,Books,Brand_I,Sports,0
+59,8,144,63,44,6,5,4,3102.9,48.58,259.98,2.9,56,2430,72,268,4,29,4619.24,203,9.58,66.97,0.839,Female,South,Freelancer,Middle,Basic,Desktop,No,Net Banking,Express,Automotive,Brand_B,Fashion,0
+43,22,84,47,1,3,0,0,4313.09,58.15,1914.08,4.8,40,2960,90,446,1,89,3573.87,237,16.01,17.69,0.028,Male,South,Retired,Middle,Gold,Mobile,Yes,Credit Card,Express,Toys,Brand_C,Electronics,0
+57,11,37,84,21,13,17,2,2621.85,15.96,3923.31,4.2,88,1096,24,105,5,68,2006.75,38,55.53,59.98,0.913,Male,East,Retired,Middle,Basic,Mobile,No,Net Banking,Standard,Toys,Brand_I,Health,0
+51,0,131,28,28,20,16,6,2274.02,27.12,4638.63,1.8,42,4532,40,752,14,17,594.28,9,71.04,57.41,0.942,Female,Metro,Government,Middle,Basic,Mobile,No,UPI,Express,Sports,Brand_E,Toys,0
+30,3,110,35,47,20,14,10,3760.05,69.85,52.54,2.0,53,3381,51,196,13,36,675.19,320,67.63,1.68,0.871,Male,Central,Homemaker,Low,Basic,Mobile,No,Digital Wallet,Standard,Grocery,Brand_G,Furniture,0
+24,9,126,15,26,26,1,4,2316.41,5.75,1040.57,2.5,63,1181,86,482,8,78,3721.34,256,42.82,72.07,0.783,Male,Central,Government,Low,Basic,Mobile,Yes,Cash on Delivery,Express,Electronics,Brand_I,Sports,0
+64,12,76,48,41,17,12,5,509.31,0.46,782.7,3.0,15,1877,106,41,6,66,4340.4,49,29.02,9.14,0.799,Male,Northeast,Government,Lower-Middle,Silver,Mobile,No,Credit Card,Standard,Health,Brand_B,Home Decor,0
+68,3,113,30,11,23,18,6,2333.72,28.58,203.82,2.0,69,2975,59,193,1,8,3433.03,155,53.39,38.72,0.577,Male,East,Doctor,Low,Basic,Desktop,Yes,Debit Card,Standard,Fashion,Brand_J,Beauty,0
+27,2,122,39,24,19,20,7,1153.79,6.91,391.07,1.4,41,4731,137,773,19,63,4072.77,112,19.05,14.3,0.887,Female,West,Business,Middle,Basic,Mobile,No,Net Banking,Standard,Books,Brand_B,Furniture,0
+20,19,13,33,4,8,5,2,2453.0,11.26,1615.79,4.3,17,4736,28,39,6,14,3309.08,20,56.7,22.29,0.415,Male,Central,Doctor,Upper-Middle,Basic,Mobile,Yes,UPI,Standard,Grocery,Brand_H,Home Decor,0
+61,20,147,91,42,29,14,3,2020.02,57.0,4355.93,4.6,42,3450,92,36,18,45,4783.57,349,16.18,59.13,0.425,Male,Metro,Freelancer,Middle,Gold,Mobile,No,UPI,Standard,Grocery,Brand_A,Toys,0
+35,18,93,84,31,17,2,5,4214.99,50.18,427.18,3.3,35,3552,13,876,13,64,1234.75,180,30.76,27.49,0.741,Female,Central,Teacher,High,Gold,Tablet,No,Debit Card,Standard,Jewelry,Brand_E,Health,0
+62,14,142,50,11,11,5,4,3819.66,45.32,974.39,4.6,46,154,48,406,11,75,1044.05,264,36.79,36.73,0.711,Female,North,Teacher,Middle,Basic,Mobile,No,Credit Card,Express,Furniture,Brand_E,Home Decor,0
+55,4,14,10,14,11,10,7,4724.41,27.57,473.98,3.0,62,3459,35,582,13,14,1532.07,262,75.73,18.0,0.136,Female,Central,Retired,Upper-Middle,Platinum,Desktop,Yes,Debit Card,Express,Sports,Brand_G,Home Decor,0
+39,2,142,93,2,24,1,9,4911.97,73.16,2536.06,3.5,3,349,55,505,17,86,1710.99,190,57.28,42.13,0.082,Male,Coastal,Business,Low,Silver,Mobile,No,Net Banking,Standard,Furniture,Brand_G,Jewelry,0
+18,6,20,90,60,1,9,7,1877.04,30.42,780.32,2.5,96,1281,149,474,6,77,41.26,74,22.76,90.84,0.8,Male,East,Government,Upper-Middle,Basic,Mobile,No,Digital Wallet,Standard,Health,Brand_J,Health,0
+42,18,70,31,54,6,0,5,2417.09,13.28,1451.0,2.4,46,2893,109,112,12,14,894.91,149,14.46,49.23,0.423,Female,West,Doctor,Middle,Gold,Mobile,Yes,Credit Card,Express,Furniture,Brand_B,Health,0
+62,19,46,76,34,24,17,7,2577.15,64.59,3274.38,4.9,57,4661,10,736,7,77,4330.62,295,56.46,53.36,0.93,Male,East,Government,High,Silver,Mobile,No,Digital Wallet,Standard,Automotive,Brand_F,Toys,0
+50,3,180,11,55,18,6,0,2913.35,64.43,2596.58,3.2,80,823,38,288,14,64,3686.22,278,92.75,53.78,0.045,Male,Coastal,Government,Low,Platinum,Desktop,Yes,Cash on Delivery,Express,Health,Brand_J,Sports,0
+58,8,61,1,27,2,11,1,4029.68,38.7,3977.92,4.1,72,1115,69,597,20,100,771.94,222,90.63,18.03,0.23,Male,Metro,Student,Middle,Basic,Mobile,Yes,Credit Card,Standard,Electronics,Brand_J,Health,0
+35,9,32,48,53,25,6,9,3947.95,64.68,617.01,4.4,36,2112,3,613,13,35,2608.11,241,21.63,75.01,0.221,Female,West,Homemaker,Low,Silver,Mobile,Yes,Net Banking,Express,Automotive,Brand_J,Electronics,0
+59,2,117,11,23,20,18,8,2795.51,14.73,2883.39,1.5,11,1198,5,555,10,86,1610.74,69,82.91,79.86,0.531,Female,Central,Homemaker,Upper-Middle,Gold,Mobile,No,Digital Wallet,Express,Grocery,Brand_G,Beauty,0
+63,2,128,73,45,23,7,1,4957.27,63.83,826.08,1.2,18,800,131,314,5,35,873.21,301,21.27,23.12,0.5,Female,North,Self-Employed,Low,Silver,Tablet,No,UPI,Same Day,Health,Brand_H,Fashion,0
+40,10,23,87,49,6,6,1,2066.8,79.25,2210.19,4.5,92,3742,94,824,12,13,2574.14,329,83.56,76.64,0.66,Female,Coastal,Engineer,Lower-Middle,Silver,Desktop,No,Net Banking,Standard,Automotive,Brand_H,Fashion,1
+64,11,102,41,28,26,2,6,3884.35,38.04,850.51,4.7,5,1803,101,882,6,69,784.78,24,65.48,4.41,0.014,Female,Northeast,Self-Employed,Middle,Silver,Desktop,Yes,Net Banking,Standard,Health,Brand_F,Electronics,0
+67,5,152,12,42,8,2,4,177.49,54.65,1329.1,2.4,20,1324,133,405,7,61,4366.35,69,56.23,6.43,0.327,Male,Metro,Homemaker,Low,Silver,Mobile,No,Credit Card,Standard,Toys,Brand_F,Electronics,0
+60,18,38,98,54,29,15,10,4374.66,52.9,3502.41,3.0,97,4327,136,511,9,43,508.56,210,67.97,37.15,0.027,Female,Central,Self-Employed,High,Silver,Mobile,Yes,Digital Wallet,Standard,Furniture,Brand_I,Home Decor,0
+46,7,47,36,38,0,12,9,2798.93,7.92,849.92,2.7,18,3533,12,769,7,17,591.3,348,5.83,62.12,0.212,Male,West,Retired,High,Basic,Mobile,No,Cash on Delivery,Standard,Toys,Brand_D,Health,0
+28,17,13,55,21,7,17,8,3126.62,26.95,3909.83,4.1,23,4576,125,50,2,9,4989.61,234,49.64,44.46,0.513,Male,West,Freelancer,Upper-Middle,Platinum,Mobile,No,Net Banking,Standard,Sports,Brand_D,Home Decor,0
+30,12,82,39,13,29,3,8,3791.29,56.79,2896.87,3.7,100,2246,42,683,16,38,3834.04,30,64.47,81.92,0.447,Female,Central,Homemaker,Upper-Middle,Silver,Mobile,Yes,UPI,Same Day,Books,Brand_B,Beauty,0
+41,11,118,93,1,21,12,6,1201.19,52.46,2378.37,3.0,13,2337,29,856,8,90,1253.21,43,72.72,85.5,0.834,Male,Central,Freelancer,Lower-Middle,Platinum,Mobile,No,Cash on Delivery,Standard,Furniture,Brand_E,Jewelry,1
+64,16,41,16,53,3,1,8,975.67,22.35,568.99,1.7,40,4389,128,820,15,98,2709.29,319,84.45,83.71,0.778,Female,North,Doctor,Upper-Middle,Platinum,Mobile,No,Debit Card,Standard,Beauty,Brand_I,Electronics,1
+62,9,160,7,50,8,6,1,1790.6,61.72,932.26,1.6,33,4109,110,585,20,72,1020.8,214,25.72,72.56,0.522,Female,North,Freelancer,Upper-Middle,Silver,Mobile,No,Debit Card,Standard,Health,Brand_I,Automotive,0
+35,9,73,17,16,19,16,10,901.81,75.83,1815.57,3.5,42,2581,116,163,14,90,1298.41,313,63.72,25.5,0.002,Female,Northeast,Engineer,Middle,Platinum,Mobile,No,Credit Card,Express,Grocery,Brand_G,Furniture,0
+66,16,123,60,47,24,5,8,1260.73,58.03,2681.2,1.9,27,174,89,814,14,32,4986.4,151,46.0,85.28,0.962,Male,North,Retired,Upper-Middle,Basic,Mobile,Yes,Cash on Delivery,Express,Home Decor,Brand_H,Jewelry,0
+19,11,154,68,1,28,12,4,1378.78,25.14,4750.91,3.3,95,2528,87,440,5,21,4474.52,198,15.5,70.13,0.539,Male,Coastal,Business,Lower-Middle,Basic,Mobile,No,Digital Wallet,Standard,Grocery,Brand_I,Automotive,0
+44,21,17,67,57,14,7,10,2820.81,38.26,4131.29,4.5,26,2380,59,473,17,73,788.76,286,10.56,70.69,0.767,Male,West,Business,Low,Basic,Mobile,No,Digital Wallet,Express,Books,Brand_J,Sports,0
+39,19,158,5,8,9,9,5,235.43,43.85,1808.14,3.9,78,2944,46,653,8,90,1588.51,212,32.81,59.93,0.02,Male,Metro,Business,Lower-Middle,Basic,Mobile,Yes,UPI,Express,Home Decor,Brand_C,Sports,0
+67,2,176,79,43,5,15,5,1893.85,53.24,1889.21,1.7,88,2660,74,200,16,6,536.89,217,70.13,17.7,0.855,Male,South,Freelancer,Upper-Middle,Basic,Desktop,No,Debit Card,Express,Sports,Brand_E,Books,0
+44,18,139,69,41,16,12,3,3198.82,26.51,3115.93,4.9,65,3964,142,315,14,16,3113.41,54,58.2,1.98,0.504,Female,Metro,Doctor,Lower-Middle,Basic,Desktop,Yes,Credit Card,Standard,Grocery,Brand_I,Automotive,0
+57,2,32,74,5,19,7,4,4941.99,36.3,2592.29,1.4,52,4232,125,676,17,86,3326.22,116,76.22,72.57,0.533,Female,North,Self-Employed,Lower-Middle,Basic,Desktop,No,UPI,Standard,Furniture,Brand_F,Electronics,0
+18,8,11,57,3,2,8,10,713.15,35.17,2027.01,3.4,30,3809,44,13,8,33,4114.88,355,2.82,88.57,0.063,Female,East,Student,Low,Basic,Mobile,Yes,Cash on Delivery,Standard,Electronics,Brand_A,Electronics,0
+39,21,117,8,39,18,8,3,3808.02,49.69,2484.56,2.3,83,2385,133,295,3,33,4314.99,299,33.38,80.22,0.329,Male,Central,Doctor,Middle,Silver,Mobile,No,Cash on Delivery,Standard,Books,Brand_H,Toys,0
+30,3,166,42,9,28,9,4,3819.94,69.31,3570.51,2.1,6,4931,60,884,1,42,150.66,176,98.12,3.71,0.024,Female,Coastal,Self-Employed,Low,Basic,Desktop,No,Credit Card,Standard,Books,Brand_B,Beauty,0
+53,16,104,100,54,15,2,1,2700.8,22.98,4693.06,2.4,23,1396,48,229,9,58,3754.9,244,41.81,40.68,0.364,Female,Coastal,Engineer,Lower-Middle,Basic,Mobile,No,Cash on Delivery,Standard,Toys,Brand_I,Books,0
+38,9,116,99,19,3,13,5,1920.65,59.72,2891.14,2.8,61,268,107,385,6,8,1991.59,181,76.44,75.84,0.527,Male,South,Student,Lower-Middle,Basic,Mobile,Yes,Credit Card,Express,Home Decor,Brand_D,Electronics,0
+39,23,65,51,4,26,18,5,2588.86,14.49,4163.39,1.5,47,2639,59,433,12,20,935.46,236,56.86,89.09,0.026,Male,Coastal,Government,Middle,Basic,Mobile,Yes,Credit Card,Express,Automotive,Brand_I,Beauty,0
+31,14,152,36,28,9,5,6,1113.57,20.08,995.82,3.7,80,4882,91,395,4,30,3288.97,16,44.73,26.37,0.806,Female,North,Government,Lower-Middle,Gold,Tablet,Yes,Net Banking,Standard,Automotive,Brand_J,Beauty,0
+25,1,136,15,55,5,4,9,4418.84,33.84,2510.38,1.3,96,3731,115,756,11,86,314.27,149,67.07,36.31,0.767,Male,West,Self-Employed,Lower-Middle,Silver,Desktop,No,Digital Wallet,Standard,Electronics,Brand_J,Automotive,0
+28,2,73,100,14,21,0,2,773.52,28.27,2249.29,4.0,67,1478,92,241,3,93,2761.7,327,86.98,87.26,0.188,Female,West,Homemaker,Lower-Middle,Basic,Tablet,No,UPI,Same Day,Sports,Brand_B,Home Decor,1
+66,6,57,48,59,1,18,10,649.82,75.15,4941.02,3.7,100,652,125,702,9,68,1040.62,160,70.46,37.68,0.12,Female,North,Teacher,Lower-Middle,Silver,Mobile,Yes,Digital Wallet,Express,Beauty,Brand_E,Beauty,0
+64,22,166,12,26,22,16,7,902.42,47.98,920.75,1.2,6,3974,10,864,19,13,3136.46,59,12.42,86.51,0.193,Female,Northeast,Student,Lower-Middle,Silver,Desktop,Yes,Cash on Delivery,Standard,Beauty,Brand_B,Electronics,0
+19,14,41,72,15,30,6,0,4076.4,68.7,1572.35,4.6,3,1103,127,832,1,92,4892.11,268,45.07,73.36,0.836,Male,Northeast,Teacher,Middle,Basic,Mobile,No,Credit Card,Standard,Grocery,Brand_F,Health,0
+37,14,180,52,43,0,17,4,1852.15,61.15,2629.59,2.2,98,534,144,518,2,90,3020.9,155,67.76,15.33,0.465,Female,West,Freelancer,Lower-Middle,Gold,Mobile,Yes,Net Banking,Standard,Beauty,Brand_B,Home Decor,0
+41,20,151,44,41,15,2,0,3982.93,15.11,4639.61,1.1,86,2102,99,486,9,23,1512.71,313,35.23,63.41,0.318,Male,Northeast,Business,Middle,Basic,Desktop,Yes,Digital Wallet,Standard,Sports,Brand_A,Grocery,0
+22,23,28,99,22,16,9,2,1597.56,38.16,4104.95,4.0,79,1099,3,762,20,68,4459.62,265,73.35,83.64,0.696,Male,Central,Retired,Upper-Middle,Silver,Mobile,Yes,Digital Wallet,Standard,Furniture,Brand_C,Books,1
+26,18,32,95,53,16,13,4,4399.86,49.73,4877.38,2.3,87,3125,146,296,2,76,2843.8,281,61.26,50.18,0.204,Male,Central,Teacher,Upper-Middle,Basic,Mobile,Yes,Net Banking,Standard,Sports,Brand_C,Books,0
+37,0,153,45,29,30,14,0,4558.93,44.5,289.3,4.8,42,1386,7,202,5,81,3375.64,44,97.99,68.6,0.29,Female,Coastal,Retired,Middle,Basic,Mobile,Yes,Debit Card,Standard,Furniture,Brand_A,Furniture,1
+30,19,79,19,28,12,16,8,1154.95,27.13,2307.56,3.8,44,1900,60,321,4,52,3106.29,144,63.55,9.26,0.318,Male,Metro,Self-Employed,Middle,Basic,Mobile,No,UPI,Standard,Sports,Brand_G,Health,0
+33,17,3,48,30,28,4,9,4994.95,3.65,460.73,3.8,21,3300,102,338,8,51,160.08,365,8.92,11.12,0.271,Female,Metro,Engineer,Low,Basic,Mobile,No,Cash on Delivery,Standard,Beauty,Brand_B,Books,0
+34,7,115,17,45,25,5,5,1745.91,64.08,3854.59,3.8,100,4496,1,510,3,95,2483.5,100,48.55,18.0,0.11,Male,Central,Student,Low,Silver,Tablet,Yes,Cash on Delivery,Standard,Health,Brand_G,Health,0
+43,1,70,99,39,21,0,7,796.43,12.59,441.97,1.1,7,2540,12,197,9,30,1239.3,92,46.78,59.86,0.016,Female,North,Freelancer,Middle,Silver,Mobile,Yes,Credit Card,Standard,Home Decor,Brand_C,Home Decor,0
+53,10,39,20,37,28,5,6,2390.87,21.43,3995.1,4.3,12,1319,139,696,3,32,3492.62,34,80.26,8.25,0.821,Female,West,Homemaker,Middle,Basic,Mobile,Yes,Debit Card,Standard,Electronics,Brand_J,Electronics,0
+61,6,147,62,7,24,4,4,4893.63,33.98,3015.75,1.8,25,1148,107,477,3,91,945.77,247,25.19,25.23,0.479,Male,Metro,Doctor,Middle,Basic,Mobile,No,Digital Wallet,Express,Health,Brand_A,Sports,0
+37,22,39,25,6,20,2,6,3142.16,77.59,4838.1,3.3,32,1058,72,315,13,91,1131.53,330,6.92,74.44,0.041,Female,Coastal,Doctor,Lower-Middle,Gold,Tablet,No,Cash on Delivery,Same Day,Furniture,Brand_B,Grocery,0
+26,5,60,68,11,30,16,9,2186.06,70.48,1361.34,1.0,57,4289,77,850,7,60,3766.78,234,9.98,4.37,0.945,Male,Coastal,Business,Low,Silver,Mobile,No,Net Banking,Express,Home Decor,Brand_A,Books,0
+39,21,156,58,44,24,14,9,2846.54,22.54,2629.11,3.3,61,4255,55,887,3,15,3283.07,241,6.09,59.42,0.149,Male,West,Engineer,Lower-Middle,Silver,Desktop,No,Net Banking,Standard,Furniture,Brand_H,Sports,0
+58,19,84,15,44,21,17,0,3692.71,0.81,1099.72,3.3,47,1741,108,70,17,69,3769.92,55,94.31,91.6,0.678,Male,West,Student,Middle,Basic,Desktop,Yes,Digital Wallet,Standard,Furniture,Brand_I,Beauty,1
+44,8,54,30,39,0,8,0,4039.81,5.1,198.49,3.4,32,1693,39,350,17,59,3440.56,95,97.89,40.29,0.505,Male,Central,Freelancer,High,Basic,Desktop,Yes,Debit Card,Standard,Health,Brand_A,Toys,0
+33,19,17,91,60,3,20,8,3852.65,26.9,2084.14,3.0,71,1468,32,791,6,33,155.16,199,4.12,62.49,0.092,Male,Northeast,Retired,Upper-Middle,Basic,Mobile,Yes,Digital Wallet,Express,Books,Brand_C,Furniture,0
+32,3,48,17,27,8,8,7,91.93,61.18,385.99,3.4,53,4598,11,799,13,43,452.11,268,68.88,54.12,0.403,Female,East,Doctor,Middle,Basic,Tablet,No,Digital Wallet,Express,Beauty,Brand_C,Beauty,0
+27,1,144,91,3,8,18,0,3681.13,43.31,1688.16,1.6,87,3735,143,271,3,44,2254.36,10,35.95,46.56,0.128,Female,Northeast,Freelancer,Low,Silver,Tablet,Yes,Net Banking,Standard,Sports,Brand_J,Furniture,0
+44,8,21,61,40,23,6,2,239.93,79.13,4624.13,1.6,73,3471,31,573,12,21,3756.21,3,16.94,30.3,0.047,Male,North,Student,Middle,Silver,Mobile,No,Digital Wallet,Standard,Automotive,Brand_J,Sports,0
+20,23,99,47,44,5,12,7,2968.86,7.68,579.28,2.7,71,1805,149,381,18,71,4686.46,95,78.13,86.52,0.585,Male,Metro,Doctor,Upper-Middle,Gold,Mobile,Yes,Credit Card,Express,Health,Brand_B,Jewelry,1
+69,14,24,53,58,13,6,10,4459.83,28.97,4346.37,1.0,90,3824,100,800,17,78,2866.14,109,81.58,42.44,0.752,Female,West,Teacher,Low,Basic,Mobile,No,Digital Wallet,Express,Health,Brand_E,Jewelry,0
+33,4,59,95,34,27,3,0,856.05,3.37,3238.89,4.7,21,1133,129,730,13,68,4912.09,281,80.15,89.0,0.773,Male,East,Freelancer,Upper-Middle,Basic,Desktop,Yes,UPI,Standard,Fashion,Brand_H,Jewelry,1
+68,21,78,9,34,20,5,6,3390.43,77.11,2755.77,4.6,84,971,143,632,20,50,354.03,286,3.0,53.83,0.151,Female,North,Homemaker,Middle,Platinum,Mobile,No,UPI,Express,Grocery,Brand_A,Books,0
+36,4,59,24,39,21,6,0,2245.9,20.14,4138.01,3.5,46,2082,114,78,15,45,1879.67,69,80.67,72.8,0.028,Male,Coastal,Student,Lower-Middle,Basic,Desktop,Yes,UPI,Standard,Furniture,Brand_D,Books,0
+61,6,86,57,23,20,16,5,438.21,54.17,1568.68,4.7,87,4211,23,635,7,81,3088.09,91,27.98,92.43,0.232,Male,North,Government,Middle,Basic,Mobile,No,Cash on Delivery,Standard,Books,Brand_F,Furniture,0
+22,1,45,21,54,25,8,10,4173.88,22.35,860.35,2.6,3,1097,139,38,7,62,470.85,328,84.28,21.23,0.699,Male,Metro,Engineer,Upper-Middle,Basic,Mobile,Yes,Cash on Delivery,Standard,Beauty,Brand_A,Books,0
+19,4,141,57,22,28,14,3,2098.68,55.03,3641.38,2.1,85,4948,70,273,20,97,463.14,274,7.23,1.54,0.241,Female,North,Engineer,Lower-Middle,Basic,Mobile,Yes,Digital Wallet,Same Day,Jewelry,Brand_D,Books,0
+30,5,70,81,45,12,1,1,1747.76,42.99,4757.31,2.4,70,1885,14,213,4,54,235.57,7,96.07,52.09,0.08,Male,South,Self-Employed,High,Gold,Desktop,Yes,Net Banking,Standard,Fashion,Brand_H,Health,0
+42,18,159,70,39,4,9,1,4915.79,50.39,1514.2,3.3,52,1925,10,465,15,92,3032.44,90,53.63,98.46,0.267,Female,Northeast,Student,Middle,Basic,Mobile,Yes,Net Banking,Express,Automotive,Brand_B,Health,0
+25,18,112,24,0,3,1,5,3437.42,16.58,3192.86,1.6,76,4312,33,318,9,14,4927.96,314,38.83,73.81,0.924,Female,West,Government,Middle,Silver,Mobile,Yes,Cash on Delivery,Standard,Fashion,Brand_E,Home Decor,0
+62,7,146,34,9,15,19,5,2084.35,67.46,3987.3,3.3,7,1074,25,261,6,88,428.08,194,83.8,93.43,0.725,Female,Metro,Doctor,Lower-Middle,Basic,Mobile,Yes,Cash on Delivery,Express,Toys,Brand_H,Beauty,1
+20,8,140,70,56,14,3,1,413.78,19.56,250.07,4.5,78,756,65,331,17,74,1228.05,335,86.61,94.58,0.158,Female,Northeast,Self-Employed,Low,Gold,Mobile,Yes,Digital Wallet,Express,Jewelry,Brand_D,Beauty,1
+51,14,148,35,39,28,7,9,957.61,56.66,3391.38,4.4,53,670,36,282,17,2,4287.51,336,15.75,61.02,0.439,Female,South,Homemaker,Upper-Middle,Basic,Mobile,No,Debit Card,Express,Toys,Brand_I,Home Decor,0
+26,7,118,65,4,21,1,8,4390.64,23.69,1826.9,1.5,2,1363,144,861,11,55,3945.04,173,35.89,72.79,0.272,Male,East,Business,Middle,Basic,Mobile,Yes,Net Banking,Standard,Jewelry,Brand_G,Sports,0
+60,18,90,20,40,18,6,3,2352.36,59.69,4779.62,1.8,86,2641,50,252,14,67,4689.93,28,65.19,49.17,0.492,Male,Central,Freelancer,Middle,Silver,Desktop,No,Digital Wallet,Standard,Toys,Brand_C,Electronics,0
+68,10,164,30,55,15,6,4,2232.46,66.58,1649.98,4.5,42,1311,81,252,4,90,651.82,188,58.87,60.24,0.698,Male,South,Government,Low,Silver,Mobile,No,UPI,Express,Fashion,Brand_A,Fashion,0
+64,13,151,51,16,14,6,9,1715.08,1.9,2524.18,1.5,37,3040,64,605,20,42,4708.22,77,84.13,47.34,0.255,Male,Coastal,Homemaker,Middle,Basic,Mobile,No,Digital Wallet,Standard,Fashion,Brand_C,Home Decor,0
+54,0,85,16,55,5,6,9,3156.69,58.52,4740.62,3.3,95,1035,111,786,6,93,4121.6,216,43.71,95.82,0.187,Male,South,Engineer,Middle,Basic,Mobile,Yes,Credit Card,Standard,Automotive,Brand_A,Electronics,0
+57,0,105,79,7,14,0,8,2738.91,79.18,4972.31,2.0,75,4856,134,226,1,64,2800.69,318,7.84,39.04,0.192,Male,Central,Student,Middle,Basic,Desktop,Yes,Net Banking,Express,Books,Brand_B,Health,0
+39,16,153,89,14,3,7,5,271.94,58.2,1194.06,2.6,26,1891,0,11,16,55,4976.75,27,27.93,16.13,0.565,Female,Coastal,Homemaker,Middle,Basic,Tablet,Yes,UPI,Standard,Books,Brand_H,Sports,0
+55,21,30,30,14,9,12,4,860.34,33.2,241.08,1.0,79,1677,146,525,0,81,3346.59,123,26.98,28.14,0.377,Male,North,Teacher,High,Basic,Desktop,Yes,Debit Card,Standard,Toys,Brand_J,Sports,0
+37,11,18,75,1,23,9,9,111.94,52.14,2049.41,3.2,67,3744,6,817,12,51,3231.39,164,17.67,87.24,0.942,Female,Northeast,Retired,Middle,Basic,Tablet,No,Digital Wallet,Express,Toys,Brand_F,Books,0
+33,19,55,32,48,24,4,1,3851.7,49.24,2550.18,2.1,6,2961,144,160,12,32,266.19,136,71.31,76.18,0.003,Female,Metro,Business,Low,Basic,Mobile,Yes,UPI,Express,Jewelry,Brand_D,Home Decor,0
+68,10,93,22,57,19,2,4,1509.95,59.93,3608.44,1.2,19,1682,48,440,11,34,4973.61,318,28.49,45.87,0.669,Male,Northeast,Business,Middle,Silver,Mobile,Yes,Net Banking,Standard,Grocery,Brand_I,Automotive,0
+68,5,113,89,28,14,8,6,2392.01,23.13,996.13,4.9,27,2971,146,483,16,10,4850.04,311,1.36,60.82,0.871,Male,Central,Doctor,Middle,Basic,Tablet,No,Cash on Delivery,Standard,Automotive,Brand_C,Beauty,0
+26,0,36,62,15,5,7,2,3857.88,26.48,365.89,1.3,10,3866,33,537,0,94,4604.56,254,62.91,43.59,0.759,Female,West,Teacher,Lower-Middle,Silver,Mobile,Yes,Digital Wallet,Express,Health,Brand_B,Grocery,0
+29,7,160,89,41,30,7,1,4520.82,23.13,2380.43,2.0,92,364,146,618,14,53,3568.46,336,48.55,70.94,0.206,Female,Northeast,Teacher,Upper-Middle,Basic,Mobile,No,UPI,Standard,Fashion,Brand_J,Jewelry,0
+22,2,31,17,15,24,3,4,4496.7,4.72,84.73,4.6,15,4377,110,716,20,64,3862.55,281,34.66,89.61,0.126,Female,Metro,Homemaker,Low,Gold,Mobile,No,Debit Card,Standard,Fashion,Brand_H,Grocery,0
+24,1,115,1,36,3,17,5,1171.6,21.49,3466.23,3.3,56,2613,36,308,8,89,837.08,172,9.99,0.11,0.14,Male,Northeast,Homemaker,Low,Silver,Desktop,No,Cash on Delivery,Express,Fashion,Brand_F,Health,0
+51,6,39,3,15,20,19,1,4341.11,36.85,1234.01,3.2,63,4017,65,29,8,7,3901.09,262,11.32,54.65,0.904,Female,West,Student,Lower-Middle,Basic,Mobile,Yes,Debit Card,Express,Furniture,Brand_H,Health,0
+41,6,74,91,38,23,7,8,3910.1,22.34,4336.5,3.4,61,1178,113,99,7,7,1631.54,229,28.85,42.0,0.213,Male,South,Homemaker,Upper-Middle,Basic,Mobile,No,Cash on Delivery,Express,Jewelry,Brand_E,Health,0
+46,15,30,69,34,8,9,7,982.41,63.03,715.54,3.3,49,3000,118,80,19,58,578.15,253,8.84,10.89,0.949,Male,Northeast,Government,Lower-Middle,Silver,Mobile,No,Digital Wallet,Same Day,Jewelry,Brand_F,Furniture,0
+45,6,46,44,13,15,2,5,4515.39,45.44,2712.85,1.6,70,4383,26,197,3,45,420.61,352,36.38,30.7,0.108,Male,North,Homemaker,Middle,Silver,Mobile,No,UPI,Express,Jewelry,Brand_E,Electronics,0
+66,2,69,99,10,21,19,5,4934.51,0.78,1302.56,4.7,10,419,149,67,15,9,4265.8,119,1.09,90.77,0.336,Female,North,Freelancer,Middle,Silver,Mobile,Yes,UPI,Standard,Home Decor,Brand_I,Home Decor,0
+39,14,166,55,48,9,5,3,4625.83,19.01,2701.16,1.2,46,2512,146,707,9,49,2981.75,200,23.09,68.5,0.578,Male,West,Engineer,Lower-Middle,Gold,Mobile,No,Credit Card,Standard,Grocery,Brand_J,Toys,0
+69,18,63,60,45,3,0,4,3307.45,46.75,256.74,1.1,37,183,124,493,4,91,4769.3,28,31.23,77.06,0.983,Male,North,Self-Employed,Lower-Middle,Silver,Desktop,Yes,Cash on Delivery,Standard,Furniture,Brand_J,Home Decor,0
+65,3,77,57,37,27,9,4,1760.86,59.82,672.77,4.7,48,2280,86,363,16,86,2123.81,282,59.2,52.01,0.957,Male,Coastal,Student,Middle,Silver,Desktop,No,Cash on Delivery,Express,Health,Brand_B,Fashion,0
+35,7,135,1,36,12,7,3,1053.2,54.29,4162.6,1.2,58,2133,106,688,13,75,974.45,276,11.61,3.39,0.255,Male,East,Homemaker,Lower-Middle,Silver,Tablet,No,UPI,Same Day,Beauty,Brand_H,Furniture,0
+68,12,135,10,55,12,13,5,464.29,9.55,2698.22,3.0,94,3339,96,857,7,37,1119.72,300,0.59,42.23,0.755,Female,Coastal,Government,Upper-Middle,Basic,Mobile,No,UPI,Express,Jewelry,Brand_C,Home Decor,0
+69,10,133,81,9,4,11,9,4733.07,15.72,2264.17,5.0,61,126,15,78,10,15,2743.96,363,77.72,9.26,0.75,Male,East,Homemaker,Middle,Basic,Desktop,Yes,Credit Card,Standard,Electronics,Brand_J,Automotive,0
+64,2,36,97,39,11,0,0,2616.68,47.97,2546.18,1.8,48,4383,133,392,1,7,1842.72,74,50.79,51.32,0.738,Male,Coastal,Homemaker,Middle,Basic,Mobile,No,Debit Card,Same Day,Books,Brand_E,Beauty,0
+19,22,98,52,56,6,13,3,3358.93,14.74,3418.04,3.2,90,3854,92,836,8,28,4181.04,283,6.0,76.66,0.5,Male,Metro,Business,High,Basic,Mobile,No,UPI,Standard,Grocery,Brand_F,Toys,0
+31,19,95,95,5,8,19,2,4587.57,30.8,1970.18,2.1,95,372,0,483,2,98,4554.23,251,44.44,18.04,0.697,Male,Coastal,Engineer,Middle,Silver,Mobile,No,UPI,Standard,Toys,Brand_E,Home Decor,0
+51,8,109,93,46,21,12,2,4205.07,72.14,4387.76,2.0,7,2378,31,763,13,16,268.69,28,75.92,76.69,0.162,Male,East,Engineer,Middle,Silver,Mobile,No,Credit Card,Standard,Home Decor,Brand_F,Automotive,0
+44,9,66,57,15,30,12,6,2803.69,60.05,457.67,1.7,79,874,73,815,8,55,625.22,302,54.57,71.95,0.574,Female,West,Business,Upper-Middle,Basic,Mobile,Yes,Net Banking,Standard,Electronics,Brand_A,Grocery,0
+18,5,132,15,11,24,18,7,1137.71,27.79,1930.14,1.4,32,3226,90,212,5,1,2553.81,88,51.79,72.91,0.513,Male,South,Homemaker,Upper-Middle,Silver,Desktop,No,Debit Card,Same Day,Fashion,Brand_C,Books,0
+48,7,67,13,57,25,16,7,1812.56,43.66,3397.48,4.0,10,2632,116,134,3,98,3938.21,82,0.09,59.1,0.707,Female,Central,Doctor,Lower-Middle,Basic,Mobile,No,Debit Card,Standard,Jewelry,Brand_A,Toys,0
+64,19,65,8,27,1,13,10,267.37,71.2,2077.79,3.1,3,3963,116,884,19,21,4871.1,81,39.7,64.83,0.951,Male,Coastal,Retired,Lower-Middle,Basic,Mobile,No,Digital Wallet,Standard,Beauty,Brand_H,Electronics,0
+29,3,105,69,11,3,18,3,3095.7,57.14,408.41,4.0,81,476,25,213,16,27,3726.89,297,75.5,20.76,0.996,Female,Coastal,Engineer,Upper-Middle,Basic,Mobile,No,Debit Card,Standard,Fashion,Brand_E,Grocery,0
+25,6,111,23,41,5,2,7,307.11,43.53,4975.89,4.0,97,4262,23,183,16,23,3440.23,237,21.75,77.47,0.857,Male,North,Student,Middle,Basic,Mobile,Yes,UPI,Standard,Fashion,Brand_J,Beauty,0
+29,15,144,39,55,6,5,6,4166.53,36.11,2099.23,3.8,85,4172,141,592,10,91,3671.14,29,38.65,43.52,0.823,Male,South,Teacher,Lower-Middle,Gold,Desktop,No,UPI,Express,Toys,Brand_A,Sports,0
+27,4,136,30,36,20,18,0,2345.62,15.45,4307.99,3.6,97,2737,115,873,13,49,4466.37,291,19.75,61.58,0.007,Female,Coastal,Doctor,Lower-Middle,Silver,Mobile,No,Net Banking,Express,Automotive,Brand_F,Toys,0
+20,3,130,4,26,12,12,6,4359.94,13.09,1918.07,3.3,2,1900,112,660,12,61,811.32,10,28.3,90.92,0.512,Male,Central,Doctor,Lower-Middle,Basic,Tablet,Yes,Debit Card,Same Day,Toys,Brand_C,Sports,0
+27,8,124,64,20,6,7,7,2321.17,6.41,1325.95,1.0,49,3695,41,858,6,10,744.45,52,77.83,53.11,0.317,Female,East,Engineer,Middle,Silver,Mobile,Yes,Credit Card,Same Day,Toys,Brand_E,Sports,0
+37,21,79,1,38,21,9,6,181.22,17.26,4903.64,1.3,77,4124,27,192,0,80,4440.1,117,23.27,91.47,0.439,Male,Northeast,Teacher,Lower-Middle,Basic,Mobile,Yes,Debit Card,Express,Health,Brand_D,Automotive,0
+58,7,43,60,13,18,13,0,1291.52,63.36,4305.79,4.1,81,4676,107,795,4,92,2736.93,225,52.6,2.36,0.76,Male,Coastal,Self-Employed,Low,Basic,Mobile,Yes,UPI,Same Day,Sports,Brand_A,Beauty,0
+31,7,111,71,12,21,17,6,4227.45,60.82,719.09,1.1,95,4338,125,426,10,34,4259.48,318,50.4,87.17,0.591,Female,Northeast,Government,Low,Silver,Mobile,Yes,Cash on Delivery,Standard,Furniture,Brand_D,Furniture,0
+44,1,143,16,43,22,15,7,1252.52,41.13,649.81,3.3,81,3062,49,397,11,91,3590.65,291,95.67,0.4,0.87,Female,Central,Business,Middle,Basic,Desktop,No,UPI,Express,Beauty,Brand_E,Electronics,0
+64,6,38,95,8,11,3,8,4132.75,27.54,379.93,1.3,70,2701,0,684,19,93,883.45,283,27.24,61.0,0.524,Male,East,Student,Middle,Silver,Desktop,Yes,UPI,Express,Automotive,Brand_I,Sports,0
+60,12,149,73,18,22,18,3,981.32,7.51,4456.62,4.2,72,3102,50,345,3,82,3406.72,57,54.37,2.41,0.782,Female,West,Engineer,High,Silver,Mobile,Yes,Digital Wallet,Express,Jewelry,Brand_J,Grocery,0
+30,22,125,27,28,10,9,9,1496.26,66.51,1425.5,2.4,84,4027,99,376,10,35,2508.93,289,23.48,16.04,0.174,Female,Northeast,Homemaker,High,Gold,Mobile,Yes,Cash on Delivery,Express,Jewelry,Brand_J,Jewelry,0
+69,9,79,2,45,30,0,4,3479.95,1.53,1780.97,2.1,11,2675,13,392,10,40,4095.34,110,18.33,88.52,0.465,Male,Coastal,Self-Employed,Middle,Basic,Mobile,No,Debit Card,Same Day,Toys,Brand_J,Home Decor,0
+36,17,167,59,25,6,6,9,4440.52,62.18,32.59,4.2,3,3405,7,66,10,31,882.75,240,2.35,44.9,0.717,Male,West,Student,Lower-Middle,Silver,Mobile,No,Net Banking,Same Day,Automotive,Brand_B,Jewelry,0
+47,19,89,37,56,30,10,8,4815.69,23.1,154.6,4.3,14,4336,78,136,20,86,4607.73,91,57.15,81.26,0.785,Male,South,Business,Lower-Middle,Silver,Mobile,No,Cash on Delivery,Express,Furniture,Brand_F,Fashion,1
+30,11,103,14,44,0,16,0,3360.68,26.51,388.36,4.3,31,3685,131,84,6,9,1358.38,72,13.17,62.91,0.871,Female,Central,Teacher,Upper-Middle,Platinum,Desktop,No,Cash on Delivery,Standard,Automotive,Brand_H,Jewelry,0
+49,16,46,13,33,28,18,7,1986.06,37.95,3076.24,1.0,45,1374,78,669,2,88,492.73,150,58.59,20.75,0.313,Female,North,Government,Middle,Gold,Mobile,Yes,Net Banking,Standard,Jewelry,Brand_D,Home Decor,0
+67,6,43,21,22,4,2,8,1311.19,44.94,1594.18,4.9,94,115,75,760,8,6,3349.81,0,91.26,38.97,0.01,Male,West,Student,Middle,Silver,Mobile,No,Cash on Delivery,Standard,Toys,Brand_A,Automotive,0
+49,20,35,35,36,18,4,0,4076.66,17.39,660.36,1.8,3,1170,54,558,20,6,1298.87,327,29.26,31.85,0.494,Male,Coastal,Government,Upper-Middle,Gold,Desktop,Yes,UPI,Standard,Jewelry,Brand_J,Books,0
+29,4,178,69,8,14,12,3,2866.82,22.84,2432.98,1.5,93,1278,18,580,16,81,2153.0,31,32.14,30.35,0.942,Male,Metro,Retired,Upper-Middle,Basic,Mobile,No,UPI,Express,Jewelry,Brand_H,Electronics,0
+43,11,51,78,56,13,13,0,4013.21,48.52,765.85,3.5,49,3512,128,754,0,26,4442.27,33,68.01,67.32,0.665,Female,South,Homemaker,Upper-Middle,Basic,Desktop,Yes,Net Banking,Standard,Automotive,Brand_C,Fashion,0
+64,4,24,42,51,15,19,3,4664.97,3.78,4288.89,1.7,50,4024,64,561,7,60,4413.97,316,67.23,31.94,0.942,Female,Metro,Teacher,Low,Basic,Mobile,No,UPI,Standard,Grocery,Brand_H,Toys,0
+60,16,10,64,55,0,17,9,1325.43,28.22,4141.96,1.4,77,1410,63,553,19,8,2966.09,347,68.63,0.37,0.659,Female,Coastal,Business,Middle,Basic,Mobile,Yes,Net Banking,Standard,Sports,Brand_A,Fashion,0
+43,4,50,58,57,6,1,2,62.02,25.52,799.47,3.4,5,3690,10,328,12,76,4624.62,194,85.99,25.32,0.515,Female,Coastal,Government,High,Platinum,Mobile,Yes,Cash on Delivery,Same Day,Beauty,Brand_D,Beauty,0
+21,7,53,44,19,27,19,6,284.57,2.52,4259.19,4.2,8,4746,26,32,9,21,3182.79,161,87.21,10.0,0.887,Male,East,Doctor,Upper-Middle,Basic,Mobile,No,Cash on Delivery,Standard,Jewelry,Brand_E,Furniture,0
+21,8,27,16,55,11,8,6,3242.52,15.12,3867.69,3.0,57,2361,13,172,4,49,4563.1,179,42.91,84.48,0.78,Female,North,Business,Middle,Platinum,Mobile,No,Credit Card,Standard,Home Decor,Brand_A,Books,0
+40,6,152,35,18,10,12,2,2030.41,29.52,369.2,1.7,12,2436,30,383,19,42,4289.46,5,83.37,16.15,0.408,Female,Coastal,Engineer,Middle,Silver,Mobile,Yes,Debit Card,Standard,Jewelry,Brand_B,Sports,0
+24,16,78,5,40,0,15,5,3081.63,55.71,2143.13,1.4,42,1648,53,381,19,97,1064.44,98,87.41,10.85,0.718,Male,Coastal,Homemaker,Upper-Middle,Silver,Mobile,No,UPI,Same Day,Electronics,Brand_C,Beauty,0
+32,23,134,4,14,2,18,6,981.84,16.73,3737.78,2.9,36,1562,10,132,14,72,28.37,266,56.58,23.45,0.77,Male,Coastal,Self-Employed,Middle,Basic,Mobile,Yes,Credit Card,Express,Home Decor,Brand_A,Grocery,0
+42,8,164,49,56,13,2,5,1695.55,17.03,993.63,1.3,60,326,29,620,4,64,2354.37,133,68.52,92.51,0.535,Female,Central,Retired,High,Silver,Mobile,Yes,Net Banking,Standard,Automotive,Brand_D,Health,0
+51,17,141,74,20,23,6,0,595.05,13.18,2770.25,3.2,83,1812,29,114,19,50,32.39,191,97.11,96.94,0.423,Female,Metro,Government,Upper-Middle,Basic,Desktop,No,Digital Wallet,Express,Beauty,Brand_D,Fashion,1
+21,16,4,92,28,0,0,8,628.06,64.46,3439.55,2.0,30,1087,70,572,16,52,3858.72,49,49.99,25.42,0.293,Female,East,Doctor,Upper-Middle,Basic,Mobile,No,Digital Wallet,Standard,Fashion,Brand_D,Books,0
+60,18,154,59,1,7,0,10,4099.71,28.29,3953.77,2.8,41,510,87,103,0,63,3967.29,107,55.37,2.57,0.889,Male,North,Government,Low,Basic,Mobile,Yes,Digital Wallet,Standard,Furniture,Brand_J,Books,0
+26,11,129,73,24,0,10,8,3692.26,74.78,3470.18,1.7,58,247,136,461,9,96,4701.13,313,34.16,74.46,0.797,Male,West,Teacher,Lower-Middle,Platinum,Mobile,No,Digital Wallet,Express,Electronics,Brand_A,Furniture,0
+26,12,171,42,1,18,17,1,1285.76,52.95,320.96,4.7,94,3225,18,420,11,11,1570.06,199,67.69,76.2,0.855,Female,North,Self-Employed,Middle,Silver,Mobile,No,Cash on Delivery,Express,Sports,Brand_F,Automotive,1
+31,10,40,77,28,6,8,6,388.83,59.55,4156.45,1.5,78,961,8,526,7,51,1207.01,217,38.47,94.18,0.025,Male,Northeast,Government,High,Gold,Mobile,No,Credit Card,Standard,Home Decor,Brand_H,Automotive,0
+56,5,102,47,15,11,1,10,1716.06,12.11,1847.18,2.5,63,2416,114,888,12,12,1448.01,173,75.87,81.26,0.728,Female,South,Government,Lower-Middle,Basic,Desktop,Yes,Cash on Delivery,Standard,Books,Brand_B,Home Decor,1
+63,22,107,72,59,11,8,3,1985.76,19.55,496.08,3.1,71,3719,114,559,19,43,522.09,90,85.14,52.61,0.253,Male,Central,Engineer,High,Basic,Mobile,No,Credit Card,Express,Home Decor,Brand_G,Fashion,0
+47,9,30,65,8,22,2,2,3667.12,30.1,774.54,2.2,27,2816,14,90,14,54,2196.36,341,64.39,59.09,0.139,Female,Metro,Freelancer,Middle,Basic,Desktop,Yes,Digital Wallet,Standard,Jewelry,Brand_A,Jewelry,0
+40,22,130,100,41,16,2,7,1092.63,2.74,94.27,4.2,93,528,0,487,18,93,4377.82,152,46.47,13.93,0.536,Male,Central,Engineer,Low,Basic,Mobile,Yes,Digital Wallet,Standard,Grocery,Brand_J,Sports,0
+40,21,157,94,45,6,12,3,2281.28,16.84,3559.16,3.5,93,2283,12,338,9,14,1342.96,2,21.5,33.67,0.935,Male,West,Self-Employed,Middle,Platinum,Desktop,No,Cash on Delivery,Express,Furniture,Brand_F,Toys,0
+45,21,47,18,7,17,10,1,2622.34,26.1,4902.98,1.9,43,1108,106,503,14,19,650.16,288,12.88,68.65,0.854,Male,Coastal,Teacher,Lower-Middle,Silver,Mobile,No,Net Banking,Same Day,Books,Brand_E,Jewelry,0
+40,18,169,29,55,4,19,7,1954.36,2.06,3540.31,2.2,8,3729,59,116,20,26,3422.68,1,33.59,82.18,0.607,Male,Northeast,Retired,Middle,Gold,Mobile,No,Net Banking,Express,Health,Brand_F,Beauty,0
+43,16,118,67,33,6,12,8,4830.65,53.54,3196.21,2.8,96,3848,134,330,15,84,1357.7,239,34.47,75.36,0.791,Female,Coastal,Engineer,High,Basic,Mobile,No,Digital Wallet,Standard,Books,Brand_I,Home Decor,0
+54,8,156,5,25,0,3,3,1666.36,47.78,987.58,2.4,20,1375,52,740,13,55,478.44,67,3.87,39.28,0.816,Female,South,Retired,Upper-Middle,Gold,Desktop,Yes,Digital Wallet,Express,Health,Brand_A,Fashion,0
+55,18,120,57,3,27,0,0,1840.38,18.0,1853.5,1.2,60,4597,57,114,4,20,3643.46,51,58.36,82.82,0.987,Male,Northeast,Self-Employed,Lower-Middle,Gold,Mobile,No,Debit Card,Standard,Home Decor,Brand_J,Beauty,0
+30,15,155,61,3,13,1,1,1216.72,33.39,3914.61,2.0,78,1460,116,505,15,93,4375.76,353,95.61,21.76,0.312,Female,Metro,Engineer,Low,Silver,Desktop,Yes,Cash on Delivery,Express,Books,Brand_H,Home Decor,0
+68,13,117,43,48,29,5,4,604.66,17.55,4640.14,3.6,98,3056,134,233,10,54,212.11,126,12.59,12.21,0.428,Female,North,Student,Middle,Silver,Mobile,Yes,Debit Card,Express,Toys,Brand_C,Toys,0
+44,19,87,59,13,21,6,4,2063.52,69.33,1852.94,3.0,64,3129,72,673,18,97,4864.46,32,61.3,94.91,0.939,Female,Coastal,Doctor,Middle,Silver,Mobile,No,Digital Wallet,Standard,Health,Brand_B,Home Decor,1
+48,4,120,92,36,3,10,0,4878.87,79.91,486.48,4.1,98,1489,94,586,9,73,2535.32,255,85.0,99.11,0.834,Female,North,Engineer,Lower-Middle,Silver,Mobile,No,Debit Card,Standard,Grocery,Brand_G,Electronics,0
+70,8,10,44,43,27,13,7,220.96,3.6,4263.74,1.9,86,747,126,297,0,64,3751.15,235,37.09,64.49,0.889,Male,Metro,Homemaker,High,Platinum,Mobile,Yes,Digital Wallet,Express,Toys,Brand_D,Home Decor,0
+56,12,10,95,8,14,5,10,727.82,45.23,3796.75,1.2,27,4964,150,211,13,100,2855.94,359,11.42,2.83,0.986,Male,West,Homemaker,Low,Silver,Mobile,Yes,Cash on Delivery,Standard,Books,Brand_A,Jewelry,0
+35,19,117,45,43,19,14,4,4274.4,39.89,4970.48,1.8,57,1934,13,731,20,15,4127.2,51,85.03,1.86,0.957,Male,West,Doctor,Lower-Middle,Basic,Mobile,No,Debit Card,Standard,Automotive,Brand_B,Sports,0
+43,19,74,90,32,3,16,0,3618.65,22.78,2435.22,2.2,29,3490,25,874,14,39,2851.01,331,20.55,69.82,0.841,Female,West,Doctor,Low,Silver,Mobile,Yes,Digital Wallet,Standard,Grocery,Brand_C,Furniture,0
+22,20,89,41,26,22,5,3,3514.21,47.25,2697.15,4.9,51,1418,83,132,5,42,3276.72,219,26.44,54.04,0.467,Male,South,Self-Employed,Lower-Middle,Gold,Mobile,Yes,Digital Wallet,Standard,Beauty,Brand_E,Sports,0
+34,19,68,32,48,23,6,9,1012.03,66.72,2314.42,4.7,73,1034,81,892,10,42,4481.85,59,10.03,19.38,0.686,Female,North,Government,Middle,Gold,Desktop,No,Digital Wallet,Express,Furniture,Brand_G,Health,0
+44,8,17,64,52,4,15,2,575.6,10.77,3303.29,4.6,56,3898,91,467,19,5,4831.8,196,22.33,50.15,0.501,Male,Central,Business,Low,Basic,Desktop,Yes,UPI,Express,Books,Brand_J,Automotive,0
+47,0,180,50,39,18,3,4,4336.65,3.91,2480.43,1.4,7,303,56,805,20,95,2738.75,344,32.05,9.37,0.01,Male,East,Retired,Middle,Basic,Mobile,No,Digital Wallet,Standard,Beauty,Brand_D,Fashion,0
+49,22,127,71,47,20,0,6,181.68,76.31,1891.41,3.6,30,3878,81,224,16,89,3439.53,173,55.43,42.02,0.534,Male,West,Business,High,Basic,Mobile,Yes,Net Banking,Same Day,Furniture,Brand_G,Health,0
+52,12,104,39,47,15,18,3,2653.21,3.57,4143.62,4.4,50,3386,34,826,9,14,83.74,191,86.42,87.61,0.938,Male,Coastal,Business,Upper-Middle,Silver,Mobile,No,Net Banking,Same Day,Jewelry,Brand_I,Automotive,0
+40,11,63,65,23,29,2,1,4114.45,15.18,1132.29,4.0,60,3326,140,797,3,2,2298.33,32,79.35,86.51,0.081,Female,Northeast,Homemaker,Lower-Middle,Basic,Mobile,No,Digital Wallet,Express,Furniture,Brand_H,Jewelry,0
+39,2,149,75,32,19,16,9,123.7,49.29,1297.04,2.3,95,3895,115,276,0,7,4184.7,268,83.1,62.22,0.897,Male,Northeast,Freelancer,Middle,Basic,Mobile,No,Credit Card,Standard,Automotive,Brand_J,Books,1
+28,14,54,69,52,3,7,0,1427.9,52.35,3548.27,4.4,55,2049,98,457,10,26,667.44,13,32.47,29.9,0.677,Male,Metro,Student,Middle,Basic,Desktop,Yes,Net Banking,Express,Jewelry,Brand_J,Electronics,0
+39,0,164,79,50,20,4,0,1618.7,8.99,577.29,4.6,32,3766,89,278,18,84,4058.41,266,29.92,58.21,0.19,Male,West,Government,Middle,Silver,Mobile,No,Digital Wallet,Express,Fashion,Brand_F,Sports,0
+51,21,94,37,30,11,15,4,4270.03,7.16,3171.24,1.1,11,339,100,319,9,76,684.24,161,58.24,26.85,0.885,Female,West,Retired,Low,Gold,Desktop,Yes,Net Banking,Express,Grocery,Brand_C,Jewelry,0
+31,20,84,24,37,4,4,9,2742.01,55.51,1402.03,2.9,63,2157,113,171,13,7,4111.81,147,99.96,62.33,0.129,Male,Northeast,Self-Employed,Low,Silver,Desktop,No,Cash on Delivery,Express,Electronics,Brand_G,Health,0
+38,17,66,63,6,14,1,8,828.86,49.71,3109.02,4.7,96,1002,97,56,14,22,4365.52,74,84.1,19.44,0.086,Male,Coastal,Engineer,Lower-Middle,Basic,Mobile,No,UPI,Standard,Health,Brand_I,Jewelry,0
+60,4,113,90,52,7,1,6,572.29,63.03,1703.12,2.4,4,3768,110,875,0,37,3029.97,298,67.12,97.22,0.419,Female,Northeast,Student,Low,Basic,Mobile,No,Credit Card,Standard,Jewelry,Brand_E,Furniture,0
+48,10,41,2,23,28,18,6,2524.2,32.54,4185.9,1.5,89,2969,81,497,16,80,4972.27,123,67.09,62.25,0.676,Male,South,Freelancer,Middle,Basic,Desktop,Yes,UPI,Standard,Fashion,Brand_F,Home Decor,0
+29,6,71,51,51,0,1,1,348.93,48.28,2752.06,3.9,71,3056,82,818,9,65,3828.75,86,58.92,20.93,0.373,Female,West,Self-Employed,Upper-Middle,Basic,Mobile,No,UPI,Standard,Home Decor,Brand_H,Health,0
+60,4,52,1,1,22,16,5,3647.78,67.29,1689.51,3.9,46,4331,134,755,20,32,152.54,322,20.67,49.32,0.98,Female,North,Teacher,High,Basic,Tablet,Yes,Debit Card,Express,Beauty,Brand_J,Beauty,0
+27,2,96,5,54,0,15,10,1320.0,56.37,2600.58,1.1,76,1077,112,139,20,14,108.48,140,16.67,54.55,0.15,Female,Northeast,Business,Low,Silver,Mobile,No,UPI,Standard,Beauty,Brand_D,Fashion,0
+34,21,53,15,4,6,14,10,1238.71,67.53,4421.28,4.2,50,1413,63,514,19,6,4073.43,70,10.93,5.6,0.38,Female,Metro,Government,Middle,Basic,Mobile,No,Cash on Delivery,Express,Fashion,Brand_H,Grocery,0
+38,20,68,71,3,11,20,4,2013.01,45.09,2920.72,1.7,91,3625,69,697,11,23,1869.83,1,17.69,74.65,0.145,Female,Central,Freelancer,Low,Basic,Mobile,Yes,Cash on Delivery,Standard,Fashion,Brand_F,Furniture,0
+37,8,152,83,5,8,6,10,285.37,54.76,2552.98,2.8,30,4563,139,242,11,21,477.03,151,33.41,77.81,0.194,Female,Northeast,Homemaker,High,Basic,Desktop,Yes,Cash on Delivery,Standard,Sports,Brand_G,Fashion,0
+31,17,177,85,47,1,16,6,2284.47,69.11,4337.8,1.0,54,255,138,327,9,45,2633.16,82,42.57,43.66,0.565,Female,Metro,Government,Lower-Middle,Basic,Desktop,No,UPI,Same Day,Jewelry,Brand_A,Fashion,0
+69,15,38,31,57,3,9,4,4670.7,78.21,3888.23,1.1,35,3328,32,562,15,54,2595.9,88,50.51,10.16,0.686,Male,East,Retired,Upper-Middle,Silver,Mobile,No,Digital Wallet,Standard,Fashion,Brand_J,Health,0
+43,2,59,80,50,25,19,3,1996.95,9.44,451.81,4.8,65,4631,80,224,6,27,4123.24,161,96.1,23.17,0.341,Female,Northeast,Freelancer,Upper-Middle,Silver,Mobile,No,Cash on Delivery,Express,Books,Brand_E,Beauty,0
+32,7,104,70,18,4,7,10,325.92,45.08,2018.47,3.5,34,1691,143,617,4,80,1847.49,363,98.54,0.02,0.273,Male,Coastal,Student,Middle,Basic,Mobile,Yes,Debit Card,Express,Toys,Brand_F,Fashion,0
+24,2,41,83,39,8,2,10,1390.11,58.62,1442.14,4.3,9,869,70,72,4,78,2833.69,164,66.42,53.17,0.167,Female,West,Homemaker,Upper-Middle,Silver,Desktop,No,Net Banking,Standard,Toys,Brand_A,Books,0
+53,8,121,15,53,29,15,3,4580.02,64.22,4841.7,4.1,76,2832,28,531,1,64,1400.73,151,11.98,46.49,0.32,Female,Metro,Freelancer,Middle,Basic,Mobile,No,Digital Wallet,Same Day,Grocery,Brand_H,Toys,0
+59,15,60,92,58,12,3,0,555.48,79.95,162.26,2.0,66,3154,12,67,3,36,4847.66,230,22.7,58.88,0.37,Female,Coastal,Self-Employed,Middle,Gold,Mobile,No,UPI,Standard,Grocery,Brand_F,Books,0
+18,14,112,23,16,19,18,3,3906.34,77.67,2615.61,1.8,10,3528,41,738,20,87,3038.55,203,77.01,44.52,0.783,Female,Central,Business,Upper-Middle,Silver,Desktop,No,Credit Card,Express,Beauty,Brand_C,Electronics,0
+47,8,142,89,24,0,7,7,2115.56,38.65,3767.8,1.4,17,3672,27,21,6,41,3885.71,345,74.25,75.58,0.785,Male,West,Self-Employed,Lower-Middle,Basic,Mobile,No,Debit Card,Express,Jewelry,Brand_B,Beauty,0
+40,0,169,83,32,24,11,1,4144.92,44.96,477.45,4.7,95,4449,125,572,1,41,1310.63,346,36.89,13.39,0.188,Female,West,Student,Lower-Middle,Gold,Tablet,Yes,UPI,Standard,Automotive,Brand_A,Electronics,0
+27,7,6,81,58,19,14,3,2865.36,60.23,3154.39,3.7,27,385,57,636,13,40,2962.62,27,74.42,45.69,0.974,Female,West,Doctor,Middle,Silver,Mobile,No,Credit Card,Express,Grocery,Brand_E,Electronics,1
+39,14,86,93,21,30,13,8,1338.75,20.55,4719.41,4.8,73,3422,126,464,19,4,1986.22,338,35.82,4.56,0.571,Male,Northeast,Retired,Middle,Silver,Desktop,No,Credit Card,Standard,Automotive,Brand_F,Beauty,0
+36,21,17,35,52,22,17,3,1050.6,27.26,2311.03,3.2,70,3096,109,770,17,7,2094.4,254,12.34,28.95,0.174,Female,Coastal,Freelancer,Lower-Middle,Basic,Mobile,No,Digital Wallet,Standard,Health,Brand_H,Grocery,0
+50,23,170,30,0,3,19,9,714.69,17.01,3687.57,1.7,46,615,73,743,12,38,1053.36,205,44.73,82.82,0.093,Female,East,Doctor,Lower-Middle,Basic,Mobile,No,Net Banking,Express,Beauty,Brand_F,Health,0
+33,13,130,29,46,17,1,6,1186.59,34.24,4480.98,2.2,59,4501,63,563,17,1,2511.06,149,98.38,95.74,0.968,Female,Metro,Doctor,Middle,Basic,Mobile,No,Digital Wallet,Standard,Health,Brand_G,Furniture,0
+21,14,51,70,49,11,13,10,3226.73,30.68,4652.41,3.3,52,1059,43,158,5,18,2139.32,24,85.03,66.31,0.195,Female,Northeast,Teacher,Lower-Middle,Silver,Mobile,Yes,Digital Wallet,Express,Beauty,Brand_A,Health,0
+37,18,64,11,1,25,11,4,3462.2,43.09,1446.02,1.3,66,664,132,550,10,69,2152.69,41,18.14,2.94,0.026,Female,Metro,Business,High,Silver,Desktop,Yes,Credit Card,Standard,Home Decor,Brand_E,Health,0
+18,16,63,25,22,30,8,9,1100.56,54.07,659.76,3.6,63,4080,78,573,9,92,1640.02,141,11.36,91.57,0.974,Female,Metro,Student,Lower-Middle,Silver,Tablet,Yes,Digital Wallet,Express,Health,Brand_F,Books,0
+45,18,83,52,42,13,10,0,4091.69,6.23,3715.59,3.7,27,2016,95,592,10,18,110.4,155,24.72,26.82,0.684,Male,South,Business,Lower-Middle,Basic,Desktop,No,Cash on Delivery,Standard,Home Decor,Brand_D,Home Decor,0
+34,16,126,21,59,10,20,1,343.09,33.83,2086.65,2.6,95,4239,50,19,8,76,580.56,68,32.19,89.99,0.938,Male,East,Freelancer,Upper-Middle,Silver,Desktop,No,Digital Wallet,Standard,Health,Brand_B,Grocery,0
+49,10,102,43,58,10,8,6,529.75,40.32,4581.48,4.4,96,4720,124,319,9,72,1394.13,8,7.52,30.93,0.451,Female,Metro,Homemaker,Lower-Middle,Basic,Desktop,Yes,Debit Card,Standard,Beauty,Brand_D,Automotive,0
+41,13,68,10,2,1,4,2,3900.79,18.75,3075.1,3.6,27,815,67,619,1,32,3410.11,114,82.97,79.72,0.209,Female,South,Self-Employed,Middle,Silver,Mobile,No,Debit Card,Express,Automotive,Brand_B,Automotive,0
+57,15,74,53,1,8,8,8,140.57,28.1,4729.84,4.1,5,1322,111,110,4,86,2661.7,318,9.7,44.36,0.951,Male,West,Self-Employed,Upper-Middle,Gold,Mobile,Yes,Debit Card,Standard,Home Decor,Brand_I,Automotive,0
+40,20,110,71,22,15,1,0,4950.65,21.48,4212.74,2.1,83,1367,41,805,8,84,2960.15,130,18.99,39.64,0.876,Female,North,Retired,Upper-Middle,Gold,Mobile,No,Digital Wallet,Express,Beauty,Brand_H,Jewelry,0
+45,16,100,49,7,8,5,10,963.64,34.62,2199.7,1.9,48,2470,96,543,19,12,4780.72,210,37.49,71.72,0.637,Male,Northeast,Business,Lower-Middle,Silver,Mobile,Yes,Credit Card,Standard,Electronics,Brand_B,Grocery,0
+70,6,36,48,44,16,4,0,2528.08,75.47,793.18,1.1,14,557,147,30,17,66,1700.72,350,3.06,50.03,0.386,Male,Central,Government,Middle,Basic,Desktop,No,Credit Card,Standard,Electronics,Brand_H,Grocery,0
+32,21,5,57,11,8,20,2,3135.03,54.2,508.24,2.3,29,3085,0,547,14,89,851.75,143,77.05,11.35,0.214,Female,East,Business,Upper-Middle,Silver,Mobile,No,Net Banking,Same Day,Jewelry,Brand_E,Books,0
+70,4,14,39,6,21,20,8,314.54,21.12,485.5,4.2,69,2584,110,701,19,57,1866.81,18,80.31,68.08,0.281,Male,North,Student,Middle,Basic,Mobile,No,Net Banking,Standard,Beauty,Brand_A,Sports,0
+58,15,68,81,1,21,9,7,4381.9,9.31,902.67,4.6,42,1657,59,581,6,15,1108.77,142,77.34,12.08,0.874,Female,North,Doctor,Lower-Middle,Silver,Mobile,Yes,Debit Card,Standard,Grocery,Brand_G,Electronics,0
+18,0,117,90,59,20,17,2,2530.2,54.03,3590.73,3.9,99,2107,0,215,20,69,2788.21,179,60.3,9.02,0.049,Female,Metro,Homemaker,Lower-Middle,Basic,Mobile,No,UPI,Standard,Fashion,Brand_B,Health,0
+18,8,79,12,59,6,2,4,4669.06,22.87,3737.12,4.6,60,3125,47,449,9,46,4700.02,179,80.89,47.13,0.851,Female,Metro,Doctor,Upper-Middle,Basic,Mobile,Yes,Credit Card,Express,Automotive,Brand_I,Fashion,1
+26,19,95,5,39,13,15,9,4635.8,25.44,56.89,2.5,89,2902,114,435,1,23,390.55,143,2.02,48.14,0.745,Male,West,Doctor,Lower-Middle,Silver,Mobile,Yes,Digital Wallet,Standard,Sports,Brand_H,Toys,0
+57,11,74,89,28,4,10,7,4882.46,77.0,4029.49,4.8,58,2076,142,6,18,77,3123.46,291,50.29,15.13,0.499,Female,Central,Self-Employed,Lower-Middle,Gold,Mobile,Yes,Net Banking,Express,Electronics,Brand_H,Furniture,0
+57,22,118,27,18,10,12,1,3654.62,3.71,2044.64,3.6,39,2912,131,879,19,44,4438.68,255,88.14,35.43,0.464,Female,South,Homemaker,High,Gold,Mobile,No,Debit Card,Same Day,Sports,Brand_F,Health,0
+62,1,42,75,54,18,3,10,3970.4,19.64,1362.81,3.1,45,1639,137,97,19,24,1515.42,25,85.38,68.14,0.149,Male,South,Government,Lower-Middle,Platinum,Mobile,No,Debit Card,Express,Toys,Brand_E,Home Decor,0
+42,3,23,98,26,29,1,9,3161.36,33.58,1292.49,2.6,50,1210,62,310,14,32,4960.48,250,57.37,26.15,0.771,Female,Coastal,Teacher,Upper-Middle,Silver,Mobile,No,UPI,Express,Jewelry,Brand_H,Fashion,0
+68,15,97,15,56,5,6,10,382.81,10.67,3890.95,4.0,43,261,10,104,16,29,4754.65,319,56.54,63.46,0.505,Male,Coastal,Teacher,Middle,Gold,Mobile,No,Digital Wallet,Express,Jewelry,Brand_F,Toys,0
+56,8,56,19,45,2,15,2,2332.92,0.03,2205.56,2.8,71,3026,119,801,2,50,3332.73,133,59.01,54.15,0.377,Female,West,Freelancer,Middle,Basic,Mobile,No,Debit Card,Express,Electronics,Brand_I,Health,0
+39,6,130,85,43,20,9,4,4833.13,32.94,2833.74,4.6,31,2904,115,217,0,26,57.71,3,90.52,32.32,0.187,Male,Metro,Engineer,Lower-Middle,Silver,Mobile,Yes,UPI,Same Day,Beauty,Brand_D,Home Decor,0
+35,18,61,2,56,24,17,7,2936.65,17.58,2912.58,2.4,82,2758,124,518,17,91,3713.46,65,96.66,87.71,0.467,Female,Central,Government,Middle,Basic,Mobile,Yes,Digital Wallet,Express,Beauty,Brand_D,Grocery,1
+21,12,114,42,55,18,20,4,3110.1,20.95,4401.39,4.7,32,1136,94,507,12,72,3820.34,201,64.38,22.83,0.848,Female,Coastal,Government,Low,Silver,Mobile,No,Cash on Delivery,Standard,Automotive,Brand_E,Books,0
+62,18,172,99,4,14,9,0,3973.78,61.79,1382.08,1.0,20,519,69,53,11,80,1692.79,25,44.49,76.82,0.369,Female,Metro,Engineer,Middle,Basic,Mobile,Yes,Digital Wallet,Standard,Beauty,Brand_I,Sports,0
+20,4,89,16,26,16,1,10,3842.83,6.47,4122.61,3.0,99,3960,32,177,2,65,2499.81,250,40.27,54.59,0.391,Female,South,Business,Lower-Middle,Basic,Tablet,Yes,Cash on Delivery,Express,Toys,Brand_G,Jewelry,0

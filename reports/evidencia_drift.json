@@ -1,0 +1,54 @@
+{
+  "modelo": {
+    "tipo": "logistic_regression",
+    "auc": 0.9881283638594297
+  },
+  "division": {
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  "tamano_lote": 500,
+  "umbral_drift": 0.3,
+  "alfa_evento": 0.05,
+  "niveles": [
+    {
+      "nivel": 0.0,
+      "lote": "C:\\proyecto\\MLOPS\\PROJECT_MLOPS\\lotes\\lote_20261122_003033_nivel_0.0.csv",
+      "prediccion": "data\\prediccion_evidencia_nivel_0.0.csv",
+      "n_filas": 500,
+      "tasa_target_lote": 0.09,
+      "fraccion_features_con_drift": 0.0,
+      "alerta_features": false,
+      "reporte_features": "C:\\proyecto\\MLOPS\\PROJECT_MLOPS\\reports\\drift_features_lote_20261122_003033_nivel_0.0.html",
+      "p_valor_target": 0.36911493441913557,
+      "alerta_target": false,
+      "reporte_evento": "C:\\proyecto\\MLOPS\\PROJECT_MLOPS\\reports\\drift_evento_lote_20261122_003033_nivel_0.0.json"
+    },
+    {
+      "nivel": 0.3,
+      "lote": "C:\\proyecto\\MLOPS\\PROJECT_MLOPS\\lotes\\lote_20261122_003133_nivel_0.3.csv",
+      "prediccion": "data\\prediccion_evidencia_nivel_0.3.csv",
+      "n_filas": 500,
+      "tasa_target_lote": 0.18,
+      "fraccion_features_con_drift": 0.22857142857142856,
+      "alerta_features": false,
+      "reporte_features": "C:\\proyecto\\MLOPS\\PROJECT_MLOPS\\reports\\drift_features_lote_20261122_003133_nivel_0.3.html",
+      "p_valor_target": 8.417515234664542e-08,
+      "alerta_target": true,
+      "reporte_evento": "C:\\proyecto\\MLOPS\\PROJECT_MLOPS\\reports\\drift_evento_lote_20261122_003133_nivel_0.3.json"
+    },
+    {
+      "nivel": 0.6,
+      "lote": "C:\\proyecto\\MLOPS\\PROJECT_MLOPS\\lotes\\lote_20261122_003233_nivel_0.6.csv",
+      "prediccion": "data\\prediccion_evidencia_nivel_0.6.csv",
+      "n_filas": 500,
+      "tasa_target_lote": 0.27,
+      "fraccion_features_con_drift": 0.5142857142857142,
+      "alerta_features": true,
+      "reporte_features": "C:\\proyecto\\MLOPS\\PROJECT_MLOPS\\reports\\drift_features_lote_20261122_003233_nivel_0.6.html",
+      "p_valor_target": 5.314553459399615e-31,
+      "alerta_target": true,
+      "reporte_evento": "C:\\proyecto\\MLOPS\\PROJECT_MLOPS\\reports\\drift_evento_lote_20261122_003233_nivel_0.6.json"
+    }
+  ]
+}

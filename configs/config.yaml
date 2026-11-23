@@ -1,5 +1,6 @@
-# Configuración unificada del proyecto (Actividad 2).
-# Todo lo que puede cambiar (datos, división, features, modelos candidatos, MLflow, registro e inferencia) vive aquí, no en el código.
+# Configuración unificada del proyecto (Actividad 3).
+# Todo lo que puede cambiar (datos, división, features, modelos candidatos, MLflow, registro,
+# inferencia y monitoreo de drift) vive aquí, no en el código.
 # Dataset: https://www.kaggle.com/datasets/colabsss/consumer-portrait-e-commerce-dataset
 
 datos:
@@ -50,6 +51,14 @@ candidatos:
       learning_rate: 0.1
       max_depth: 3
       random_state: 42
+  - nombre_run: ecommerce-forest
+    tipo: random_forest
+    parametros:
+      n_estimators: 200
+      max_depth: 10
+      min_samples_leaf: 5
+      random_state: 42
+      n_jobs: -1
 
 mlflow:
   tracking_uri: http://localhost:5000  # servidor de MLflow de services/. MLFLOW_TRACKING_URI, si existe, tiene prioridad
@@ -59,11 +68,20 @@ mlflow:
 metricas:
   umbral: 0.5                          # probabilidad a partir de la cual se predice recomendación (Recommendation_Label = 1)
 
-# Registro del modelo e inferencia (Actividad 2).
+# Registro del modelo e inferencia.
 registro:
   nombre_modelo: ecommerce-recommendation-modelo   # nombre en el Model Registry de MLflow
-  umbral_auc: 0.60                                  # AUC mínimo para ser champion; además debe superar al champion actual
+  umbral_auc: 0.90                                  # AUC mínimo para ser champion; además debe superar al champion actual
 
 inferencia:
-  tamano_lote: 100              # clientes que se puntúan en cada ejecución diaria
+  tamano_lote: 500              # clientes que se puntúan en cada ejecución (lote de la parte de prueba)
   carpeta_salida: data          # carpeta donde se guardan las predicciones diarias
+  nivel_drift: 0.6              # emulación de drift: 0.0 sin drift, 0.3 medio, 0.6 alto (ver domain/monitoreo.py)
+
+# Detección de drift (Actividad 3).
+monitoreo:
+  lotes_dir: lotes                    # copias de los lotes puntuados (histórico + último por nivel)
+  lote_actual: lotes/lote_actual.csv  # lote que puntúa la inferencia; lo leen los flows de drift
+  umbral_drift: 0.3                   # fracción de variables con drift a partir de la cual se emite una alerta
+  alfa_evento: 0.05                   # p-valor por debajo del cual el drift del target se considera drift
+  carpeta_reportes: reports           # reportes HTML/JSON por lote (ignorada por git)

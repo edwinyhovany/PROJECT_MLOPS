@@ -1,12 +1,22 @@
-"""Despliegues en Prefect (Actividad 2).
+"""Actividad 3: despliegue de las pipelines en Prefect.
 
-- Pipeline de entrenamiento: despliegue manual (sin horario fijo).
-- Pipeline de inferencia: despliegue programado con horario diario (cron: todos los días a las 06:00 UTC).
+- entrenamiento-ecommerce: despliegue manual (se lanza desde la UI de Prefect).
+- inferencia-ecommerce-diaria: todos los días a las 06:00 UTC.
+- drift-features-ecommerce: todos los días a las 06:30 UTC, después de la inferencia.
+- drift-evento-ecommerce: todos los días a las 07:00 UTC, cuando ya pueden estar las etiquetas.
+
+Ejecución (desde la raíz del proyecto):
+    poetry run python -m infraestructure.flows.desplegar
+
+Deja esta terminal abierta: mientras esté abierta, Prefect puede lanzar las ejecuciones.
 """
-
 import os
 import sys
 from pathlib import Path
+
+# Configurar variables de entorno por defecto si no están definidas.
+if not os.environ.get("PREFECT_API_URL"):
+    os.environ["PREFECT_API_URL"] = "http://localhost:4200/api"
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 if str(ROOT_DIR) not in sys.path:
@@ -14,21 +24,19 @@ if str(ROOT_DIR) not in sys.path:
 
 from prefect import serve
 
+from infraestructure.flows.drift_evento_flow import drift_evento_flow
+from infraestructure.flows.drift_features_flow import drift_features_flow
 from infraestructure.flows.entrenamiento_flow import entrenamiento_flow
 from infraestructure.flows.inferencia_flow import inferencia_flow
 
 if __name__ == "__main__":
-    despliegue_entrenamiento = entrenamiento_flow.to_deployment(
-        name="entrenamiento-ecommerce",
-        description="Pipeline de entrenamiento que entrena modelos, registra en MLflow y promueve a champion",
-    )
-    despliegue_inferencia = inferencia_flow.to_deployment(
-        name="inferencia-ecommerce-diaria",
-        cron="0 6 * * *",
-        description="Pipeline diaria de inferencia que carga el modelo champion y genera predicciones",
-    )
-
+    despliegues = [
+        entrenamiento_flow.to_deployment(name="entrenamiento-ecommerce"),
+        inferencia_flow.to_deployment(name="inferencia-ecommerce-diaria", cron="0 6 * * *"),
+        drift_features_flow.to_deployment(name="drift-features-ecommerce", cron="30 6 * * *"),
+        drift_evento_flow.to_deployment(name="drift-evento-ecommerce", cron="0 7 * * *"),
+    ]
     print("Iniciando servicio de despliegues de Prefect...")
-    print("- Despliegue 1: entrenamiento-ecommerce (Manual)")
-    print("- Despliegue 2: inferencia-ecommerce-diaria (Diario: cron 0 6 * * *)")
-    serve(despliegue_entrenamiento, despliegue_inferencia)
+    for despliegue in despliegues:
+        print(f"- {despliegue.name}")
+    serve(*despliegues)

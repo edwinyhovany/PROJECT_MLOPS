@@ -6,8 +6,9 @@ La variable objetivo 'Recommendation_Label' se binariza: 'Recommended' → 1, el
 
 No usa Prefect ni MLflow: se puede probar sin servicios levantados.
 """
+import pandas as pd
 from sklearn.compose import ColumnTransformer
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, roc_auc_score
 from sklearn.pipeline import Pipeline
@@ -59,7 +60,13 @@ ETIQUETA_POSITIVA = "Recommended"
 
 
 def binarizar_objetivo(serie):
-    """Convierte Recommendation_Label a binario: 'Recommended' → 1, el resto → 0."""
+    """Convierte Recommendation_Label a binario: 'Recommended' → 1, el resto → 0.
+
+    Es idempotente: si la serie ya es binaria (0/1) la devuelve sin cambios. Así el
+    entrenamiento, la inferencia y los lotes de drift pueden compartir la misma función.
+    """
+    if pd.api.types.is_numeric_dtype(serie) and set(pd.Series(serie).dropna().unique()) <= {0, 1}:
+        return serie.astype(int)
     return (serie == ETIQUETA_POSITIVA).astype(int)
 
 
@@ -86,6 +93,8 @@ def construir_modelo(tipo, parametros, numericas, categoricas):
         estimador = LogisticRegression(**parametros)
     elif tipo == "gradient_boosting":
         estimador = GradientBoostingClassifier(**parametros)
+    elif tipo == "random_forest":
+        estimador = RandomForestClassifier(**parametros)
     else:
         raise ValueError(f"modelo '{tipo}' no soportado")
 

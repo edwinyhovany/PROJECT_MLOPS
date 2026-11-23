@@ -1,48 +1,50 @@
-"""API FastAPI que sirve el modelo champion (Actividad 2).
+"""API FastAPI que sirve el modelo champion de recomendación E-Commerce (Actividad 3).
 
 - Carga el modelo champion desde el Model Registry de MLflow.
 - Expone endpoints:
   - GET /: información general de la API.
   - GET /health: estado del servicio y versión activa del champion.
-  - GET /v1/models: metadatos del modelo champion activo (compatibilidad estándar).
+  - GET /v1/models: metadatos del modelo champion activo.
   - POST /predict: recibe los datos de un cliente y devuelve probabilidad y predicción.
   - POST /predecir: alias en español para /predict.
+
+El payload se valida con Pydantic: rangos numéricos y categorías del dataset. Un payload
+inválido devuelve 422. La carga del champion se hace al arrancar; si MLflow no está
+disponible, la API arranca igualmente y `/predict` devuelve 503 hasta que el champion exista.
 """
+from __future__ import annotations
 
 import os
 import sys
 from pathlib import Path
+from typing import Literal
 
-# Raíz del proyecto en sys.path
+# Raíz del proyecto en sys.path.
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 import mlflow
 import pandas as pd
-import yaml
 from fastapi import FastAPI, HTTPException
 from mlflow.tracking import MlflowClient
 from pydantic import BaseModel, Field
 
 import domain.modelo as modelo_domain
+from scripts.load_data import cargar_config
 
-CONFIG_FILE = ROOT_DIR / "configs" / "config.yaml"
-
-with open(CONFIG_FILE, encoding="utf-8") as f:
-    cfg = yaml.safe_load(f)
-
+cfg = cargar_config()
 NOMBRE_MODELO = cfg["registro"]["nombre_modelo"]
 TRACKING_URI = os.environ.get("MLFLOW_TRACKING_URI", cfg["mlflow"]["tracking_uri"])
 mlflow.set_tracking_uri(TRACKING_URI)
 
 app = FastAPI(
     title="API de Recomendación E-Commerce",
-    description="Servicio de inferencia FastAPI que sirve el modelo champion de MLflow",
-    version="1.0.0",
+    description="Servicio de inferencia FastAPI que sirve el modelo champion de MLflow (Actividad 3)",
+    version="3.0.0",
 )
 
-# Cargar modelo champion al arrancar
+# Cargar modelo champion al arrancar.
 modelo = None
 version_champion = None
 
@@ -57,42 +59,61 @@ except Exception as e:
 
 
 class ClienteRequest(BaseModel):
-    """Datos de cliente según el dataset Consumer Portrait E-Commerce."""
-    Age: float = 33.0
-    Login_Hour: float = 1.0
-    Session_Duration_Min: float = 150.0
-    Pages_Viewed: float = 80.0
-    Search_Count: float = 5.0
-    Wishlist_Count: float = 10.0
-    Cart_Items: float = 4.0
-    Purchase_Count: float = 3.0
-    Purchase_Value: float = 2500.0
-    Discount_Percentage: float = 20.0
-    Product_Price: float = 1500.0
-    Product_Rating: float = 4.0
-    Product_Popularity: float = 50.0
-    Review_Count: float = 500.0
-    Click_Count: float = 40.0
-    View_Time_Sec: float = 120.0
-    Repeat_Product_View: float = 2.0
-    Browsing_Frequency: float = 15.0
-    Average_Order_Value: float = 2800.0
-    Purchase_Recency_Days: float = 10.0
-    Interaction_Score: float = 85.0
-    Customer_Loyalty_Score: float = 60.0
-    Product_Relevance_Score: float = 0.85
-    Gender: str = "Male"
-    Region: str = "North"
-    Occupation: str = "Business"
-    Income_Level: str = "Middle"
-    Membership_Level: str = "Silver"
-    Shopping_Device: str = "Mobile"
-    Coupon_Used: str = "No"
-    Payment_Method: str = "Credit Card"
-    Delivery_Preference: str = "Express"
-    Product_Category: str = "Electronics"
-    Brand: str = "Brand_A"
-    Favorite_Category: str = "Electronics"
+    """Datos de un cliente según el dataset Consumer Portrait E-Commerce (35 variables)."""
+
+    # Numéricas
+    Age: float = Field(ge=18, le=70)
+    Login_Hour: float = Field(ge=0, le=23)
+    Session_Duration_Min: float = Field(ge=2, le=180)
+    Pages_Viewed: float = Field(ge=1, le=100)
+    Search_Count: float = Field(ge=0, le=60)
+    Wishlist_Count: float = Field(ge=0, le=30)
+    Cart_Items: float = Field(ge=0, le=20)
+    Purchase_Count: float = Field(ge=0, le=10)
+    Purchase_Value: float = Field(ge=20, le=5000)
+    Discount_Percentage: float = Field(ge=0, le=80)
+    Product_Price: float = Field(ge=10, le=5000)
+    Product_Rating: float = Field(ge=1, le=5)
+    Product_Popularity: float = Field(ge=1, le=100)
+    Review_Count: float = Field(ge=0, le=5000)
+    Click_Count: float = Field(ge=0, le=150)
+    View_Time_Sec: float = Field(ge=5, le=900)
+    Repeat_Product_View: float = Field(ge=0, le=20)
+    Browsing_Frequency: float = Field(ge=1, le=100)
+    Average_Order_Value: float = Field(ge=20, le=5000)
+    Purchase_Recency_Days: float = Field(ge=0, le=365)
+    Interaction_Score: float = Field(ge=0, le=100)
+    Customer_Loyalty_Score: float = Field(ge=0, le=100)
+    Product_Relevance_Score: float = Field(ge=0, le=1)
+
+    # Categóricas
+    Gender: Literal["Male", "Female"]
+    Region: Literal["North", "Central", "West", "Metro", "South", "Coastal", "Northeast", "East"]
+    Occupation: Literal[
+        "Business", "Student", "Retired", "Freelancer", "Government",
+        "Doctor", "Homemaker", "Engineer", "Self-Employed", "Teacher",
+    ]
+    Income_Level: Literal["Low", "Upper-Middle", "Middle", "Lower-Middle", "High"]
+    Membership_Level: Literal["Basic", "Silver", "Platinum", "Gold"]
+    Shopping_Device: Literal["Mobile", "Desktop", "Tablet"]
+    Coupon_Used: Literal["No", "Yes"]
+    Payment_Method: Literal[
+        "Net Banking", "Debit Card", "Cash on Delivery",
+        "Digital Wallet", "Credit Card", "UPI",
+    ]
+    Delivery_Preference: Literal["Express", "Standard", "Same Day"]
+    Product_Category: Literal[
+        "Electronics", "Health", "Home Decor", "Fashion", "Toys", "Furniture",
+        "Sports", "Beauty", "Jewelry", "Books", "Automotive", "Grocery",
+    ]
+    Brand: Literal[
+        "Brand_A", "Brand_B", "Brand_C", "Brand_D", "Brand_E",
+        "Brand_F", "Brand_G", "Brand_H", "Brand_I", "Brand_J",
+    ]
+    Favorite_Category: Literal[
+        "Electronics", "Health", "Home Decor", "Fashion", "Toys", "Furniture",
+        "Sports", "Beauty", "Jewelry", "Books", "Automotive", "Grocery",
+    ]
 
 
 class PrediccionResponse(BaseModel):
@@ -109,7 +130,7 @@ def root():
         "modelo": NOMBRE_MODELO,
         "version_champion": version_champion,
         "estado": "listo" if modelo is not None else "sin_modelo_champion",
-        "docs": "/docs"
+        "endpoints": ["/health", "/v1/models", "/predict", "/docs"],
     }
 
 

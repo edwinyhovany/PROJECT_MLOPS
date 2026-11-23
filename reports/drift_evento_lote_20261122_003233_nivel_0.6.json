@@ -1,0 +1,8 @@
+{
+  "lote": "C:\\proyecto\\MLOPS\\PROJECT_MLOPS\\lotes\\lote_20261122_003233_nivel_0.6.csv",
+  "n_filas": 500,
+  "tasa_referencia": 0.1035,
+  "tasa_lote": 0.27,
+  "p_valor": 5.314553459399615e-31,
+  "drift": true
+}
